@@ -718,5 +718,85 @@
     "retrieval_time": 177.48,
     "llm_time": 12870.9,
     "time": "11:59:56"
+  },
+  {
+    "question": "What’s the difference between AUX and Injection outputs?",
+    "model": "gpt-5-mini",
+    "answer": "I'm sorry, I couldn't find this in the current documentation.",
+    "sources": [
+      {
+        "source": "./data/doc/G4+ Wire-in XTREME.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "Injection 1\nWire Inj 1 to cyl 1, 2 to 2, 3 to 3, etc...\nUse spare Injection channels for switching type Auxillary OutputsInjection 2\nInjection 3\nInjection 4\nInjection 5\nInjection 6"
+      },
+      {
+        "source": "./data/doc/Honda Civic Gen 7 and Integra Type R (DC5) Installation Manual.pdf",
+        "page": 15,
+        "score": null,
+        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\nB10\nnc\nExpansion 2\n+5V Out\nB11\nnc\nExpansion 3\nAux 9\nB12\nnc\nExpansion 4\nAux 10\nB13\nnc\nExpansion 5\nAn Volt 4\nB14\nnc\nExpan"
+      },
+      {
+        "source": "./data/doc/G4-MonsoonX.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "Inst aller I/ O t able\nWire Description Installer Connection Typical Application\n+14V Power Wire\nGround Wire these seperately. Typically both to \nengine. Ground\nTrigger 1 Crank Ang"
+      },
+      {
+        "source": "./data/doc/Honda S2000 AP1 Installation Manual.pdf",
+        "page": 8,
+        "score": null,
+        "snippet": "inputs. Aux 6 is setup to control the E-throttle power and so needs to be set as the E-Throttle Relay.\n1.4.4\nExpansion Connector\nExpansion connectors are provided to allow easy con"
+      },
+      {
+        "source": "./data/doc/G4+ Wire-in FORCE GDI.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "Ignition 3\nIgnition 4\nInj 1+ Supplies the positive side of Injectors switching with Inj 1A, Inj 1B\nInj 2+ Supplies the positive side of Injectors switching with Inj 2A, Inj 2B\nInje"
+      }
+    ],
+    "retrieval_time": 141.84,
+    "llm_time": 26837.64,
+    "time": "11:27:45"
+  },
+  {
+    "question": "What are the correct wiring pins for Knock Sensor?",
+    "model": "gpt-5-mini",
+    "answer": "Safety warning: Installation should be carried out by a trained professional. Incorrect wiring can damage the ECU or vehicle — extreme care must be taken.\n\nWiring pins for Knock Sensor (as per provided documentation):\n\n1. G4X AtomX ECU\n   - Knock input (where supported) is fed into the ECU through pin 6.\n   - Note: Versions prior to 3.0 do not have knock control hardware.\n\n2. G4+ Kurofune ECU\n   - Knock 1 = connector J7 (Knock Sensors only)\n   - Knock 2 = connector J8\n\nAdditional note: All pinouts are shown looking into the ECU (wire side).",
+    "sources": [
+      {
+        "source": "./data/doc/G4-AtomX.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "PWM or General Switching Functions .\nFlywheeled, Low Side Drives.Auxilary Output 2\nAuxilary Output 3\nAuxilary Output 4\nKnock* Knock Sensor\nDigital Input 1Frequency Input, Switch In"
+      },
+      {
+        "source": "./data/doc/G4-AtomX.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "Inst aller I/ O t able\nWire Description Installer Connection Typical Application\n+14V Power Wire\nGround Wire these seperately. Typically both to \nengine. Ground\nTrigger 1 Crank Ang"
+      },
+      {
+        "source": "./data/doc/Honda-CIVIC-Gen5 Installation Manual.pdf",
+        "page": 16,
+        "score": null,
+        "snippet": "to allow sufficient span of the numbers in the main fuel table.\n1.8\nPinouts\nPin information is provided to assist when troubleshooting. All pinouts are looking into the ECU (wire s"
+      },
+      {
+        "source": "./data/doc/G4+ Wire-in KUROFUNE.pdf",
+        "page": 3,
+        "score": null,
+        "snippet": "Digital Input Karman 59 Frequency Input Sensors\nAnalog Out 1 56\nFor emulation of signals such as airflow, pressure, O2 or \ntemperature.Analog Out 2 57\nAnalog Out 3 43\nAnalog Out 4 "
+      },
+      {
+        "source": "./data/doc/G4-StormX.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "Injection 1\nWire Inj 1 to cyl 1, 2 to 2, 3 to 3, etc...\nUse spare Injection channels for Auxillary OutputsInjection 2\nInjection 3Injection 4\nInjection 5\nInjection 6\nInjection 7\nInj"
+      }
+    ],
+    "retrieval_time": 86.75,
+    "llm_time": 13162.4,
+    "time": "11:28:34"
   }
 ]

@@ -1,0 +1,722 @@
+[
+  {
+    "question": "Why won't my ECU start? Is it locked?",
+    "model": "gpt-5",
+    "answer": "Likely cause: All Link ECUs are shipped locked. When locked, the ECU can be installed and configured in PCLink, but it will not read engine RPM or run the engine. If your engine won’t start, the ECU is likely still locked.\n\nHow to resolve:\n1) Install PCLink:\n   - Download the latest PCLink from linkecu.com (USB drivers are included).\n2) Connect to the ECU:\n   - Connection is via the ECU’s on-board interface:\n     - G5 Voodoo Neo: USB, Ethernet, or Wi‑Fi\n     - G5 Voodoo Pro: USB or Wi‑Fi\n     - G4X / G4+: USB\n   - In PCLink, press F1 to open Help for connection instructions.\n3) Update firmware:\n   - Once connected, check ECU firmware and upgrade to the latest version.\n4) Unlock the ECU:\n   - Contact your official Link ECU supplier to obtain an unlock code.\n   - Use the provided unlock code to unlock the ECU. Until unlocked, the ECU will not read RPM or run the engine.\n\nSupport options:\n- PCLink Help — press F1 while running PCLink.\n- Link website: linkecu.com\n- Contact your nearest Link dealer (list on linkecu.com)\n- Technical Support: tech@linkecu.com\n- Forums: linkecu.com/forums",
+    "sources": [
+      {
+        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed"
+      },
+      {
+        "source": "./data/doc/G5-Voodoo-Pro.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Pro Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed"
+      },
+      {
+        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
+        "page": 8,
+        "score": null,
+        "snippet": "Important Information\nG4+ ECUS SHIPPED LOCKED\nG4+ ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed and configured \nusing PCLink, but wi"
+      },
+      {
+        "source": "./data/doc/G4-StormX.pdf",
+        "page": 5,
+        "score": null,
+        "snippet": "continued on next pageImPOrtant \nInfOrmatIOn\ng4X eCus are shIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand conf"
+      },
+      {
+        "source": "./data/doc/G4-FuryX.pdf",
+        "page": 5,
+        "score": null,
+        "snippet": "continued on next pageImPOrt ant  \nInfOrmatIO n\ng4X eC us are s hIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand"
+      }
+    ],
+    "retrieval_time": 75.9,
+    "llm_time": 19610.22,
+    "time": "23:30:47"
+  },
+  {
+    "question": "How do I connect the ECU via USB or Wi-Fi?",
+    "model": "gpt-5",
+    "answer": "USB connection (G4X/G5 Plug-In ECUs)\n\n1. Install PCLink:\n   - Download the latest PCLink from linkecu.com (Downloads/Software Updates).\n   - Run the installer and select Yes when prompted to install USB drivers.\n\n2. Connect hardware:\n   - Use a Link G4X ECU USB Cable and plug it into the ECU connector labeled “USB.” No other adapters are required.\n\n3. Power and start software:\n   - Turn the vehicle key to ON to power the ECU.\n   - Open PCLink (double-click the desktop icon).\n\n4. Configure connection:\n   - In PCLink, go to Options > Connection.\n   - Select the correct COM Port or choose Auto for automatic detection.\n\n5. Connect:\n   - Press F3 to connect. If successful, PCLink will download settings from the ECU.\n   - Confirm the status shows ONLINE in the top-right of PCLink.\n\n6. Store changes:\n   - Press F4 to STORE any changes before turning ECU power off, otherwise changes will be lost.\n\nNote: On first USB use, follow the driver installation prompts and select “Continue Anyway” when asked to install drivers.\n\nWi‑Fi connection\n\nI'm sorry, I couldn't find this in the current documentation.",
+    "sources": [
+      {
+        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
+        "page": 9,
+        "score": null,
+        "snippet": "work.\n1.Connect the ECU to your laptop using a Link G4X ECU USB Cable. If not supplied with the ECU, these\ncan be purchased from a Link dealer. No other adapter or cabling is requi"
+      },
+      {
+        "source": "./data/doc/Mazda RX7 Series 6 Installation Manual.pdf",
+        "page": 9,
+        "score": null,
+        "snippet": "instructions that appear. When prompted if you want to install drivers select 'Continue Anyway'.\n3.Start PCLink by double clicking on the PCLink icon on the windows desktop.\n4.Swit"
+      },
+      {
+        "source": "./data/doc/BMW-BMWLINK-E36X.pdf",
+        "page": 9,
+        "score": null,
+        "snippet": "1.5.1\nInstalling USB Drivers\nBefore connecting the ECU to your laptop or PC, the ECU USB drivers must be installed. These drivers are\ninstalled as part of PCLink installation as de"
+      },
+      {
+        "source": "./data/doc/Honda Civic Gen 7 and Integra Type R (DC5) Installation Manual.pdf",
+        "page": 9,
+        "score": null,
+        "snippet": "Link ECU Online Manual 10\n© 2023  Link Engine Management Ltd\n2.Download the latest version of PCLink. When prompted to run or save the file, select save. It is\nrecommended to save "
+      },
+      {
+        "source": "./data/doc/Mazda MX-5 NB2 Installation Manual.pdf",
+        "page": 10,
+        "score": null,
+        "snippet": "G4X and G5 Plug-In ECU Installation Manual 11\n© 2023  Link Engine Management Ltd\n2.If this is the first time you have connected a G4X ECU USB cable to your laptop follow the driver"
+      }
+    ],
+    "retrieval_time": 67.63,
+    "llm_time": 26101.63,
+    "time": "23:31:23"
+  },
+  {
+    "question": "What does the ignition input A6 do?",
+    "model": "gpt-5",
+    "answer": "- A6 is the ignition switch input.\n- It must be connected to a switched battery source.\n- If A6 is connected to constant battery voltage (VBat), the ECU will not power down.",
+    "sources": [
+      {
+        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "Ignition 6 Ignition Amplifier Drivers  \nUse spare Ignition channels for switching type Axillary Outputs Ignition 7\nIgnition 8\nInjection 1 Wire Injector 1 to Cylinder 1, 2 to 2, 3 t"
+      },
+      {
+        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
+        "page": 4,
+        "score": null,
+        "snippet": "5\nG5 Voodoo Neo Quick Start Guide – Version 1.0WIrING I NfOrmat ION\nPower\n -Pin A5 is the main ECU power input. It can be \nsupplied with either switched or constant VBat.\n -Pin A6 "
+      },
+      {
+        "source": "./data/doc/Honda S2000 AP1 Installation Manual.pdf",
+        "page": 16,
+        "score": null,
+        "snippet": "G4X Plug-In ECU Installation Manual 17\n© 2023  Link Engine Management Ltd\nA6\nAux 15\nEvap canister purge\nvalve\nC6\nnc\nA7\nnc\nC7\nGround\n(Signal)\nA8\nnc\nC8\nGround\n(Crank)\nA9\nDI 3\nGearbox"
+      },
+      {
+        "source": "./data/doc/G4+ Wire-in FORCE GDI.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "Ignition 3\nIgnition 4\nInj 1+ Supplies the positive side of Injectors switching with Inj 1A, Inj 1B\nInj 2+ Supplies the positive side of Injectors switching with Inj 2A, Inj 2B\nInje"
+      },
+      {
+        "source": "./data/doc/BMW-BMWLINK-E36X.pdf",
+        "page": 14,
+        "score": null,
+        "snippet": "application. Set to 'OFF' if ignition is not controlled by\nthe ECU.\nb.Set ‘Maximum Advance’ to a suitable value.\nc.Enter appropriate values for coil dwell time in the\n‘Ignition Dwe"
+      }
+    ],
+    "retrieval_time": 74.36,
+    "llm_time": 6277.82,
+    "time": "23:31:36"
+  },
+  {
+    "question": "What are the correct wiring pins for Knock Sensor?",
+    "model": "gpt-5",
+    "answer": "- G4+ Kurofune ECU:\n  - Knock 1: J7\n  - Knock 2: J8\n\n- G4X AtomX ECU:\n  - Version 3 or newer: Pin 6 (knock control input)\n  - Versions prior to 3.0: Knock control hardware not present (no knock input)\n\nIf you are using a different ECU model, I'm sorry, I couldn't find this in the current documentation.",
+    "sources": [
+      {
+        "source": "./data/doc/G4-AtomX.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "PWM or General Switching Functions .\nFlywheeled, Low Side Drives.Auxilary Output 2\nAuxilary Output 3\nAuxilary Output 4\nKnock* Knock Sensor\nDigital Input 1Frequency Input, Switch In"
+      },
+      {
+        "source": "./data/doc/G4-AtomX.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "Inst aller I/ O t able\nWire Description Installer Connection Typical Application\n+14V Power Wire\nGround Wire these seperately. Typically both to \nengine. Ground\nTrigger 1 Crank Ang"
+      },
+      {
+        "source": "./data/doc/Honda-CIVIC-Gen5 Installation Manual.pdf",
+        "page": 16,
+        "score": null,
+        "snippet": "to allow sufficient span of the numbers in the main fuel table.\n1.8\nPinouts\nPin information is provided to assist when troubleshooting. All pinouts are looking into the ECU (wire s"
+      },
+      {
+        "source": "./data/doc/G4+ Wire-in KUROFUNE.pdf",
+        "page": 3,
+        "score": null,
+        "snippet": "Digital Input Karman 59 Frequency Input Sensors\nAnalog Out 1 56\nFor emulation of signals such as airflow, pressure, O2 or \ntemperature.Analog Out 2 57\nAnalog Out 3 43\nAnalog Out 4 "
+      },
+      {
+        "source": "./data/doc/G4-StormX.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "Injection 1\nWire Inj 1 to cyl 1, 2 to 2, 3 to 3, etc...\nUse spare Injection channels for Auxillary OutputsInjection 2\nInjection 3Injection 4\nInjection 5\nInjection 6\nInjection 7\nInj"
+      }
+    ],
+    "retrieval_time": 68.36,
+    "llm_time": 13555.81,
+    "time": "23:31:52"
+  },
+  {
+    "question": "What’s the difference between AUX and Injection outputs?",
+    "model": "gpt-5",
+    "answer": "Safety warning:\n- Using the wrong output type for a load can damage the ECU or the actuator. Confirm each channel’s drive type (low-side vs high-side), PWM capability, and any special requirements before wiring. Note that some Aux channels are low-side only, some provide high/low-side drive, and certain functions (e-throttle motor) require specific Aux channels or an external controller.\n\nDifference between AUX and Injection outputs:\n\n1) Primary purpose\n- Injection outputs:\n  - Dedicated to controlling fuel injectors.\n  - Wiring: “Wire Inj 1 to cyl 1, 2 to 2, 3 to 3, etc...”\n  - Example hardware note: “Inj 1+ supplies the positive side of injectors… Injection 1A switches the negative sides of four injectors” (i.e., negative-side switching).\n- Auxiliary (Aux) outputs:\n  - General-purpose control of actuators such as solenoids, relays, valves, and motors.\n  - Support functions including high-frequency PWM, VVT control, idle control (ISC), stepper ISC, alternator control, and (on specific channels) e-throttle motor.\n\n2) Electrical/functional capability\n- Injection outputs:\n  - Intended as injector drivers; negative-side switching is referenced in the documentation.\n  - Use as general switching varies by ECU/version:\n    - One note states: “Use spare Injection channels for switching type Auxiliary Outputs.”\n    - Another installer table states: “Spare Injection Channels unavailable for switching.”\n    - Conclusion: Whether spare injection outputs can be used for switching is ECU-dependent and must be confirmed for the specific model.\n- Auxiliary outputs:\n  - Designed as “flywheeled” drivers for inductive loads.\n  - Channel capabilities vary:\n    - Aux 1: High-frequency PWM or VVT control; low-side only. “Three Wire ISC Solenoid must be wired to Aux1 and Aux2.”\n    - Aux 5: PWM < 300 Hz or general switching; “Flywheeled, High / Low side Drives; ISC Stepper (4 or 6 terminal).”\n    - Aux 8: Alternator control (switched output providing ~13 V active low vs ~14.5 V off).\n    - Aux 9 (E-throttle Motor +) and Aux 10 (E-throttle Motor -): For e-throttle motor or GP output.\n    - Model-specific note (MX5Link): Aux 9 & 10 are not exposed; to use e-throttle, use Aux 1 & 2 with an external e-throttle controller.\n\nSummary:\n- Injection outputs are primarily dedicated low-side drivers for fuel injectors and must be assigned to cylinders; using them for switching depends on the specific ECU documentation.\n- Aux outputs are general-purpose, flywheeled drivers with PWM/varying drive types, intended for solenoids, stepper/idle valves, alternator control, and (on specific channels) e-throttle motors.",
+    "sources": [
+      {
+        "source": "./data/doc/G4+ Wire-in XTREME.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "Injection 1\nWire Inj 1 to cyl 1, 2 to 2, 3 to 3, etc...\nUse spare Injection channels for switching type Auxillary OutputsInjection 2\nInjection 3\nInjection 4\nInjection 5\nInjection 6"
+      },
+      {
+        "source": "./data/doc/Mazda MX-5 (1600-1800) Installation Manual.pdf",
+        "page": 9,
+        "score": null,
+        "snippet": "Expansion Connector. Note spare An Volt channels can be used as temperature inputs when a pullup\nresistor (to +5V) is added.\n1.4.3\nE-Throttle Output\n1.4.3.1\nMX5Link\nAux 9 & 10 are "
+      },
+      {
+        "source": "./data/doc/Honda Civic Gen 7 and Integra Type R (DC5) Installation Manual.pdf",
+        "page": 15,
+        "score": null,
+        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\nB10\nnc\nExpansion 2\n+5V Out\nB11\nnc\nExpansion 3\nAux 9\nB12\nnc\nExpansion 4\nAux 10\nB13\nnc\nExpansion 5\nAn Volt 4\nB14\nnc\nExpan"
+      },
+      {
+        "source": "./data/doc/G4-MonsoonX.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "Inst aller I/ O t able\nWire Description Installer Connection Typical Application\n+14V Power Wire\nGround Wire these seperately. Typically both to \nengine. Ground\nTrigger 1 Crank Ang"
+      },
+      {
+        "source": "./data/doc/G4+ Wire-in FORCE GDI.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "Ignition 3\nIgnition 4\nInj 1+ Supplies the positive side of Injectors switching with Inj 1A, Inj 1B\nInj 2+ Supplies the positive side of Injectors switching with Inj 2A, Inj 2B\nInje"
+      }
+    ],
+    "retrieval_time": 50.68,
+    "llm_time": 29695.88,
+    "time": "23:32:27"
+  },
+  {
+    "question": "Can I use my ECU with a 2-wire or 3-wire idle control valve?",
+    "model": "gpt-5",
+    "answer": "- Safety note: If using the expansion connector for any related wiring, do not overload the +5V Out pin.\n\nAnswer:\n- 3‑wire idle control valve: Yes. The manual states “Three Wire ISC Solenoid must be wired to Aux1 and Aux2.”\n  Wiring summary:\n  1) Connect the ISC solenoid control wires to Aux 1 and Aux 2.\n  2) Configure the outputs accordingly in the ECU.\n\n- 2‑wire idle control valve: I'm sorry, I couldn't find this in the current documentation.",
+    "sources": [
+      {
+        "source": "./data/doc/Honda Civic Gen 7 and Integra Type R (DC5) Installation Manual.pdf",
+        "page": 15,
+        "score": null,
+        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\nB10\nnc\nExpansion 2\n+5V Out\nB11\nnc\nExpansion 3\nAux 9\nB12\nnc\nExpansion 4\nAux 10\nB13\nnc\nExpansion 5\nAn Volt 4\nB14\nnc\nExpan"
+      },
+      {
+        "source": "./data/doc/G4+ Wire-in FORCE GDI.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "Injection 1B\nInjection 2A\nInjection 2B\nAuxiliary Output 1 High Frequency PWM or VVT Control  \nThree Wire ISC Solenoid must be wired to Aux1 and Aux2  \nFlywheeled, Low side onlyAuxi"
+      },
+      {
+        "source": "./data/doc/G4+ Wire-in MONSOON.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "Three Wire ISC Solenoid must be wired \nto Aux1 and Aux2\nFlywheeled, Low side onlyAuxillary Output 2\nAuxillary Output 3Auxillary Output 4\nAuxillary Output 5 PWM less than 3ooHz or g"
+      },
+      {
+        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
+        "page": 8,
+        "score": null,
+        "snippet": "1.4.3\nE-Throttle Output\nIt is becoming more common to convert cable throttle vehicles to Electronic Throttle control, this section\nexplains how (if it is possible) to do this for e"
+      },
+      {
+        "source": "./data/doc/Mazda MX-5 NB1 Installation Manual.pdf",
+        "page": 15,
+        "score": null,
+        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\n31 (2G)\nnc\nExpansion 6\nDI 7\n32 (2E)\nAn Temp 1\nECT\nExpansion 7\nIgn 4\n33 (2C)\nAn Volt 7\nFront NB O2 Signal\nExpansion 8\nIg"
+      }
+    ],
+    "retrieval_time": 85.92,
+    "llm_time": 22482.88,
+    "time": "23:32:55"
+  },
+  {
+    "question": "Which firmware version is required for Knock Control?",
+    "model": "gpt-5",
+    "answer": "I'm sorry, I couldn't find this in the current documentation.",
+    "sources": [
+      {
+        "source": "./data/doc/G4-AtomX.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "PWM or General Switching Functions .\nFlywheeled, Low Side Drives.Auxilary Output 2\nAuxilary Output 3\nAuxilary Output 4\nKnock* Knock Sensor\nDigital Input 1Frequency Input, Switch In"
+      },
+      {
+        "source": "./data/doc/G4-MonsoonX.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "Aux 4 Aux 3 Aux 2 Aux 1 An Volt 2 DI 3 Gnd Out GroundBrown/ Orange Brown/ Red Brown Brown/ Black Red Red/ White Green Red\nBlue/ Orange Blue/ Red\nOrange Orange /Red Orange /Brown Or"
+      },
+      {
+        "source": "./data/doc/G4+ Wire-in KUROFUNE.pdf",
+        "page": 3,
+        "score": null,
+        "snippet": "Digital Input Karman 59 Frequency Input Sensors\nAnalog Out 1 56\nFor emulation of signals such as airflow, pressure, O2 or \ntemperature.Analog Out 2 57\nAnalog Out 3 43\nAnalog Out 4 "
+      },
+      {
+        "source": "./data/doc/Mazda MX-5 NB1 Installation Manual.pdf",
+        "page": 15,
+        "score": null,
+        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\n31 (2G)\nnc\nExpansion 6\nDI 7\n32 (2E)\nAn Temp 1\nECT\nExpansion 7\nIgn 4\n33 (2C)\nAn Volt 7\nFront NB O2 Signal\nExpansion 8\nIg"
+      },
+      {
+        "source": "./data/doc/BMW-BMWLINK-E36X.pdf",
+        "page": 14,
+        "score": null,
+        "snippet": "application. Set to 'OFF' if ignition is not controlled by\nthe ECU.\nb.Set ‘Maximum Advance’ to a suitable value.\nc.Enter appropriate values for coil dwell time in the\n‘Ignition Dwe"
+      }
+    ],
+    "retrieval_time": 53.67,
+    "llm_time": 7296.96,
+    "time": "23:33:07"
+  },
+  {
+    "question": "Can I power the ECU from constant VBat?",
+    "model": "gpt-5",
+    "answer": "Yes.\n\n- Pin A5 (main ECU power) can be supplied with either switched or constant VBat.\n- Pin A6 (ignition switch input) must be connected to a switched battery source. The ECU will not power down if A6 is connected to constant VBat.\n- If you are using the H-Bridge drivers (AUX3/4/HB1 and AUX5/6/HB2), ensure Pin B5 is supplied with VBat or those drivers will not function.",
+    "sources": [
+      {
+        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
+        "page": 4,
+        "score": null,
+        "snippet": "5\nG5 Voodoo Neo Quick Start Guide – Version 1.0WIrING I NfOrmat ION\nPower\n -Pin A5 is the main ECU power input. It can be \nsupplied with either switched or constant VBat.\n -Pin A6 "
+      },
+      {
+        "source": "./data/doc/BMW-BMWLINK-E36X.pdf",
+        "page": 4,
+        "score": null,
+        "snippet": "Communicating With Your ECU \n................................................................................................................................... 11\n6\nPre-Start Conf"
+      },
+      {
+        "source": "./data/doc/G5-Voodoo-Pro.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "There are a range of ways to find information and \nsupport for installing and using your ECU:\n -PCLink help — press F1  while running PCLink. \nIncludes help on wiring, PCLink and E"
+      },
+      {
+        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
+        "page": 9,
+        "score": null,
+        "snippet": "work.\n1.Connect the ECU to your laptop using a Link G4X ECU USB Cable. If not supplied with the ECU, these\ncan be purchased from a Link dealer. No other adapter or cabling is requi"
+      },
+      {
+        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
+        "page": 4,
+        "score": null,
+        "snippet": "E-Throttle Output \n......................................................................................................................................................... 9\n<%HVL"
+      }
+    ],
+    "retrieval_time": 54.21,
+    "llm_time": 9088.84,
+    "time": "23:33:18"
+  },
+  {
+    "question": "Why does my sensor value read incorrectly?",
+    "model": "gpt-5",
+    "answer": "Possible causes based on the documentation:\n- Incorrect sensor type selected in PCLink.\n- MAP sensor calibration not performed.\n- Wrong Analog Input channel selected (not the one the sensor is wired to).\n- Calibration not saved (“Store” not performed).\n- MAP and BAP readings do not agree at atmospheric pressure (should be within 1 kPa).\n\nHow to correct it (MAP sensor example):\n1. Connect your laptop to the ECU and open PCLink.\n2. Under Analog Channels, select the An Volt channel that the MAP sensor is wired to.\n3. Select the correct MAP Sensor Type.\n4. Go to Options and select MAP sensor calibration, then follow the on‑screen instructions.\n5. Open the Runtime Values pane (lower part of the screen) and select the Analog Inputs tab.\n6. Verify MAP and BAP values are similar (within 1 kPa) at atmosphere.\n7. Press F4 to Store the settings.\n\nFor more detail: PCLink G4X Users Manual -> Tuning Operating Procedures -> ECU Controls -> MAP Sensor Calibration.\n\nIf your issue is with a different sensor (e.g., TPS or IAT), I'm sorry, I couldn't find this in the current documentation.",
+    "sources": [
+      {
+        "source": "./data/doc/BMW-MINIX-MINIX.pdf",
+        "page": 4,
+        "score": null,
+        "snippet": "MAP Sensor Calibration \n.......................................................................................................................................................... 1"
+      },
+      {
+        "source": "./data/doc/Mazda MX-5 NB2 Installation Manual.pdf",
+        "page": 10,
+        "score": null,
+        "snippet": "(MGP) as a load index.\nTo calibrate the MAP sensor:\n1.Connect a laptop/notebook PC to the ECU and connect to the ECU using PCLink.\n2.Under the Analog Channels menu, select the An V"
+      },
+      {
+        "source": "./data/doc/BMW-BMWLINK-E36X.pdf",
+        "page": 4,
+        "score": null,
+        "snippet": "MAP Sensor \n......................................................................................................................................................... 9\nBMWLink\n...."
+      },
+      {
+        "source": "./data/doc/Audi -TTLINK–TTX.pdf",
+        "page": 4,
+        "score": null,
+        "snippet": "MAP Sensor \n......................................................................................................................................................... 8\nTTLink\n....."
+      },
+      {
+        "source": "./data/doc/Mazda RX7 Series 7-8 Installation Manual.pdf",
+        "page": 10,
+        "score": null,
+        "snippet": "Select the correct MAP Sensor Type.\n3.Under the 'Options' menu, select 'MAP sensor calibration'.\n4.Follow the on screen instructions.\n5.Select the 'Analog Inputs' tab in the runtim"
+      }
+    ],
+    "retrieval_time": 67.75,
+    "llm_time": 19188.77,
+    "time": "23:33:39"
+  },
+  {
+    "question": "What’s the recommended mounting location for the ECU?",
+    "model": "gpt-5",
+    "answer": "- Recommended location: Inside the vehicle cabin.\n- Choose a spot that:\n  1) Avoids excessive temperatures and any risk of water ingress.\n  2) Is physically separated from ignition components or other sources of electrical interference.\n  3) Provides enough space at both ends of the ECU for the main harness and tuning cables.\n\n- Motorsport-specific:\n  - Mount where it minimizes risk of damage in a crash.\n  - Speedway applications: Securely within the cockpit area, protected from the elements, isolated from vibration, and use an additional retention strap for high impacts.",
+    "sources": [
+      {
+        "source": "./data/doc/G5-Voodoo-Pro.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "3\nG5 Voodoo Pro Quick Start Guide – Version 1.0ECU mounting guidelines\nThe following requirements should be taken into \naccount during installation:\n -The ECU should be fitted insi"
+      },
+      {
+        "source": "./data/doc/G5-Voodoo-Pro.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "3\nG5 Voodoo Pro Quick Start Guide – Version 1.0ECU mounting guidelines\nThe following requirements should be taken into \naccount during installation:\n -The ECU should be fitted insi"
+      },
+      {
+        "source": "./data/doc/G4-AtomX.pdf",
+        "page": 3,
+        "score": null,
+        "snippet": "the ECU:\n•  The ECU should be fitted inside the vehicle cabin in a location that avoids \nexposure to excessive temperatures and the risk of water ingress. The location \nof the ECU "
+      },
+      {
+        "source": "./data/doc/G4+ Wire-in KUROFUNE.pdf",
+        "page": 7,
+        "score": null,
+        "snippet": "• The ECU should be fitted inside the vehicle cabin in a location that avoids exposure to excessive   \ntemperatures and the risk of water ingress. The location of the ECU should al"
+      },
+      {
+        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
+        "page": 9,
+        "score": null,
+        "snippet": "other components that may cause interference.\n• Allow enough room at both ends of the ECU for the main wiring harness and tuning cables to be connected.\n• The mounting bracket prov"
+      }
+    ],
+    "retrieval_time": 122.22,
+    "llm_time": 12517.12,
+    "time": "23:34:03"
+  },
+  {
+    "question": "Can AUX outputs be used to control fans?",
+    "model": "gpt-5",
+    "answer": "Warning: Incorrect installation can damage the ECU or vehicle. It is recommended that installation and wiring be performed by a trained professional.\n\nAnswer:\nYes. AUX outputs are flywheeled, low-side switching drivers suitable for general switching functions, including controlling fans. For example, on the MX5Link, Aux 1 or Aux 2 may be assigned to Fan/Overboost buzzer depending on the vehicle.\n\nBasic setup and test:\n1) Assign an available Auxiliary Output channel to the fan function in PCLink.\n2) Use the “Test On” or “Test PWM” (at 10 Hz) functions to confirm the fan/wiring operates correctly.\n\nNote: AUX outputs support PWM at less than 300 Hz if needed.",
+    "sources": [
+      {
+        "source": "./data/doc/Mazda MX-5 (1600-1800) Installation Manual.pdf",
+        "page": 9,
+        "score": null,
+        "snippet": "Expansion Connector. Note spare An Volt channels can be used as temperature inputs when a pullup\nresistor (to +5V) is added.\n1.4.3\nE-Throttle Output\n1.4.3.1\nMX5Link\nAux 9 & 10 are "
+      },
+      {
+        "source": "./data/doc/G4-MonsoonX.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "Switching Functions.\nFlywheeled, Low Side Drives.Auxilary Output 2\nAuxilary Output 3\nAuxilary Output 4\nAuxilary Output 5\nAuxilary Output 6\nKnock* Knock Sensor\nDigital Input 1\nFrequ"
+      },
+      {
+        "source": "./data/doc/G4+ Wire-in MONSOON.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "Three Wire ISC Solenoid must be wired \nto Aux1 and Aux2\nFlywheeled, Low side onlyAuxillary Output 2\nAuxillary Output 3Auxillary Output 4\nAuxillary Output 5 PWM less than 3ooHz or g"
+      },
+      {
+        "source": "./data/doc/Honda-CIVIC-Gen6 Installation Manual.pdf",
+        "page": 11,
+        "score": null,
+        "snippet": "vehicle.\nIt is the tuners responsibility to make sure that the following channels are set-up correctly for the vehicle\nmodel the ECU is fitted to:\nAll Auxiliary Output Channels \nUs"
+      },
+      {
+        "source": "./data/doc/G4-FuryX.pdf",
+        "page": 3,
+        "score": null,
+        "snippet": "a lOO m\nViewed looking into wire side of loom \nconnector (or into ECU header)\nAux 7 Aux 8 Aux 6 Aux 5 DI 1 DI 2 5V+ An Volt 3 GroundShield/\nGndInj 4 Inj 3 Inj 2 Inj 1 14V+ +8V Trig"
+      }
+    ],
+    "retrieval_time": 59.9,
+    "llm_time": 33364.22,
+    "time": "23:34:40"
+  },
+  {
+    "question": "Does the ECU support VVT (Variable Valve Timing)?",
+    "model": "gpt-5",
+    "answer": "WARNING: Always download the latest Installation Manual from linkecu.com and check the latest status of known issues before installing or configuring the ECU.\n\nYes. The Plug-In ECUs support Variable Valve Timing/Control (VVT/VTC).\n- Evidence: The pinout shows a dedicated VTC control output (Aux 2: “VTC Oil Control Sol -ve”) and a VTEC solenoid output (Aux 15/“VTEC Solenoid (Drives High Side)” in the provided excerpt).\n- Known issue: On MX5 NB2 units with Bottom Board PCB version 04 and older, VVT does not work correctly—contact Link technical support to organise a fix.",
+    "sources": [
+      {
+        "source": "./data/doc/Mazda MX-5 NB2 Installation Manual.pdf",
+        "page": 16,
+        "score": null,
+        "snippet": "G4X and G5 Plug-In ECU Installation Manual 17\n© 2023  Link Engine Management Ltd\n3\nCAN H\nWhite\n4\n+14V\nYellow\n1.10\nKnown Issues\nAll plug-in ECUs are fully tested on a range of relev"
+      },
+      {
+        "source": "./data/doc/Honda Civic Gen 7 and Integra Type R (DC5) Installation Manual.pdf",
+        "page": 15,
+        "score": null,
+        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\nB10\nnc\nExpansion 2\n+5V Out\nB11\nnc\nExpansion 3\nAux 9\nB12\nnc\nExpansion 4\nAux 10\nB13\nnc\nExpansion 5\nAn Volt 4\nB14\nnc\nExpan"
+      },
+      {
+        "source": "./data/doc/Honda Civic Gen 7 and Integra Type R (DC5) Installation Manual.pdf",
+        "page": 16,
+        "score": null,
+        "snippet": "G4X Plug-In ECU Installation Manual 17\n© 2023  Link Engine Management Ltd\nDC5 plug in ECU Serial Port setup\nNote: The AC Request is received on CAN DI 1.\n1.10\nKnown Issues\nAll plug"
+      },
+      {
+        "source": "./data/doc/Audi -TTLINK–TTX.pdf",
+        "page": 5,
+        "score": null,
+        "snippet": "Link ECU Online Manual 6\n© 2020  Link Engine Management Ltd\n1\nG4X Plug-In ECU Installation Manual\n1.1\nIntroduction\nThank you for purchasing your Link Plug-In Engine Control Unit (E"
+      },
+      {
+        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
+        "page": 16,
+        "score": null,
+        "snippet": "G4X Plug-In ECU Installation Manual 17\n© 2020  Link Engine Management Ltd\n1.8.1\nVLLink"
+      }
+    ],
+    "retrieval_time": 52.13,
+    "llm_time": 15717.89,
+    "time": "23:34:59"
+  },
+  {
+    "question": "Where can I find the unlock code?",
+    "model": "gpt-5",
+    "answer": "Contact your official Link ECU supplier/dealer. All Link ECUs are shipped locked, and the unlock code is provided by your ECU supplier. A dealer list is available at linkecu.com.",
+    "sources": [
+      {
+        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed"
+      },
+      {
+        "source": "./data/doc/G5-Voodoo-Neo6.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0\n2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nb"
+      },
+      {
+        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
+        "page": 8,
+        "score": null,
+        "snippet": "Important Information\nG4+ ECUS SHIPPED LOCKED\nG4+ ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed and configured \nusing PCLink, but wi"
+      },
+      {
+        "source": "./data/doc/G4-AtomX.pdf",
+        "page": 3,
+        "score": null,
+        "snippet": "ImPOrt ant \nInf OrmatIO n \n \ng4X eC Us are s HIPP eD lOCKeD\nG4X ECUs are shipped as locked and must be enabled before they are used. The \nECU can be installed and configured using "
+      },
+      {
+        "source": "./data/doc/G4-XtremeX.pdf",
+        "page": 5,
+        "score": null,
+        "snippet": "continued on next pageImPOrt ant  \nInfOrmatIO n\ng4X eC us are s hIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand"
+      }
+    ],
+    "retrieval_time": 51.98,
+    "llm_time": 7373.78,
+    "time": "23:35:13"
+  },
+  {
+    "question": "Is there a lifetime warranty on the ECU?",
+    "model": "gpt-5",
+    "answer": "Yes. Link Engine Management Ltd offers a Limited Lifetime Warranty on ECUs they manufacture or distribute.\n\nKey points:\n- Applies only to the original purchaser and covers defects in materials and manufacturing workmanship for the lifetime of the ECU (subject to limitations).\n- Not transferable.\n- The warranty ceases to apply to ECUs that have not been manufactured or distributed by Link Engine Management Ltd for a period of greater than one year.\n- Claims process: return the allegedly defective ECU to the place of purchase. Link, at its sole option, may repair the ECU or replace it with a comparable new ECU.\n- Exclusions: does not apply to ECUs that are not properly installed or used, or that are damaged or impaired by external forces.\n- Liability and other warranties: Link disclaims liability for any damages and disavows all other express or implied warranties.",
+    "sources": [
+      {
+        "source": "./data/doc/G4+ Wire-in FORCE GDI.pdf",
+        "page": 10,
+        "score": null,
+        "snippet": "LIFETIME WARRANTY\nLINK ENGINE MANAGEMENT LTD - LIMITED LIFETIME WARRANTY\nAll Engine Control Units (ECUs) manufactured or distributed by LINK Engine Management Ltd are subject to th"
+      },
+      {
+        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
+        "page": 10,
+        "score": null,
+        "snippet": "LIMITED LIFETIME WARRANTY\nLINK ENGINE MANAGEMENT LTD - LIMITED LIFETIME WARRANTY\nAll Engine Control Units (ECUs) manufactured or distributed by LINK Engine Management Ltd are subje"
+      },
+      {
+        "source": "./data/doc/BMW-MINIX-MINIX.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "defective ECU. \nThis limited lifetime warranty is not transferable and does not apply to any ECU not properly installed\nor properly used by the purchaser or end user, or to any ECU"
+      },
+      {
+        "source": "./data/doc/Audi -TTLINK–TTX.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "defective ECU. \nThis limited lifetime warranty is not transferable and does not apply to any ECU not properly installed\nor properly used by the purchaser or end user, or to any ECU"
+      },
+      {
+        "source": "./data/doc/BMW-MINIX-MINIX.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "LINK ENGINE MANAGEMENT LTD – LIMITED LIFETIME WARRANTY\nAll Engine Control Units (ECUs) manufactured or distributed by Link Engine Management Ltd are\nsubject to the following LIMITE"
+      }
+    ],
+    "retrieval_time": 47.31,
+    "llm_time": 11427.71,
+    "time": "23:35:36"
+  },
+  {
+    "question": "What’s the difference between AUX and Injection outputs?",
+    "model": "gpt-5",
+    "answer": "- Safety note: Aux outputs that drive inductive loads (solenoids, motors) are flywheeled; ensure the correct Aux type is used to avoid driver damage.\n\nDifference between Injection and Aux outputs:\n\n- Purpose\n  - Injection outputs:\n    - Dedicated to controlling fuel injectors.\n    - Wire Inj 1 to cylinder 1, Inj 2 to 2, etc.\n    - Example noted: Inj 1+ supplies the positive side; Injection 1A switches the negative sides of four injectors.\n  - Aux outputs:\n    - General-purpose control outputs for devices such as VVT, idle solenoids, stepper ISC, alternator control, VTEC solenoid, and E-throttle motor (Aux 9/10 where applicable).\n\n- Electrical/functional characteristics\n  - Injection outputs:\n    - Low-side switching of injector negatives, with dedicated injector supply (e.g., Inj 1+, Inj 2+).\n    - Availability for general switching varies by ECU:\n      - Some documentation: “Use spare Injection channels for switching type Auxiliary Outputs.”\n      - Other documentation: “Spare Injection Channels unavailable for switching.”\n  - Aux outputs:\n    - Designed as general switching/PWM drivers and are flywheeled for inductive loads.\n    - Channel capabilities vary:\n      - Aux 1: High-frequency PWM or VVT control; three-wire ISC must use Aux 1 and Aux 2; low-side only.\n      - Aux 5–8: PWM <300 Hz or general switching; include high-/low-side drive options; support 4- or 6-terminal stepper ISC.\n      - Aux 8: Alternator control with two charging voltages (~13 V active low, ~14.5 V off).\n      - Aux 9/10: E-throttle motor drive (where available). Note for MX5Link: Aux 9 & 10 are not exposed; use Aux 1 & 2 with an external E-throttle controller.\n      - Aux 14: VTEC solenoid (high-side drive).\n      - Note: Aux 15 must be on for ECU to work correctly (active low).\n\nSummary:\n- Use Injection outputs for injectors as assigned per cylinder.\n- Use Aux outputs for all other actuators/controls per their specific capability.\n- Whether spare Injection outputs can be repurposed as general outputs depends on the specific ECU/version; refer to the Installer I/O table for that ECU.",
+    "sources": [
+      {
+        "source": "./data/doc/G4+ Wire-in XTREME.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "Injection 1\nWire Inj 1 to cyl 1, 2 to 2, 3 to 3, etc...\nUse spare Injection channels for switching type Auxillary OutputsInjection 2\nInjection 3\nInjection 4\nInjection 5\nInjection 6"
+      },
+      {
+        "source": "./data/doc/Mazda MX-5 (1600-1800) Installation Manual.pdf",
+        "page": 9,
+        "score": null,
+        "snippet": "Expansion Connector. Note spare An Volt channels can be used as temperature inputs when a pullup\nresistor (to +5V) is added.\n1.4.3\nE-Throttle Output\n1.4.3.1\nMX5Link\nAux 9 & 10 are "
+      },
+      {
+        "source": "./data/doc/Honda Civic Gen 7 and Integra Type R (DC5) Installation Manual.pdf",
+        "page": 15,
+        "score": null,
+        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\nB10\nnc\nExpansion 2\n+5V Out\nB11\nnc\nExpansion 3\nAux 9\nB12\nnc\nExpansion 4\nAux 10\nB13\nnc\nExpansion 5\nAn Volt 4\nB14\nnc\nExpan"
+      },
+      {
+        "source": "./data/doc/G4-MonsoonX.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "Inst aller I/ O t able\nWire Description Installer Connection Typical Application\n+14V Power Wire\nGround Wire these seperately. Typically both to \nengine. Ground\nTrigger 1 Crank Ang"
+      },
+      {
+        "source": "./data/doc/G4+ Wire-in FORCE GDI.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "Ignition 3\nIgnition 4\nInj 1+ Supplies the positive side of Injectors switching with Inj 1A, Inj 1B\nInj 2+ Supplies the positive side of Injectors switching with Inj 2A, Inj 2B\nInje"
+      }
+    ],
+    "retrieval_time": 56.21,
+    "llm_time": 28704.74,
+    "time": "23:36:19"
+  },
+  {
+    "question": "What’s the difference between AUX and Injection outputs?",
+    "model": "gpt-5",
+    "answer": "Safety note: Using the wrong output type for an actuator (e.g., injectors, throttle motor, ISC) can damage components or cause engine control faults. Always wire actuators to the outputs specified for them.\n\nKey differences\n\nInjection outputs\n- Purpose: Dedicated to driving fuel injectors (wire Inj 1 to cyl 1, Inj 2 to cyl 2, etc.).\n- Wiring/electrical: The ECU provides injector power feeds (Inj 1+, Inj 2+) and switches the negative side via injection channels (e.g., “Injection 1A switches the negative sides of four injectors” while “Inj 1+ supplies the positive side”).\n- Repurposing: Documentation is inconsistent:\n  - One note states “Use spare Injection channels for switching type Auxiliary Outputs.”\n  - Another states “Spare Injection Channels unavailable for switching.”\n  - Conclusion: Whether injection channels can be reassigned depends on the specific ECU/model; refer to that ECU’s I/O table.\n\nAuxiliary (AUX) outputs\n- Purpose: General-purpose and specialized actuator control (e.g., PWM, VVT, ISC, alternator, E-throttle motor on some ECUs).\n- Capabilities (as specified):\n  - Aux 1: High-frequency PWM or VVT control; three-wire ISC solenoid must be wired to Aux 1 and Aux 2. Flywheeled, low-side only.\n  - Aux 5 (and related group per context): PWM less than 300 Hz or general switching functions; flywheeled; high/low side drives; supports ISC stepper (4 or 6 terminal).\n  - Aux 8: Alternator control; switched output to select between two charging voltages (~13 V when output ON active-low, ~14.5 V when OFF). Use a GP Output strategy for control.\n  - Aux 9/10: E-throttle motor +/− (where available). Note: On MX5Link, Aux 9 & 10 are not exposed; to use E-throttle you must use Aux 1 & 2 with an external E-throttle controller.\n- Notes: Many AUX outputs are “flywheeled” (inductive load suppression) and may be low-side only or support high/low side depending on the specific AUX channel.\n\nSummary\n- Injection outputs are primarily for injectors, with defined injector power feeds and low-side switching.\n- AUX outputs are designed for a wide range of actuators with defined PWM/switching capabilities and protection features.\n- Whether spare Injection channels can be used as AUX depends on the specific ECU documentation for that model.",
+    "sources": [
+      {
+        "source": "./data/doc/G4+ Wire-in XTREME.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "Injection 1\nWire Inj 1 to cyl 1, 2 to 2, 3 to 3, etc...\nUse spare Injection channels for switching type Auxillary OutputsInjection 2\nInjection 3\nInjection 4\nInjection 5\nInjection 6"
+      },
+      {
+        "source": "./data/doc/Mazda MX-5 (1600-1800) Installation Manual.pdf",
+        "page": 9,
+        "score": null,
+        "snippet": "Expansion Connector. Note spare An Volt channels can be used as temperature inputs when a pullup\nresistor (to +5V) is added.\n1.4.3\nE-Throttle Output\n1.4.3.1\nMX5Link\nAux 9 & 10 are "
+      },
+      {
+        "source": "./data/doc/Honda Civic Gen 7 and Integra Type R (DC5) Installation Manual.pdf",
+        "page": 15,
+        "score": null,
+        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\nB10\nnc\nExpansion 2\n+5V Out\nB11\nnc\nExpansion 3\nAux 9\nB12\nnc\nExpansion 4\nAux 10\nB13\nnc\nExpansion 5\nAn Volt 4\nB14\nnc\nExpan"
+      },
+      {
+        "source": "./data/doc/G4-MonsoonX.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "Inst aller I/ O t able\nWire Description Installer Connection Typical Application\n+14V Power Wire\nGround Wire these seperately. Typically both to \nengine. Ground\nTrigger 1 Crank Ang"
+      },
+      {
+        "source": "./data/doc/G4+ Wire-in FORCE GDI.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "Ignition 3\nIgnition 4\nInj 1+ Supplies the positive side of Injectors switching with Inj 1A, Inj 1B\nInj 2+ Supplies the positive side of Injectors switching with Inj 2A, Inj 2B\nInje"
+      }
+    ],
+    "retrieval_time": 156.14,
+    "llm_time": 45219.04,
+    "time": "11:51:23"
+  },
+  {
+    "question": "Can I power the ECU from constant VBat?",
+    "model": "gpt-5-mini",
+    "answer": "Safety warning:\n- Do not connect the ignition input (Pin A6) to a constant battery source if you require the ECU to power down — the ECU will not power down if A6 is tied to constant VBat (risk of battery drain).\n\nAnswer and wiring steps:\n1. Pin A5 (main ECU power) may be connected to either switched or constant VBat — so yes, the ECU can be powered from constant VBat on A5.\n2. Pin A6 (ignition switch input) must be connected to a switched battery source. Do not connect A6 to constant VBat unless you accept the ECU will remain powered.\n3. If you require the H‑Bridge/AUX drivers (AUX3/4/HB1 and AUX5/6/HB2), ensure Pin B5 is supplied with VBat — these drivers will not function if B5 is unpowered.\n4. For CAN devices: CAN 1 provides a +14V 3A continuous power output from the ECU (suitable to power a CAN Lambda).\n5. Ground the ECU to a single common point on the engine block or heads to avoid sensor/ECU ground potential issues and inaccuracies.",
+    "sources": [
+      {
+        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
+        "page": 4,
+        "score": null,
+        "snippet": "5\nG5 Voodoo Neo Quick Start Guide – Version 1.0WIrING I NfOrmat ION\nPower\n -Pin A5 is the main ECU power input. It can be \nsupplied with either switched or constant VBat.\n -Pin A6 "
+      },
+      {
+        "source": "./data/doc/BMW-BMWLINK-E36X.pdf",
+        "page": 4,
+        "score": null,
+        "snippet": "Communicating With Your ECU \n................................................................................................................................... 11\n6\nPre-Start Conf"
+      },
+      {
+        "source": "./data/doc/G5-Voodoo-Pro.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "There are a range of ways to find information and \nsupport for installing and using your ECU:\n -PCLink help — press F1  while running PCLink. \nIncludes help on wiring, PCLink and E"
+      },
+      {
+        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
+        "page": 9,
+        "score": null,
+        "snippet": "work.\n1.Connect the ECU to your laptop using a Link G4X ECU USB Cable. If not supplied with the ECU, these\ncan be purchased from a Link dealer. No other adapter or cabling is requi"
+      },
+      {
+        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
+        "page": 4,
+        "score": null,
+        "snippet": "E-Throttle Output \n......................................................................................................................................................... 9\n<%HVL"
+      }
+    ],
+    "retrieval_time": 181.75,
+    "llm_time": 19281.73,
+    "time": "11:57:47"
+  },
+  {
+    "question": "Can I power the ECU from constant VBat?",
+    "model": "gpt-5-mini",
+    "answer": "Warning: If the ignition input (Pin A6) is connected to constant VBat, the ECU will not power down.\n\nAnswer:\n1. Yes — Pin A5 (main ECU power input) may be supplied with either switched or constant VBat.\n2. Important: Pin A6 (ignition switch input) must be connected to a switched battery source; do not use constant VBat on A6 unless you intend for the ECU to remain powered.\n3. Note: Pin B5 must be supplied VBat to power the H‑Bridge drivers (AUX3/4/HB1 and AUX5/6/HB2). Those drivers will not function if B5 is unpowered.",
+    "sources": [
+      {
+        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
+        "page": 4,
+        "score": null,
+        "snippet": "5\nG5 Voodoo Neo Quick Start Guide – Version 1.0WIrING I NfOrmat ION\nPower\n -Pin A5 is the main ECU power input. It can be \nsupplied with either switched or constant VBat.\n -Pin A6 "
+      },
+      {
+        "source": "./data/doc/BMW-BMWLINK-E36X.pdf",
+        "page": 4,
+        "score": null,
+        "snippet": "Communicating With Your ECU \n................................................................................................................................... 11\n6\nPre-Start Conf"
+      },
+      {
+        "source": "./data/doc/G5-Voodoo-Pro.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "There are a range of ways to find information and \nsupport for installing and using your ECU:\n -PCLink help — press F1  while running PCLink. \nIncludes help on wiring, PCLink and E"
+      },
+      {
+        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
+        "page": 9,
+        "score": null,
+        "snippet": "work.\n1.Connect the ECU to your laptop using a Link G4X ECU USB Cable. If not supplied with the ECU, these\ncan be purchased from a Link dealer. No other adapter or cabling is requi"
+      },
+      {
+        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
+        "page": 4,
+        "score": null,
+        "snippet": "E-Throttle Output \n......................................................................................................................................................... 9\n<%HVL"
+      }
+    ],
+    "retrieval_time": 177.48,
+    "llm_time": 12870.9,
+    "time": "11:59:56"
+  }
+]

@@ -1,5 +1,6 @@
 # backend/services/rag.py
 import time
+import math
 from typing import List
 from langchain.prompts import PromptTemplate
 from langchain_openai.chat_models import ChatOpenAI
@@ -60,6 +61,38 @@ print("✅ [Startup] VectorDB and Embeddings initialized successfully!")
 # =======================
 # 核心问答逻辑（避免重复检索）
 # =======================
+import math
+import re
+
+def estimate_tokens(text: str) -> int:
+    """
+    改进版 Token 估算
+    - 中文：1 个汉字 ≈ 1 Token
+    - 英文：平均 1 Token ≈ 4 个字符
+    - 数字/符号/空格：平均 1 Token ≈ 2 个字符
+    """
+    if not text:
+        return 0
+
+    # 统计不同类型字符
+    chinese_chars = len(re.findall(r'[\u4e00-\u9fff]', text))  # 中文
+    english_chars = len(re.findall(r'[A-Za-z]', text))         # 英文
+    numbers = len(re.findall(r'\d', text))                     # 数字
+    symbols = len(re.findall(r'[^\w\s\u4e00-\u9fff]', text))   # 符号，如标点、特殊字符
+    spaces = text.count(" ")                                   # 空格
+
+    # 中文：1 个汉字 ≈ 1 Token
+    chinese_tokens = chinese_chars
+
+    # 英文：4 个字符 ≈ 1 Token
+    english_tokens = math.ceil(english_chars / 4)
+
+    # 数字和符号：2 个字符 ≈ 1 Token
+    num_symbol_tokens = math.ceil((numbers + symbols + spaces) / 2)
+
+    total_tokens = chinese_tokens + english_tokens + num_symbol_tokens
+    return total_tokens
+
 def answer_question(question: str, model: str = "gpt-5-mini", provider: str = "openai"):
     """
     1. 检索一次文档
@@ -100,9 +133,23 @@ def answer_question(question: str, model: str = "gpt-5-mini", provider: str = "o
     # ---------- 5. 调用 LLM ----------
     t6 = time.perf_counter()
     response = llm.invoke(final_prompt)  # 返回 AIMessage 对象
-    answer = response.content.strip()  # 取 content 中的字符串
+    # 统一解析不同类型返回值
+    if hasattr(response, "content"):
+        # OpenAI、Claude 返回 AIMessage
+        answer = response.content.strip()
+    elif isinstance(response, str):
+        # 本地模型 Ollama 返回纯字符串
+        answer = response.strip()
+    else:
+        # 其他情况，比如返回字典
+        answer = str(response).strip()
     t7 = time.perf_counter()
     print(f"调用 LLM 生成答案耗时: {(t7 - t6):.2f} 秒")
+    # ---------- 统一估算 token 消耗 ----------
+    input_tokens = estimate_tokens(final_prompt)
+    output_tokens = estimate_tokens(answer)
+    total_tokens = input_tokens + output_tokens
+    print(f"🔹 Token Usage : prompt={input_tokens}, completion={output_tokens}, total={total_tokens}")
 
     # ---------- 6. 整理引用信息 ----------
     sources = []

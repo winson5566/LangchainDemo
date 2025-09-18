@@ -45,3 +45,6 @@ class QueryResponse(BaseModel):
     sources: List[Source] = []
     retrieval_time: Optional[float] = None
     llm_time: Optional[float] = None
+    input_tokens: int
+    output_tokens: int
+    total_tokens: int

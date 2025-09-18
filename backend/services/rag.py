@@ -7,7 +7,7 @@ from langchain_openai.chat_models import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
 from langchain_community.llms.ollama import Ollama
 from langchain_community.vectorstores import Chroma
-
+from langchain_google_genai import ChatGoogleGenerativeAI
 from backend.core.config import settings
 from backend.services.retrievers import get_retriever
 from backend.services.safety import is_safe
@@ -160,13 +160,16 @@ def answer_question(question: str, model: str = "gpt-5-mini", provider: str = "o
 
     return answer, sources, {
         "retrieval_time": round((t5 - t4) * 1000, 2),
-        "llm_time": round((t7 - t6) * 1000, 2)
+        "llm_time": round((t7 - t6) * 1000, 2),
+        "input_tokens": input_tokens,
+        "output_tokens": output_tokens,
+        "total_tokens": total_tokens
     }
 
 # =======================
 # Multi-model Support
 # =======================
-def get_llm_by_provider(provider: str, model: str, temperature: float = 0.0, streaming: bool = False):
+def get_llm_by_provider(provider: str, model: str, temperature: float = 0.9, streaming: bool = False):
     """
     Select the appropriate LLM based on the provider
     """
@@ -183,6 +186,12 @@ def get_llm_by_provider(provider: str, model: str, temperature: float = 0.0, str
             model=model,
             temperature=temperature,
             anthropic_api_key=settings.anthropic_api_key
+        )
+    elif provider == "gemini":
+        return ChatGoogleGenerativeAI(
+            model=model,
+            temperature=temperature,
+            google_api_key=settings.google_api_key
         )
     elif provider == "local":
         # Use Ollama to call local LLM

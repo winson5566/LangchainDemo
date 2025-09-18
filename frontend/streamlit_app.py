@@ -45,13 +45,14 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 with st.sidebar:
 
     # --- Provider Selection ---
-    provider_options = ["openai", "claude", "local"]
+    provider_options = ["openai", "claude", "gemini", "local"]
     selected_provider = st.selectbox("⚙️ LLM Provider:", provider_options, index=0)
 
     # --- Model Selection per Provider ---
     model_options = {
         "openai": ["gpt-5-mini", "gpt-5-nano", "gpt-5", "gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano", "gpt-o4", "gpt-o4-mini"],
         "claude": ["claude-opus-4-1-20250805", "claude-opus-4-20250514", "claude-sonnet-4-20250514", "claude-3-7-sonnet-latest", "claude-3-5-haiku-latest", "claude-3-haiku-20240307"],
+        "gemini": [ "gemini-2.5-pro","gemini-2.5-flash"],
         "local": ["llama3.1:8b", "deepseek-r1:8b"]
     }
     selected_model = st.selectbox("🧠 Choose a model:", model_options[selected_provider], index=0)
@@ -181,11 +182,15 @@ if ask_clicked and user_question.strip():
                 # Save to session and persist to local file
                 st.session_state.chat_history.append({
                     "question": user_question,
+                    "provider": selected_provider,
                     "model": selected_model,
                     "answer": answer,
                     "sources": sources,
                     "retrieval_time": retrieval_time,
                     "llm_time": llm_time,
+                    "input_tokens": data.get("input_tokens", 0),
+                    "output_tokens": data.get("output_tokens", 0),
+                    "total_tokens": data.get("total_tokens", 0),
                     "time": datetime.now().strftime("%H:%M:%S"),
                 })
                 save_chat_history(st.session_state.chat_history)
@@ -197,12 +202,41 @@ if ask_clicked and user_question.strip():
 # ===== Render Chat History Below Input =====
 if st.session_state.chat_history:
     for idx, chat in enumerate(reversed(st.session_state.chat_history), 1):
-        st.markdown(f"### 👤  {chat['question']}")
-        st.markdown(f"**📄️ Retrieval:** {chat.get('retrieval_time', '?')} ms  |  **🧠 LLM:** {chat.get('llm_time', '?')} ms")
-        st.markdown("**🤖 Answer:**")
-        st.write(chat['answer'])
+        # 问题标题
+        st.markdown(f"### 👤 {chat['question']}")
 
-        # Show sources in expandable section
+        # 元信息行
+        st.markdown(
+            f"""
+            <div style='display:flex; gap:20px; font-size:14px; color:#555; margin:5px 0 10px 0;'>
+                <span>📄 <b style='color:#4CAF50;'>Retrieval:</b> {chat.get('retrieval_time', '?')} ms</span>
+                <span>🧠 <b style='color:#2196F3;'>LLM:</b> {round(chat.get('llm_time', 0) / 1000, 2)} s</span>
+                <span>🤖 <b style='color:#9C27B0;'>Model:</b> {chat.get('provider', 'unknown')} / {chat.get('model', 'unknown')}</span>
+                <span>🔢 <b style='color:#FF9800;'>Tokens:</b> {chat.get('total_tokens', 0)} (in: {chat.get('input_tokens', 0)}, out: {chat.get('output_tokens', 0)})</span>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+        # 答案卡片
+        st.markdown(
+            f"""
+            <div style='
+                background-color:#f9f9ff;
+                border:1px solid #ddd;
+                border-radius:8px;
+                padding:12px 15px;
+                margin:10px 0;
+                box-shadow:0 1px 3px rgba(0,0,0,0.05);
+            '>
+                <div style='font-weight:bold; margin-bottom:6px;'>🤖 Answer:</div>
+                <div style='font-size:16px; line-height:1.6; color:#222;'>{chat['answer']}</div>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+        # 资料来源
         if chat['sources']:
             with st.expander("📚 Sources", expanded=False):
                 for i, src in enumerate(chat['sources'], 1):
@@ -210,4 +244,6 @@ if st.session_state.chat_history:
                     snippet = src.get("snippet", "")
                     st.markdown(f"**{i}.** `{src['source']}` - p.{page}")
                     st.caption(snippet)
+
         st.markdown("---")
+

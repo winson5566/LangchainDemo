@@ -37,6 +37,5 @@ def query(req: QueryRequest):
     return QueryResponse(
         answer=answer,
         sources=[Source(**s) for s in sources],
-        retrieval_time=stats["retrieval_time"],
-        llm_time=stats["llm_time"]
+        **stats
     )

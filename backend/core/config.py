@@ -8,6 +8,7 @@ class Settings(BaseModel):
     openai_api_key: str = os.getenv("OPENAI_API_KEY", "")
     anthropic_api_key: str = os.getenv("ANTHROPIC_API_KEY", "")
     google_api_key: str = os.getenv("GOOGLE_API_KEY")
+    serpapi_key: str = os.getenv("SERPAPI_KEY")
     # embedding_model: str = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
     embedding_model: str = os.getenv("EMBEDDING_MODEL", "BAAI/bge-large-en-v1.5")
     chat_model: str = os.getenv("CHAT_MODEL", "gpt-4o-mini")

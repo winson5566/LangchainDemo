@@ -24,3 +24,5 @@ streamlit==1.38.0
 
 # Optional: re-ranking（如需）
 rank-bm25==0.2.2
+googlesearch-python
+google-search-results

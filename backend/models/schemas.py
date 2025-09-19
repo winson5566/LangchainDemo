@@ -9,10 +9,12 @@ class QueryRequest(BaseModel):
         question (str): The user's input question to be answered.
         model (Optional[str]): The name of the LLM model to use (default: "gpt-5-mini").
         provider (str): The LLM provider, such as "openai", "claude", or "local".
+        search_forum (bool): Whether to search forum posts for additional information.
     """
     question: str
     model: Optional[str] = "gpt-5-mini"
     provider: str = "openai"
+    search_forum: bool = True
 
 
 class Source(BaseModel):
@@ -25,10 +27,12 @@ class Source(BaseModel):
         score (Optional[float]): Relevance score (if available from retriever).
         snippet (Optional[str]): Text snippet from the source that was used in context.
     """
+    type: str
     source: str
     page: Optional[int] = None
     score: Optional[float] = None
     snippet: Optional[str] = None
+    content: Optional[str] = None
 
 
 class QueryResponse(BaseModel):

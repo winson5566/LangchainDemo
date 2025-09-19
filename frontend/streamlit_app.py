@@ -3,7 +3,8 @@ import requests
 import streamlit as st
 from datetime import datetime
 from chat_storage import save_chat_history, load_chat_history  # ✅ Import local storage methods
-
+import uuid
+from markdown import markdown as md_to_html
 # ===== Configuration =====
 DOC_DIR = "data/doc"  # Directory where user-uploaded documents are stored
 API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/api/query")  # Backend query API endpoint
@@ -15,6 +16,26 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+# ===== 在这里插入自定义CSS =====
+custom_style = """
+<style>
+    /* 减少顶部整体空白 */
+    .block-container {
+        padding-top: 0rem !important;
+        padding-bottom: 0rem !important;
+    }
+
+    /* 让标题更靠上 */
+    h1 {
+        margin-top: 0rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+</style>
+"""
+st.markdown(custom_style, unsafe_allow_html=True)
+# ===== CSS插入结束 =====
 
 # ===== Initialize Chat History from File =====
 if "chat_history" not in st.session_state:
@@ -43,20 +64,35 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # ===== Sidebar UI =====
 with st.sidebar:
-
     # --- Provider Selection ---
     provider_options = ["openai", "claude", "gemini", "local"]
-    selected_provider = st.selectbox("⚙️ LLM Provider:", provider_options, index=0)
+
+    # 默认 provider 为 "claude"
+    default_provider_index = provider_options.index("gemini")
+    selected_provider = st.selectbox("⚙️ LLM Provider:", provider_options, index=default_provider_index)
 
     # --- Model Selection per Provider ---
     model_options = {
-        "openai": ["gpt-5-mini", "gpt-5-nano", "gpt-5", "gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano", "gpt-o4", "gpt-o4-mini"],
-        "claude": ["claude-opus-4-1-20250805", "claude-opus-4-20250514", "claude-sonnet-4-20250514", "claude-3-7-sonnet-latest", "claude-3-5-haiku-latest", "claude-3-haiku-20240307"],
-        "gemini": [ "gemini-2.5-pro","gemini-2.5-flash"],
+        "openai": ["gpt-5","gpt-5-mini", "gpt-5-nano", "gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano", "gpt-o4",
+                   "gpt-o4-mini"],
+        "claude": ["claude-opus-4-1-20250805", "claude-opus-4-20250514", "claude-sonnet-4-20250514",
+                   "claude-3-7-sonnet-latest", "claude-3-5-haiku-latest", "claude-3-haiku-20240307"],
+        "gemini": [ "gemini-2.5-flash","gemini-2.5-pro"],
         "local": ["llama3.1:8b", "deepseek-r1:8b"]
     }
-    selected_model = st.selectbox("🧠 Choose a model:", model_options[selected_provider], index=0)
 
+    # 默认模型为 claude-3-7-sonnet-latest
+    default_model_name = "gemini-2.5-flash"
+    default_model_index = model_options["gemini"].index(default_model_name)
+
+    selected_model = st.selectbox(
+        "🧠 Choose a model:",
+        model_options[selected_provider],
+        index=default_model_index if selected_provider == "claude" else 0
+    )
+
+    # --- New: Forum Search Toggle ---
+    search_forum = st.toggle("🔍 Search Forum", value=False)
     st.markdown("---")
 
     # --- Document Listing UI ---
@@ -120,7 +156,7 @@ faq_questions = [
 if "selected_question" not in st.session_state:
     st.session_state.selected_question = ""
 
-# Render FAQ buttons in a grid (4 per row)
+# Render FAQ buttons in a grid
 num_cols = 4
 for i in range(0, len(faq_questions), num_cols):
     cols = st.columns(num_cols)
@@ -168,7 +204,8 @@ if ask_clicked and user_question.strip():
                 json={
                     "question": user_question,
                     "model": selected_model,
-                    "provider": selected_provider
+                    "provider": selected_provider,
+                    "search_forum": search_forum
                 },
                 timeout=60
             )
@@ -219,31 +256,55 @@ if st.session_state.chat_history:
         )
 
         # 答案卡片
-        st.markdown(
-            f"""
-            <div style='
-                background-color:#f9f9ff;
-                border:1px solid #ddd;
-                border-radius:8px;
-                padding:12px 15px;
-                margin:10px 0;
-                box-shadow:0 1px 3px rgba(0,0,0,0.05);
-            '>
-                <div style='font-weight:bold; margin-bottom:6px;'>🤖 Answer:</div>
-                <div style='font-size:16px; line-height:1.6; color:#222;'>{chat['answer']}</div>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
+        answer_html = md_to_html(chat["answer"], extensions=["extra", "sane_lists"])
 
-        # 资料来源
+        # ===== 渲染答案卡片（整块内容都在同一个容器里，不会“飘出框外”）=====
+        final_html = f"""
+        <div style="
+            background-color:#f9f9ff;
+            border:1px solid #ddd;
+            border-radius:8px;
+            padding:12px 15px;
+            margin:10px 0;
+            box-shadow:0 1px 3px rgba(0,0,0,0.05);
+        ">
+          <div style="font-weight:bold; margin-bottom:6px;">🤖 Answer:</div>
+          <div style="font-size:16px; line-height:1.6; color:#222;">
+            {answer_html}
+          </div>
+        </div>
+        """
+
+        st.markdown(final_html, unsafe_allow_html=True)
+
         if chat['sources']:
             with st.expander("📚 Sources", expanded=False):
                 for i, src in enumerate(chat['sources'], 1):
-                    page = src.get("page", "-")
+                    src_type = src.get("type", "document")
                     snippet = src.get("snippet", "")
-                    st.markdown(f"**{i}.** `{src['source']}` - p.{page}")
-                    st.caption(snippet)
+                    content = src.get("content", "")
+                    unique_id = str(uuid.uuid4()).replace("-", "")  # 保证每条唯一
 
+                    if src_type == "document":
+                        st.markdown(f"**{i}. 📄 Document:** `{src['source']}` - Page {src.get('page', '-')}")
+                        st.caption(snippet)
+
+                    elif src_type == "forum":
+                        st.markdown(f"**{i}. 🌍 Forum:** [{src['source']}]({src['source']})")
+                        st.caption(snippet)
+
+                        if content:
+                            st.markdown(
+                                f"""
+                                <details style='margin-top:6px;'>
+                                  <summary style='cursor: pointer; color:#4A90E2;'>Show Content</summary>
+                                  <div style='margin-top:8px; padding:8px; background-color:#f5f5f5;
+                                              border:1px solid #ddd; border-radius:6px;'>
+                                    {content}
+                                  </div>
+                                </details>
+                                """,
+                                unsafe_allow_html=True
+                            )
         st.markdown("---")
 

@@ -2,8 +2,7 @@ from typing import Tuple
 
 # List of keywords that indicate potentially unsafe or illegal queries
 UNSAFE_KEYWORDS = [
-    "disable safety", "bypass emissions", "delete egr", "defeat o2",
-    "illegal", "street racing setup", "tamper"
+    "disable safety","illegal"
 ]
 
 def is_safe(text: str) -> Tuple[bool, str]:

@@ -1,802 +1,1030 @@
 [
   {
-    "question": "Why won't my ECU start? Is it locked?",
-    "model": "gpt-5",
-    "answer": "Likely cause: All Link ECUs are shipped locked. When locked, the ECU can be installed and configured in PCLink, but it will not read engine RPM or run the engine. If your engine won’t start, the ECU is likely still locked.\n\nHow to resolve:\n1) Install PCLink:\n   - Download the latest PCLink from linkecu.com (USB drivers are included).\n2) Connect to the ECU:\n   - Connection is via the ECU’s on-board interface:\n     - G5 Voodoo Neo: USB, Ethernet, or Wi‑Fi\n     - G5 Voodoo Pro: USB or Wi‑Fi\n     - G4X / G4+: USB\n   - In PCLink, press F1 to open Help for connection instructions.\n3) Update firmware:\n   - Once connected, check ECU firmware and upgrade to the latest version.\n4) Unlock the ECU:\n   - Contact your official Link ECU supplier to obtain an unlock code.\n   - Use the provided unlock code to unlock the ECU. Until unlocked, the ECU will not read RPM or run the engine.\n\nSupport options:\n- PCLink Help — press F1 while running PCLink.\n- Link website: linkecu.com\n- Contact your nearest Link dealer (list on linkecu.com)\n- Technical Support: tech@linkecu.com\n- Forums: linkecu.com/forums",
-    "sources": [
-      {
-        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed"
-      },
-      {
-        "source": "./data/doc/G5-Voodoo-Pro.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "2\nG5 Voodoo Pro Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed"
-      },
-      {
-        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
-        "page": 8,
-        "score": null,
-        "snippet": "Important Information\nG4+ ECUS SHIPPED LOCKED\nG4+ ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed and configured \nusing PCLink, but wi"
-      },
-      {
-        "source": "./data/doc/G4-StormX.pdf",
-        "page": 5,
-        "score": null,
-        "snippet": "continued on next pageImPOrtant \nInfOrmatIOn\ng4X eCus are shIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand conf"
-      },
-      {
-        "source": "./data/doc/G4-FuryX.pdf",
-        "page": 5,
-        "score": null,
-        "snippet": "continued on next pageImPOrt ant  \nInfOrmatIO n\ng4X eC us are s hIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand"
-      }
-    ],
-    "retrieval_time": 75.9,
-    "llm_time": 19610.22,
-    "time": "23:30:47"
-  },
-  {
-    "question": "How do I connect the ECU via USB or Wi-Fi?",
-    "model": "gpt-5",
-    "answer": "USB connection (G4X/G5 Plug-In ECUs)\n\n1. Install PCLink:\n   - Download the latest PCLink from linkecu.com (Downloads/Software Updates).\n   - Run the installer and select Yes when prompted to install USB drivers.\n\n2. Connect hardware:\n   - Use a Link G4X ECU USB Cable and plug it into the ECU connector labeled “USB.” No other adapters are required.\n\n3. Power and start software:\n   - Turn the vehicle key to ON to power the ECU.\n   - Open PCLink (double-click the desktop icon).\n\n4. Configure connection:\n   - In PCLink, go to Options > Connection.\n   - Select the correct COM Port or choose Auto for automatic detection.\n\n5. Connect:\n   - Press F3 to connect. If successful, PCLink will download settings from the ECU.\n   - Confirm the status shows ONLINE in the top-right of PCLink.\n\n6. Store changes:\n   - Press F4 to STORE any changes before turning ECU power off, otherwise changes will be lost.\n\nNote: On first USB use, follow the driver installation prompts and select “Continue Anyway” when asked to install drivers.\n\nWi‑Fi connection\n\nI'm sorry, I couldn't find this in the current documentation.",
-    "sources": [
-      {
-        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
-        "page": 9,
-        "score": null,
-        "snippet": "work.\n1.Connect the ECU to your laptop using a Link G4X ECU USB Cable. If not supplied with the ECU, these\ncan be purchased from a Link dealer. No other adapter or cabling is requi"
-      },
-      {
-        "source": "./data/doc/Mazda RX7 Series 6 Installation Manual.pdf",
-        "page": 9,
-        "score": null,
-        "snippet": "instructions that appear. When prompted if you want to install drivers select 'Continue Anyway'.\n3.Start PCLink by double clicking on the PCLink icon on the windows desktop.\n4.Swit"
-      },
-      {
-        "source": "./data/doc/BMW-BMWLINK-E36X.pdf",
-        "page": 9,
-        "score": null,
-        "snippet": "1.5.1\nInstalling USB Drivers\nBefore connecting the ECU to your laptop or PC, the ECU USB drivers must be installed. These drivers are\ninstalled as part of PCLink installation as de"
-      },
-      {
-        "source": "./data/doc/Honda Civic Gen 7 and Integra Type R (DC5) Installation Manual.pdf",
-        "page": 9,
-        "score": null,
-        "snippet": "Link ECU Online Manual 10\n© 2023  Link Engine Management Ltd\n2.Download the latest version of PCLink. When prompted to run or save the file, select save. It is\nrecommended to save "
-      },
-      {
-        "source": "./data/doc/Mazda MX-5 NB2 Installation Manual.pdf",
-        "page": 10,
-        "score": null,
-        "snippet": "G4X and G5 Plug-In ECU Installation Manual 11\n© 2023  Link Engine Management Ltd\n2.If this is the first time you have connected a G4X ECU USB cable to your laptop follow the driver"
-      }
-    ],
-    "retrieval_time": 67.63,
-    "llm_time": 26101.63,
-    "time": "23:31:23"
-  },
-  {
-    "question": "What does the ignition input A6 do?",
-    "model": "gpt-5",
-    "answer": "- A6 is the ignition switch input.\n- It must be connected to a switched battery source.\n- If A6 is connected to constant battery voltage (VBat), the ECU will not power down.",
-    "sources": [
-      {
-        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
-        "page": 2,
-        "score": null,
-        "snippet": "Ignition 6 Ignition Amplifier Drivers  \nUse spare Ignition channels for switching type Axillary Outputs Ignition 7\nIgnition 8\nInjection 1 Wire Injector 1 to Cylinder 1, 2 to 2, 3 t"
-      },
-      {
-        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
-        "page": 4,
-        "score": null,
-        "snippet": "5\nG5 Voodoo Neo Quick Start Guide – Version 1.0WIrING I NfOrmat ION\nPower\n -Pin A5 is the main ECU power input. It can be \nsupplied with either switched or constant VBat.\n -Pin A6 "
-      },
-      {
-        "source": "./data/doc/Honda S2000 AP1 Installation Manual.pdf",
-        "page": 16,
-        "score": null,
-        "snippet": "G4X Plug-In ECU Installation Manual 17\n© 2023  Link Engine Management Ltd\nA6\nAux 15\nEvap canister purge\nvalve\nC6\nnc\nA7\nnc\nC7\nGround\n(Signal)\nA8\nnc\nC8\nGround\n(Crank)\nA9\nDI 3\nGearbox"
-      },
-      {
-        "source": "./data/doc/G4+ Wire-in FORCE GDI.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "Ignition 3\nIgnition 4\nInj 1+ Supplies the positive side of Injectors switching with Inj 1A, Inj 1B\nInj 2+ Supplies the positive side of Injectors switching with Inj 2A, Inj 2B\nInje"
-      },
-      {
-        "source": "./data/doc/BMW-BMWLINK-E36X.pdf",
-        "page": 14,
-        "score": null,
-        "snippet": "application. Set to 'OFF' if ignition is not controlled by\nthe ECU.\nb.Set ‘Maximum Advance’ to a suitable value.\nc.Enter appropriate values for coil dwell time in the\n‘Ignition Dwe"
-      }
-    ],
-    "retrieval_time": 74.36,
-    "llm_time": 6277.82,
-    "time": "23:31:36"
-  },
-  {
-    "question": "What are the correct wiring pins for Knock Sensor?",
-    "model": "gpt-5",
-    "answer": "- G4+ Kurofune ECU:\n  - Knock 1: J7\n  - Knock 2: J8\n\n- G4X AtomX ECU:\n  - Version 3 or newer: Pin 6 (knock control input)\n  - Versions prior to 3.0: Knock control hardware not present (no knock input)\n\nIf you are using a different ECU model, I'm sorry, I couldn't find this in the current documentation.",
-    "sources": [
-      {
-        "source": "./data/doc/G4-AtomX.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "PWM or General Switching Functions .\nFlywheeled, Low Side Drives.Auxilary Output 2\nAuxilary Output 3\nAuxilary Output 4\nKnock* Knock Sensor\nDigital Input 1Frequency Input, Switch In"
-      },
-      {
-        "source": "./data/doc/G4-AtomX.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "Inst aller I/ O t able\nWire Description Installer Connection Typical Application\n+14V Power Wire\nGround Wire these seperately. Typically both to \nengine. Ground\nTrigger 1 Crank Ang"
-      },
-      {
-        "source": "./data/doc/Honda-CIVIC-Gen5 Installation Manual.pdf",
-        "page": 16,
-        "score": null,
-        "snippet": "to allow sufficient span of the numbers in the main fuel table.\n1.8\nPinouts\nPin information is provided to assist when troubleshooting. All pinouts are looking into the ECU (wire s"
-      },
-      {
-        "source": "./data/doc/G4+ Wire-in KUROFUNE.pdf",
-        "page": 3,
-        "score": null,
-        "snippet": "Digital Input Karman 59 Frequency Input Sensors\nAnalog Out 1 56\nFor emulation of signals such as airflow, pressure, O2 or \ntemperature.Analog Out 2 57\nAnalog Out 3 43\nAnalog Out 4 "
-      },
-      {
-        "source": "./data/doc/G4-StormX.pdf",
-        "page": 2,
-        "score": null,
-        "snippet": "Injection 1\nWire Inj 1 to cyl 1, 2 to 2, 3 to 3, etc...\nUse spare Injection channels for Auxillary OutputsInjection 2\nInjection 3Injection 4\nInjection 5\nInjection 6\nInjection 7\nInj"
-      }
-    ],
-    "retrieval_time": 68.36,
-    "llm_time": 13555.81,
-    "time": "23:31:52"
-  },
-  {
-    "question": "What’s the difference between AUX and Injection outputs?",
-    "model": "gpt-5",
-    "answer": "Safety warning:\n- Using the wrong output type for a load can damage the ECU or the actuator. Confirm each channel’s drive type (low-side vs high-side), PWM capability, and any special requirements before wiring. Note that some Aux channels are low-side only, some provide high/low-side drive, and certain functions (e-throttle motor) require specific Aux channels or an external controller.\n\nDifference between AUX and Injection outputs:\n\n1) Primary purpose\n- Injection outputs:\n  - Dedicated to controlling fuel injectors.\n  - Wiring: “Wire Inj 1 to cyl 1, 2 to 2, 3 to 3, etc...”\n  - Example hardware note: “Inj 1+ supplies the positive side of injectors… Injection 1A switches the negative sides of four injectors” (i.e., negative-side switching).\n- Auxiliary (Aux) outputs:\n  - General-purpose control of actuators such as solenoids, relays, valves, and motors.\n  - Support functions including high-frequency PWM, VVT control, idle control (ISC), stepper ISC, alternator control, and (on specific channels) e-throttle motor.\n\n2) Electrical/functional capability\n- Injection outputs:\n  - Intended as injector drivers; negative-side switching is referenced in the documentation.\n  - Use as general switching varies by ECU/version:\n    - One note states: “Use spare Injection channels for switching type Auxiliary Outputs.”\n    - Another installer table states: “Spare Injection Channels unavailable for switching.”\n    - Conclusion: Whether spare injection outputs can be used for switching is ECU-dependent and must be confirmed for the specific model.\n- Auxiliary outputs:\n  - Designed as “flywheeled” drivers for inductive loads.\n  - Channel capabilities vary:\n    - Aux 1: High-frequency PWM or VVT control; low-side only. “Three Wire ISC Solenoid must be wired to Aux1 and Aux2.”\n    - Aux 5: PWM < 300 Hz or general switching; “Flywheeled, High / Low side Drives; ISC Stepper (4 or 6 terminal).”\n    - Aux 8: Alternator control (switched output providing ~13 V active low vs ~14.5 V off).\n    - Aux 9 (E-throttle Motor +) and Aux 10 (E-throttle Motor -): For e-throttle motor or GP output.\n    - Model-specific note (MX5Link): Aux 9 & 10 are not exposed; to use e-throttle, use Aux 1 & 2 with an external e-throttle controller.\n\nSummary:\n- Injection outputs are primarily dedicated low-side drivers for fuel injectors and must be assigned to cylinders; using them for switching depends on the specific ECU documentation.\n- Aux outputs are general-purpose, flywheeled drivers with PWM/varying drive types, intended for solenoids, stepper/idle valves, alternator control, and (on specific channels) e-throttle motors.",
-    "sources": [
-      {
-        "source": "./data/doc/G4+ Wire-in XTREME.pdf",
-        "page": 2,
-        "score": null,
-        "snippet": "Injection 1\nWire Inj 1 to cyl 1, 2 to 2, 3 to 3, etc...\nUse spare Injection channels for switching type Auxillary OutputsInjection 2\nInjection 3\nInjection 4\nInjection 5\nInjection 6"
-      },
-      {
-        "source": "./data/doc/Mazda MX-5 (1600-1800) Installation Manual.pdf",
-        "page": 9,
-        "score": null,
-        "snippet": "Expansion Connector. Note spare An Volt channels can be used as temperature inputs when a pullup\nresistor (to +5V) is added.\n1.4.3\nE-Throttle Output\n1.4.3.1\nMX5Link\nAux 9 & 10 are "
-      },
-      {
-        "source": "./data/doc/Honda Civic Gen 7 and Integra Type R (DC5) Installation Manual.pdf",
-        "page": 15,
-        "score": null,
-        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\nB10\nnc\nExpansion 2\n+5V Out\nB11\nnc\nExpansion 3\nAux 9\nB12\nnc\nExpansion 4\nAux 10\nB13\nnc\nExpansion 5\nAn Volt 4\nB14\nnc\nExpan"
-      },
-      {
-        "source": "./data/doc/G4-MonsoonX.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "Inst aller I/ O t able\nWire Description Installer Connection Typical Application\n+14V Power Wire\nGround Wire these seperately. Typically both to \nengine. Ground\nTrigger 1 Crank Ang"
-      },
-      {
-        "source": "./data/doc/G4+ Wire-in FORCE GDI.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "Ignition 3\nIgnition 4\nInj 1+ Supplies the positive side of Injectors switching with Inj 1A, Inj 1B\nInj 2+ Supplies the positive side of Injectors switching with Inj 2A, Inj 2B\nInje"
-      }
-    ],
-    "retrieval_time": 50.68,
-    "llm_time": 29695.88,
-    "time": "23:32:27"
-  },
-  {
-    "question": "Can I use my ECU with a 2-wire or 3-wire idle control valve?",
-    "model": "gpt-5",
-    "answer": "- Safety note: If using the expansion connector for any related wiring, do not overload the +5V Out pin.\n\nAnswer:\n- 3‑wire idle control valve: Yes. The manual states “Three Wire ISC Solenoid must be wired to Aux1 and Aux2.”\n  Wiring summary:\n  1) Connect the ISC solenoid control wires to Aux 1 and Aux 2.\n  2) Configure the outputs accordingly in the ECU.\n\n- 2‑wire idle control valve: I'm sorry, I couldn't find this in the current documentation.",
-    "sources": [
-      {
-        "source": "./data/doc/Honda Civic Gen 7 and Integra Type R (DC5) Installation Manual.pdf",
-        "page": 15,
-        "score": null,
-        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\nB10\nnc\nExpansion 2\n+5V Out\nB11\nnc\nExpansion 3\nAux 9\nB12\nnc\nExpansion 4\nAux 10\nB13\nnc\nExpansion 5\nAn Volt 4\nB14\nnc\nExpan"
-      },
-      {
-        "source": "./data/doc/G4+ Wire-in FORCE GDI.pdf",
-        "page": 2,
-        "score": null,
-        "snippet": "Injection 1B\nInjection 2A\nInjection 2B\nAuxiliary Output 1 High Frequency PWM or VVT Control  \nThree Wire ISC Solenoid must be wired to Aux1 and Aux2  \nFlywheeled, Low side onlyAuxi"
-      },
-      {
-        "source": "./data/doc/G4+ Wire-in MONSOON.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "Three Wire ISC Solenoid must be wired \nto Aux1 and Aux2\nFlywheeled, Low side onlyAuxillary Output 2\nAuxillary Output 3Auxillary Output 4\nAuxillary Output 5 PWM less than 3ooHz or g"
-      },
-      {
-        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
-        "page": 8,
-        "score": null,
-        "snippet": "1.4.3\nE-Throttle Output\nIt is becoming more common to convert cable throttle vehicles to Electronic Throttle control, this section\nexplains how (if it is possible) to do this for e"
-      },
-      {
-        "source": "./data/doc/Mazda MX-5 NB1 Installation Manual.pdf",
-        "page": 15,
-        "score": null,
-        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\n31 (2G)\nnc\nExpansion 6\nDI 7\n32 (2E)\nAn Temp 1\nECT\nExpansion 7\nIgn 4\n33 (2C)\nAn Volt 7\nFront NB O2 Signal\nExpansion 8\nIg"
-      }
-    ],
-    "retrieval_time": 85.92,
-    "llm_time": 22482.88,
-    "time": "23:32:55"
-  },
-  {
-    "question": "Which firmware version is required for Knock Control?",
-    "model": "gpt-5",
-    "answer": "I'm sorry, I couldn't find this in the current documentation.",
-    "sources": [
-      {
-        "source": "./data/doc/G4-AtomX.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "PWM or General Switching Functions .\nFlywheeled, Low Side Drives.Auxilary Output 2\nAuxilary Output 3\nAuxilary Output 4\nKnock* Knock Sensor\nDigital Input 1Frequency Input, Switch In"
-      },
-      {
-        "source": "./data/doc/G4-MonsoonX.pdf",
-        "page": 2,
-        "score": null,
-        "snippet": "Aux 4 Aux 3 Aux 2 Aux 1 An Volt 2 DI 3 Gnd Out GroundBrown/ Orange Brown/ Red Brown Brown/ Black Red Red/ White Green Red\nBlue/ Orange Blue/ Red\nOrange Orange /Red Orange /Brown Or"
-      },
-      {
-        "source": "./data/doc/G4+ Wire-in KUROFUNE.pdf",
-        "page": 3,
-        "score": null,
-        "snippet": "Digital Input Karman 59 Frequency Input Sensors\nAnalog Out 1 56\nFor emulation of signals such as airflow, pressure, O2 or \ntemperature.Analog Out 2 57\nAnalog Out 3 43\nAnalog Out 4 "
-      },
-      {
-        "source": "./data/doc/Mazda MX-5 NB1 Installation Manual.pdf",
-        "page": 15,
-        "score": null,
-        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\n31 (2G)\nnc\nExpansion 6\nDI 7\n32 (2E)\nAn Temp 1\nECT\nExpansion 7\nIgn 4\n33 (2C)\nAn Volt 7\nFront NB O2 Signal\nExpansion 8\nIg"
-      },
-      {
-        "source": "./data/doc/BMW-BMWLINK-E36X.pdf",
-        "page": 14,
-        "score": null,
-        "snippet": "application. Set to 'OFF' if ignition is not controlled by\nthe ECU.\nb.Set ‘Maximum Advance’ to a suitable value.\nc.Enter appropriate values for coil dwell time in the\n‘Ignition Dwe"
-      }
-    ],
-    "retrieval_time": 53.67,
-    "llm_time": 7296.96,
-    "time": "23:33:07"
-  },
-  {
-    "question": "Can I power the ECU from constant VBat?",
-    "model": "gpt-5",
-    "answer": "Yes.\n\n- Pin A5 (main ECU power) can be supplied with either switched or constant VBat.\n- Pin A6 (ignition switch input) must be connected to a switched battery source. The ECU will not power down if A6 is connected to constant VBat.\n- If you are using the H-Bridge drivers (AUX3/4/HB1 and AUX5/6/HB2), ensure Pin B5 is supplied with VBat or those drivers will not function.",
-    "sources": [
-      {
-        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
-        "page": 4,
-        "score": null,
-        "snippet": "5\nG5 Voodoo Neo Quick Start Guide – Version 1.0WIrING I NfOrmat ION\nPower\n -Pin A5 is the main ECU power input. It can be \nsupplied with either switched or constant VBat.\n -Pin A6 "
-      },
-      {
-        "source": "./data/doc/BMW-BMWLINK-E36X.pdf",
-        "page": 4,
-        "score": null,
-        "snippet": "Communicating With Your ECU \n................................................................................................................................... 11\n6\nPre-Start Conf"
-      },
-      {
-        "source": "./data/doc/G5-Voodoo-Pro.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "There are a range of ways to find information and \nsupport for installing and using your ECU:\n -PCLink help — press F1  while running PCLink. \nIncludes help on wiring, PCLink and E"
-      },
-      {
-        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
-        "page": 9,
-        "score": null,
-        "snippet": "work.\n1.Connect the ECU to your laptop using a Link G4X ECU USB Cable. If not supplied with the ECU, these\ncan be purchased from a Link dealer. No other adapter or cabling is requi"
-      },
-      {
-        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
-        "page": 4,
-        "score": null,
-        "snippet": "E-Throttle Output \n......................................................................................................................................................... 9\n<%HVL"
-      }
-    ],
-    "retrieval_time": 54.21,
-    "llm_time": 9088.84,
-    "time": "23:33:18"
-  },
-  {
-    "question": "Why does my sensor value read incorrectly?",
-    "model": "gpt-5",
-    "answer": "Possible causes based on the documentation:\n- Incorrect sensor type selected in PCLink.\n- MAP sensor calibration not performed.\n- Wrong Analog Input channel selected (not the one the sensor is wired to).\n- Calibration not saved (“Store” not performed).\n- MAP and BAP readings do not agree at atmospheric pressure (should be within 1 kPa).\n\nHow to correct it (MAP sensor example):\n1. Connect your laptop to the ECU and open PCLink.\n2. Under Analog Channels, select the An Volt channel that the MAP sensor is wired to.\n3. Select the correct MAP Sensor Type.\n4. Go to Options and select MAP sensor calibration, then follow the on‑screen instructions.\n5. Open the Runtime Values pane (lower part of the screen) and select the Analog Inputs tab.\n6. Verify MAP and BAP values are similar (within 1 kPa) at atmosphere.\n7. Press F4 to Store the settings.\n\nFor more detail: PCLink G4X Users Manual -> Tuning Operating Procedures -> ECU Controls -> MAP Sensor Calibration.\n\nIf your issue is with a different sensor (e.g., TPS or IAT), I'm sorry, I couldn't find this in the current documentation.",
-    "sources": [
-      {
-        "source": "./data/doc/BMW-MINIX-MINIX.pdf",
-        "page": 4,
-        "score": null,
-        "snippet": "MAP Sensor Calibration \n.......................................................................................................................................................... 1"
-      },
-      {
-        "source": "./data/doc/Mazda MX-5 NB2 Installation Manual.pdf",
-        "page": 10,
-        "score": null,
-        "snippet": "(MGP) as a load index.\nTo calibrate the MAP sensor:\n1.Connect a laptop/notebook PC to the ECU and connect to the ECU using PCLink.\n2.Under the Analog Channels menu, select the An V"
-      },
-      {
-        "source": "./data/doc/BMW-BMWLINK-E36X.pdf",
-        "page": 4,
-        "score": null,
-        "snippet": "MAP Sensor \n......................................................................................................................................................... 9\nBMWLink\n...."
-      },
-      {
-        "source": "./data/doc/Audi -TTLINK–TTX.pdf",
-        "page": 4,
-        "score": null,
-        "snippet": "MAP Sensor \n......................................................................................................................................................... 8\nTTLink\n....."
-      },
-      {
-        "source": "./data/doc/Mazda RX7 Series 7-8 Installation Manual.pdf",
-        "page": 10,
-        "score": null,
-        "snippet": "Select the correct MAP Sensor Type.\n3.Under the 'Options' menu, select 'MAP sensor calibration'.\n4.Follow the on screen instructions.\n5.Select the 'Analog Inputs' tab in the runtim"
-      }
-    ],
-    "retrieval_time": 67.75,
-    "llm_time": 19188.77,
-    "time": "23:33:39"
-  },
-  {
-    "question": "What’s the recommended mounting location for the ECU?",
-    "model": "gpt-5",
-    "answer": "- Recommended location: Inside the vehicle cabin.\n- Choose a spot that:\n  1) Avoids excessive temperatures and any risk of water ingress.\n  2) Is physically separated from ignition components or other sources of electrical interference.\n  3) Provides enough space at both ends of the ECU for the main harness and tuning cables.\n\n- Motorsport-specific:\n  - Mount where it minimizes risk of damage in a crash.\n  - Speedway applications: Securely within the cockpit area, protected from the elements, isolated from vibration, and use an additional retention strap for high impacts.",
-    "sources": [
-      {
-        "source": "./data/doc/G5-Voodoo-Pro.pdf",
-        "page": 2,
-        "score": null,
-        "snippet": "3\nG5 Voodoo Pro Quick Start Guide – Version 1.0ECU mounting guidelines\nThe following requirements should be taken into \naccount during installation:\n -The ECU should be fitted insi"
-      },
-      {
-        "source": "./data/doc/G5-Voodoo-Pro.pdf",
-        "page": 2,
-        "score": null,
-        "snippet": "3\nG5 Voodoo Pro Quick Start Guide – Version 1.0ECU mounting guidelines\nThe following requirements should be taken into \naccount during installation:\n -The ECU should be fitted insi"
-      },
-      {
-        "source": "./data/doc/G4-AtomX.pdf",
-        "page": 3,
-        "score": null,
-        "snippet": "the ECU:\n•  The ECU should be fitted inside the vehicle cabin in a location that avoids \nexposure to excessive temperatures and the risk of water ingress. The location \nof the ECU "
-      },
-      {
-        "source": "./data/doc/G4+ Wire-in KUROFUNE.pdf",
-        "page": 7,
-        "score": null,
-        "snippet": "• The ECU should be fitted inside the vehicle cabin in a location that avoids exposure to excessive   \ntemperatures and the risk of water ingress. The location of the ECU should al"
-      },
-      {
-        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
-        "page": 9,
-        "score": null,
-        "snippet": "other components that may cause interference.\n• Allow enough room at both ends of the ECU for the main wiring harness and tuning cables to be connected.\n• The mounting bracket prov"
-      }
-    ],
-    "retrieval_time": 122.22,
-    "llm_time": 12517.12,
-    "time": "23:34:03"
-  },
-  {
-    "question": "Can AUX outputs be used to control fans?",
-    "model": "gpt-5",
-    "answer": "Warning: Incorrect installation can damage the ECU or vehicle. It is recommended that installation and wiring be performed by a trained professional.\n\nAnswer:\nYes. AUX outputs are flywheeled, low-side switching drivers suitable for general switching functions, including controlling fans. For example, on the MX5Link, Aux 1 or Aux 2 may be assigned to Fan/Overboost buzzer depending on the vehicle.\n\nBasic setup and test:\n1) Assign an available Auxiliary Output channel to the fan function in PCLink.\n2) Use the “Test On” or “Test PWM” (at 10 Hz) functions to confirm the fan/wiring operates correctly.\n\nNote: AUX outputs support PWM at less than 300 Hz if needed.",
-    "sources": [
-      {
-        "source": "./data/doc/Mazda MX-5 (1600-1800) Installation Manual.pdf",
-        "page": 9,
-        "score": null,
-        "snippet": "Expansion Connector. Note spare An Volt channels can be used as temperature inputs when a pullup\nresistor (to +5V) is added.\n1.4.3\nE-Throttle Output\n1.4.3.1\nMX5Link\nAux 9 & 10 are "
-      },
-      {
-        "source": "./data/doc/G4-MonsoonX.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "Switching Functions.\nFlywheeled, Low Side Drives.Auxilary Output 2\nAuxilary Output 3\nAuxilary Output 4\nAuxilary Output 5\nAuxilary Output 6\nKnock* Knock Sensor\nDigital Input 1\nFrequ"
-      },
-      {
-        "source": "./data/doc/G4+ Wire-in MONSOON.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "Three Wire ISC Solenoid must be wired \nto Aux1 and Aux2\nFlywheeled, Low side onlyAuxillary Output 2\nAuxillary Output 3Auxillary Output 4\nAuxillary Output 5 PWM less than 3ooHz or g"
-      },
-      {
-        "source": "./data/doc/Honda-CIVIC-Gen6 Installation Manual.pdf",
-        "page": 11,
-        "score": null,
-        "snippet": "vehicle.\nIt is the tuners responsibility to make sure that the following channels are set-up correctly for the vehicle\nmodel the ECU is fitted to:\nAll Auxiliary Output Channels \nUs"
-      },
-      {
-        "source": "./data/doc/G4-FuryX.pdf",
-        "page": 3,
-        "score": null,
-        "snippet": "a lOO m\nViewed looking into wire side of loom \nconnector (or into ECU header)\nAux 7 Aux 8 Aux 6 Aux 5 DI 1 DI 2 5V+ An Volt 3 GroundShield/\nGndInj 4 Inj 3 Inj 2 Inj 1 14V+ +8V Trig"
-      }
-    ],
-    "retrieval_time": 59.9,
-    "llm_time": 33364.22,
-    "time": "23:34:40"
-  },
-  {
-    "question": "Does the ECU support VVT (Variable Valve Timing)?",
-    "model": "gpt-5",
-    "answer": "WARNING: Always download the latest Installation Manual from linkecu.com and check the latest status of known issues before installing or configuring the ECU.\n\nYes. The Plug-In ECUs support Variable Valve Timing/Control (VVT/VTC).\n- Evidence: The pinout shows a dedicated VTC control output (Aux 2: “VTC Oil Control Sol -ve”) and a VTEC solenoid output (Aux 15/“VTEC Solenoid (Drives High Side)” in the provided excerpt).\n- Known issue: On MX5 NB2 units with Bottom Board PCB version 04 and older, VVT does not work correctly—contact Link technical support to organise a fix.",
-    "sources": [
-      {
-        "source": "./data/doc/Mazda MX-5 NB2 Installation Manual.pdf",
-        "page": 16,
-        "score": null,
-        "snippet": "G4X and G5 Plug-In ECU Installation Manual 17\n© 2023  Link Engine Management Ltd\n3\nCAN H\nWhite\n4\n+14V\nYellow\n1.10\nKnown Issues\nAll plug-in ECUs are fully tested on a range of relev"
-      },
-      {
-        "source": "./data/doc/Honda Civic Gen 7 and Integra Type R (DC5) Installation Manual.pdf",
-        "page": 15,
-        "score": null,
-        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\nB10\nnc\nExpansion 2\n+5V Out\nB11\nnc\nExpansion 3\nAux 9\nB12\nnc\nExpansion 4\nAux 10\nB13\nnc\nExpansion 5\nAn Volt 4\nB14\nnc\nExpan"
-      },
-      {
-        "source": "./data/doc/Honda Civic Gen 7 and Integra Type R (DC5) Installation Manual.pdf",
-        "page": 16,
-        "score": null,
-        "snippet": "G4X Plug-In ECU Installation Manual 17\n© 2023  Link Engine Management Ltd\nDC5 plug in ECU Serial Port setup\nNote: The AC Request is received on CAN DI 1.\n1.10\nKnown Issues\nAll plug"
-      },
-      {
-        "source": "./data/doc/Audi -TTLINK–TTX.pdf",
-        "page": 5,
-        "score": null,
-        "snippet": "Link ECU Online Manual 6\n© 2020  Link Engine Management Ltd\n1\nG4X Plug-In ECU Installation Manual\n1.1\nIntroduction\nThank you for purchasing your Link Plug-In Engine Control Unit (E"
-      },
-      {
-        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
-        "page": 16,
-        "score": null,
-        "snippet": "G4X Plug-In ECU Installation Manual 17\n© 2020  Link Engine Management Ltd\n1.8.1\nVLLink"
-      }
-    ],
-    "retrieval_time": 52.13,
-    "llm_time": 15717.89,
-    "time": "23:34:59"
-  },
-  {
     "question": "Where can I find the unlock code?",
+    "provider": "openai",
     "model": "gpt-5",
-    "answer": "Contact your official Link ECU supplier/dealer. All Link ECUs are shipped locked, and the unlock code is provided by your ECU supplier. A dealer list is available at linkecu.com.",
+    "answer": "Answer:\n1. Obtain the unlock code from your official Link ECU supplier/dealer.\n2. If you need to find a dealer, use the dealer list on linkecu.com or contact tech@linkecu.com for assistance.",
     "sources": [
       {
+        "type": "document",
         "source": "./data/doc/G5-Voodoo-Neo4.pdf",
         "page": 1,
         "score": null,
-        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed"
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed",
+        "content": null
       },
       {
+        "type": "document",
         "source": "./data/doc/G5-Voodoo-Neo6.pdf",
         "page": 1,
         "score": null,
-        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0\n2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nb"
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0\n2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nb",
+        "content": null
       },
       {
+        "type": "document",
         "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
         "page": 8,
         "score": null,
-        "snippet": "Important Information\nG4+ ECUS SHIPPED LOCKED\nG4+ ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed and configured \nusing PCLink, but wi"
+        "snippet": "Important Information\nG4+ ECUS SHIPPED LOCKED\nG4+ ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed and configured \nusing PCLink, but wi",
+        "content": null
       },
       {
+        "type": "document",
         "source": "./data/doc/G4-AtomX.pdf",
         "page": 3,
         "score": null,
-        "snippet": "ImPOrt ant \nInf OrmatIO n \n \ng4X eC Us are s HIPP eD lOCKeD\nG4X ECUs are shipped as locked and must be enabled before they are used. The \nECU can be installed and configured using "
+        "snippet": "ImPOrt ant \nInf OrmatIO n \n \ng4X eC Us are s HIPP eD lOCKeD\nG4X ECUs are shipped as locked and must be enabled before they are used. The \nECU can be installed and configured using ",
+        "content": null
       },
       {
+        "type": "document",
         "source": "./data/doc/G4-XtremeX.pdf",
         "page": 5,
         "score": null,
-        "snippet": "continued on next pageImPOrt ant  \nInfOrmatIO n\ng4X eC us are s hIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand"
+        "snippet": "continued on next pageImPOrt ant  \nInfOrmatIO n\ng4X eC us are s hIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand",
+        "content": null
       }
     ],
-    "retrieval_time": 51.98,
-    "llm_time": 7373.78,
-    "time": "23:35:13"
+    "retrieval_time": 138.9,
+    "llm_time": 16210.54,
+    "input_tokens": 2069,
+    "output_tokens": 57,
+    "total_tokens": 2126,
+    "time": "14:06:36"
+  },
+  {
+    "question": "Where can I find the unlock code?",
+    "provider": "openai",
+    "model": "gpt-5",
+    "answer": "Answer:\n1. Find your ECU’s serial number and gather proof of purchase/ownership.\n2. Contact your official Link ECU supplier/dealer and request the unlock code. This is the only official source for ECU unlock codes.\n3. If you cannot reach the supplier or do not know who it is, email Link Technical Support at tech@linkecu.com with:\n   - ECU serial number\n   - Proof of purchase/ownership\n   - Brief ownership history\n4. Connect to the ECU with PCLink (USB/Ethernet/Wi‑Fi). Enter the unlock code when prompted.\n5. After unlocking, in PCLink check ECU firmware and update to the latest version.",
+    "sources": [
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo6.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0\n2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nb",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
+        "page": 8,
+        "score": null,
+        "snippet": "Important Information\nG4+ ECUS SHIPPED LOCKED\nG4+ ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed and configured \nusing PCLink, but wi",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-AtomX.pdf",
+        "page": 3,
+        "score": null,
+        "snippet": "ImPOrt ant \nInf OrmatIO n \n \ng4X eC Us are s HIPP eD lOCKeD\nG4X ECUs are shipped as locked and must be enabled before they are used. The \nECU can be installed and configured using ",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-FuryX.pdf",
+        "page": 5,
+        "score": null,
+        "snippet": "continued on next pageImPOrt ant  \nInfOrmatIO n\ng4X eC us are s hIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand",
+        "content": null
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/25982-requesting-for-ecu-unlock-code/",
+        "page": null,
+        "score": null,
+        "snippet": "Upon me trying to overwrite the ecu with a standard R53 mini base map given in the software, there comes a pop up saying i need the unlock code from supplier.",
+        "content": "Dear links,\nrecently i bought a mini R53 from an owner who knows nothing about the car and the ecu has been locked, upon me trying to overwrite the ecu with a standard R53 mini base map given in the software, there comes a pop up saying i need the unlock code from supplier.\nmy ecu serial number is 45342\nits a links g4+ plug in for mini.\ncan any one assist in unlocking the ecu? thank you\n6fe85920-e689-4c90-b835-4ed85ce489b4.mov\n\nIs it running on the link ecu just\nIf answer is yes then who ever tuned it has locked the map so it can't be copied or modified\nOnly course of action is either get the original tuner to u lock it or modify it or start fresh with a new tuner putting on a fresh map\n\nYour post is a little confusing.  To clarify a couple of terms we use:\nLocked/Unlocked:\nAll new ecu's are shipped from the factory in a \"locked\" condition for security to minimise theft risk etc.  In the locked condition the ECU will still connect to PC Link, all settings are visible and adjustable but the ECU will not run an engine until it is \"Unlocked\" using the unlock code from the dealer. The unlock code was issued for this ecu in Aug 2019 so I expect it has already been unlocked.  Locked/Unlocked only relates to the ECU, not the map.\nPassword Protected:\nThe tuner can apply a password to the map in the ecu which prevents access and visibility to any ECU settings.  This protection only applies to the map, not the ecu.  You can load an un-password protected map into the ecu and it will be fully functional.\nSo its not 100% clear which of these you are talking about.  It sounds like you are talking about password protection in the first part of your post, then locked in the 2nd part.  Was the car running when you bought it?\nWith PC Link connected to the ecu, can you attach a picture of >Help>ECU Information and >Help>about.\n\nok, sorry for confusing you guys.\nTo make things simple.\n1. Car is running with links ecu plugged in for R53.\n2. the ecu itself is password protected by previous tuner.\n3. Without the password to the tune, i tried to put a fresh map over it by uploading the R53 links base map provided in the links softeare. Upon uploading the basemap, an error comes out saying that i would need to unlock this ecu with the serial code. Hence i am unable to overwrite the password protected map and start with a new one.\nthank you\nEdited\nOctober 22, 2024\nby Owner of miniR53 and evo 7\n\nOn 10/20/2024 at 10:18 AM, Adamw said:\nWith PC Link connected to the ecu, can you attach a picture of >Help>ECU Information and >Help>about.\n\nHi, i got myself connected to the ecu and did what was requested...\nafter that, i tried to reupload R53 basemap into the ecu and it worked... but it did say the ecu is disabled in a pop out like the attached below.\nthe error did not affect anything and the newly uploaded basemap can be accessible .\nbug ? i guess\n\nI think you might be using an old version of PC Link or possibly firmware that had a bug that could incorrectly report the lock status, which is why I keep asking for...\nOn 10/20/2024 at 10:18 AM, Adamw said:\nWith PC Link connected to the ecu, can you attach a picture of >Help>ECU Information and >Help>about.\nYou havent shown >help>about yet, so I still dont know for certain, but your ecu information shows that you are on a firmware from ~10 years ago so I would suggest you start by downloading the latest G4+ PC Link, and do a firmware update.  The latest is V5.6.8 for both PC Link and the firmware.  It should not disable the ecu by loading a fresh map in.\nLink to download:\nhttps://www.linkecu.com/pclink/PCLink G4+ EN-JP V5.6.8.3669 Setup.exe\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/8875-need-unlock-code-please/",
+        "page": null,
+        "score": null,
+        "snippet": "Hello i purchased a link ecu #WRX6+ 2 years ago i never knew i had to unlock ecu until now . i had to put it off on the side because until i ...",
+        "content": "Hello i purchased a link ecu\n#WRX6+ 2 years ago i never knew i had to unlock ecu until now . i had to put it off on the side  because until i finished rebuilding motor i decided to install new link ecu and it keep saying ecu is lock . please help i contacted the dealer i bought it from and havent heard from him yet . i have serial number if needed . thanks in advance ...\nEdited\nAugust 25, 2018\nby NIZBARU\n\nYou can send us an email at\nInclude if you can some sort of proof of purchase and a copy of some photo ID.  Also a brief story of who you purchased from etc.  If it all checks out we will be able to give you an unlock code early next week.\n\nOk thnx sent link tech support email . one more question i followed installation on manual for my ecu set up tps and map calibration done everything good just except trigger calibration is locked .  my question is does ecu being locked prevent me from starting up motor because it will not turn over i tried a many times it will turn over i switched it back to stock it turns over and runs any advice is appriciated please help thanks... Also i tried swithing the dip switch and my 1999 wrx is a jdm\n\nYes engine will not start when the ecu is locked.  Triggers will be disabled.\n\nOk thanks good to know ty for the help ill just wait for my unlock code\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/7007-i-want-unlock-code/",
+        "page": null,
+        "score": null,
+        "snippet": "You will need to contact a dealer for the unlock code you will need to prove ownership. The original dealer for this unit was Power Logic Racing ...",
+        "content": "This ECU I bought From used parts dealer but its a new one never used the dealer bought it from a guy how works on a project but he didn't complete his project so as i just know about code issue also the used parts dealer didnt know about it and we dont know the first owner personally so we dont know the code\nThose are the stuff i bought from used parts dealer\n\nHi\nYou will need to contact a dealer for the unlock code you will need to prove ownership.\nThe original dealer for this unit was Power Logic Racing in Egypt\n\nI try to contact him but no response\n\nshould i connect my computer to the internet when when i try to unlock the ecu ???\n\nNo it only needs to be connected to the ECU.\n\nthanks Simon I unlocked my ECU Finaly\n\nMr.Mohamed i am sameh the seller of the ecu and egypt dealer\nactually no one tried to contact me in case you need anything here is my number 01001251586\nthanks Simon for helping (Y)\n\nThanks Mr Sameh I Solve My problem\n\nOn 6/21/2017 at 12:51 AM, Mohamed Maher said:\nthanks Simon I unlocked my ECU Finaly\nHow did you solve this Mohamed?\n\nWith the ECU serial we can put you in touch with the original dealer they will then be able to process the unlock provided the unit is legit and not stolen.\n\nHey I’m Ezé and I just got a G4X, is there anyone who can help me with my unlock code? It didn’t come with the ecu\nPhone: 3015235555\n[email protected]\n\n3 hours ago, ezethelion said:\nHey I’m Ezé and I just got a G4X, is there anyone who can help me with my unlock code? It didn’t come with the ecu\nPhone: 3015235555\n[email protected]\nFirst place to contact would be the dealer that supplied it, failing that try posting on the G4x forum\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      }
+    ],
+    "retrieval_time": 138.54,
+    "llm_time": 33511.09,
+    "input_tokens": 3036,
+    "output_tokens": 179,
+    "total_tokens": 3215,
+    "time": "14:08:27"
+  },
+  {
+    "question": "Where can I find the unlock code?",
+    "provider": "gemini",
+    "model": "gemini-2.5-pro",
+    "answer": "**Answer:**\n\nAll Link ECUs (including G4+, G4X, and G5 models) are shipped in a locked state and must be unlocked before they can run an engine.\n\n1.  The primary method to obtain an unlock code is to contact your official Link ECU supplier or the dealer where the ECU was purchased.\n2.  If you are unable to contact the original supplier, you can email Link Technical Support directly at `tech@linkecu.com`.\n3.  Be prepared to provide proof of ownership, such as a receipt or photo ID, as this may be required to receive the code.",
+    "sources": [
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo6.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0\n2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nb",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
+        "page": 8,
+        "score": null,
+        "snippet": "Important Information\nG4+ ECUS SHIPPED LOCKED\nG4+ ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed and configured \nusing PCLink, but wi",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-AtomX.pdf",
+        "page": 3,
+        "score": null,
+        "snippet": "ImPOrt ant \nInf OrmatIO n \n \ng4X eC Us are s HIPP eD lOCKeD\nG4X ECUs are shipped as locked and must be enabled before they are used. The \nECU can be installed and configured using ",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-FuryX.pdf",
+        "page": 5,
+        "score": null,
+        "snippet": "continued on next pageImPOrt ant  \nInfOrmatIO n\ng4X eC us are s hIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand",
+        "content": null
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/25982-requesting-for-ecu-unlock-code/",
+        "page": null,
+        "score": null,
+        "snippet": "Upon me trying to overwrite the ecu with a standard R53 mini base map given in the software, there comes a pop up saying i need the unlock code from supplier.",
+        "content": "Dear links,\nrecently i bought a mini R53 from an owner who knows nothing about the car and the ecu has been locked, upon me trying to overwrite the ecu with a standard R53 mini base map given in the software, there comes a pop up saying i need the unlock code from supplier.\nmy ecu serial number is 45342\nits a links g4+ plug in for mini.\ncan any one assist in unlocking the ecu? thank you\n6fe85920-e689-4c90-b835-4ed85ce489b4.mov\n\nIs it running on the link ecu just\nIf answer is yes then who ever tuned it has locked the map so it can't be copied or modified\nOnly course of action is either get the original tuner to u lock it or modify it or start fresh with a new tuner putting on a fresh map\n\nYour post is a little confusing.  To clarify a couple of terms we use:\nLocked/Unlocked:\nAll new ecu's are shipped from the factory in a \"locked\" condition for security to minimise theft risk etc.  In the locked condition the ECU will still connect to PC Link, all settings are visible and adjustable but the ECU will not run an engine until it is \"Unlocked\" using the unlock code from the dealer. The unlock code was issued for this ecu in Aug 2019 so I expect it has already been unlocked.  Locked/Unlocked only relates to the ECU, not the map.\nPassword Protected:\nThe tuner can apply a password to the map in the ecu which prevents access and visibility to any ECU settings.  This protection only applies to the map, not the ecu.  You can load an un-password protected map into the ecu and it will be fully functional.\nSo its not 100% clear which of these you are talking about.  It sounds like you are talking about password protection in the first part of your post, then locked in the 2nd part.  Was the car running when you bought it?\nWith PC Link connected to the ecu, can you attach a picture of >Help>ECU Information and >Help>about.\n\nok, sorry for confusing you guys.\nTo make things simple.\n1. Car is running with links ecu plugged in for R53.\n2. the ecu itself is password protected by previous tuner.\n3. Without the password to the tune, i tried to put a fresh map over it by uploading the R53 links base map provided in the links softeare. Upon uploading the basemap, an error comes out saying that i would need to unlock this ecu with the serial code. Hence i am unable to overwrite the password protected map and start with a new one.\nthank you\nEdited\nOctober 22, 2024\nby Owner of miniR53 and evo 7\n\nOn 10/20/2024 at 10:18 AM, Adamw said:\nWith PC Link connected to the ecu, can you attach a picture of >Help>ECU Information and >Help>about.\n\nHi, i got myself connected to the ecu and did what was requested...\nafter that, i tried to reupload R53 basemap into the ecu and it worked... but it did say the ecu is disabled in a pop out like the attached below.\nthe error did not affect anything and the newly uploaded basemap can be accessible .\nbug ? i guess\n\nI think you might be using an old version of PC Link or possibly firmware that had a bug that could incorrectly report the lock status, which is why I keep asking for...\nOn 10/20/2024 at 10:18 AM, Adamw said:\nWith PC Link connected to the ecu, can you attach a picture of >Help>ECU Information and >Help>about.\nYou havent shown >help>about yet, so I still dont know for certain, but your ecu information shows that you are on a firmware from ~10 years ago so I would suggest you start by downloading the latest G4+ PC Link, and do a firmware update.  The latest is V5.6.8 for both PC Link and the firmware.  It should not disable the ecu by loading a fresh map in.\nLink to download:\nhttps://www.linkecu.com/pclink/PCLink G4+ EN-JP V5.6.8.3669 Setup.exe\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/8875-need-unlock-code-please/",
+        "page": null,
+        "score": null,
+        "snippet": "Hello i purchased a link ecu #WRX6+ 2 years ago i never knew i had to unlock ecu until now . i had to put it off on the side because until i ...",
+        "content": "Hello i purchased a link ecu\n#WRX6+ 2 years ago i never knew i had to unlock ecu until now . i had to put it off on the side  because until i finished rebuilding motor i decided to install new link ecu and it keep saying ecu is lock . please help i contacted the dealer i bought it from and havent heard from him yet . i have serial number if needed . thanks in advance ...\nEdited\nAugust 25, 2018\nby NIZBARU\n\nYou can send us an email at\nInclude if you can some sort of proof of purchase and a copy of some photo ID.  Also a brief story of who you purchased from etc.  If it all checks out we will be able to give you an unlock code early next week.\n\nOk thnx sent link tech support email . one more question i followed installation on manual for my ecu set up tps and map calibration done everything good just except trigger calibration is locked .  my question is does ecu being locked prevent me from starting up motor because it will not turn over i tried a many times it will turn over i switched it back to stock it turns over and runs any advice is appriciated please help thanks... Also i tried swithing the dip switch and my 1999 wrx is a jdm\n\nYes engine will not start when the ecu is locked.  Triggers will be disabled.\n\nOk thanks good to know ty for the help ill just wait for my unlock code\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/7007-i-want-unlock-code/",
+        "page": null,
+        "score": null,
+        "snippet": "You will need to contact a dealer for the unlock code you will need to prove ownership. The original dealer for this unit was Power Logic Racing ...",
+        "content": "This ECU I bought From used parts dealer but its a new one never used the dealer bought it from a guy how works on a project but he didn't complete his project so as i just know about code issue also the used parts dealer didnt know about it and we dont know the first owner personally so we dont know the code\nThose are the stuff i bought from used parts dealer\n\nHi\nYou will need to contact a dealer for the unlock code you will need to prove ownership.\nThe original dealer for this unit was Power Logic Racing in Egypt\n\nI try to contact him but no response\n\nshould i connect my computer to the internet when when i try to unlock the ecu ???\n\nNo it only needs to be connected to the ECU.\n\nthanks Simon I unlocked my ECU Finaly\n\nMr.Mohamed i am sameh the seller of the ecu and egypt dealer\nactually no one tried to contact me in case you need anything here is my number 01001251586\nthanks Simon for helping (Y)\n\nThanks Mr Sameh I Solve My problem\n\nOn 6/21/2017 at 12:51 AM, Mohamed Maher said:\nthanks Simon I unlocked my ECU Finaly\nHow did you solve this Mohamed?\n\nWith the ECU serial we can put you in touch with the original dealer they will then be able to process the unlock provided the unit is legit and not stolen.\n\nHey I’m Ezé and I just got a G4X, is there anyone who can help me with my unlock code? It didn’t come with the ecu\nPhone: 3015235555\n[email protected]\n\n3 hours ago, ezethelion said:\nHey I’m Ezé and I just got a G4X, is there anyone who can help me with my unlock code? It didn’t come with the ecu\nPhone: 3015235555\n[email protected]\nFirst place to contact would be the dealer that supplied it, failing that try posting on the G4x forum\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      }
+    ],
+    "retrieval_time": 75.63,
+    "llm_time": 11932.11,
+    "input_tokens": 3036,
+    "output_tokens": 162,
+    "total_tokens": 3198,
+    "time": "14:08:54"
+  },
+  {
+    "question": "Where can I find the unlock code?",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "answer": "To obtain the unlock code for your Link ECU:\n\n1.  **Contact your official Link ECU supplier** to obtain an unlock code.\n2.  You may need to **prove ownership** of the ECU.\n3.  If you cannot reach your dealer, you may contact Link Technical Support via email. Include proof of purchase, a copy of photo ID, and a brief story of who you purchased the ECU from.\n4.  When attempting to unlock the ECU, your computer **only needs to be connected to the ECU**, not to the internet.",
+    "sources": [
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo6.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0\n2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nb",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
+        "page": 8,
+        "score": null,
+        "snippet": "Important Information\nG4+ ECUS SHIPPED LOCKED\nG4+ ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed and configured \nusing PCLink, but wi",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-AtomX.pdf",
+        "page": 3,
+        "score": null,
+        "snippet": "ImPOrt ant \nInf OrmatIO n \n \ng4X eC Us are s HIPP eD lOCKeD\nG4X ECUs are shipped as locked and must be enabled before they are used. The \nECU can be installed and configured using ",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-FuryX.pdf",
+        "page": 5,
+        "score": null,
+        "snippet": "continued on next pageImPOrt ant  \nInfOrmatIO n\ng4X eC us are s hIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand",
+        "content": null
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/25982-requesting-for-ecu-unlock-code/",
+        "page": null,
+        "score": null,
+        "snippet": "Upon me trying to overwrite the ecu with a standard R53 mini base map given in the software, there comes a pop up saying i need the unlock code from supplier.",
+        "content": "Dear links,\nrecently i bought a mini R53 from an owner who knows nothing about the car and the ecu has been locked, upon me trying to overwrite the ecu with a standard R53 mini base map given in the software, there comes a pop up saying i need the unlock code from supplier.\nmy ecu serial number is 45342\nits a links g4+ plug in for mini.\ncan any one assist in unlocking the ecu? thank you\n6fe85920-e689-4c90-b835-4ed85ce489b4.mov\n\nIs it running on the link ecu just\nIf answer is yes then who ever tuned it has locked the map so it can't be copied or modified\nOnly course of action is either get the original tuner to u lock it or modify it or start fresh with a new tuner putting on a fresh map\n\nYour post is a little confusing.  To clarify a couple of terms we use:\nLocked/Unlocked:\nAll new ecu's are shipped from the factory in a \"locked\" condition for security to minimise theft risk etc.  In the locked condition the ECU will still connect to PC Link, all settings are visible and adjustable but the ECU will not run an engine until it is \"Unlocked\" using the unlock code from the dealer. The unlock code was issued for this ecu in Aug 2019 so I expect it has already been unlocked.  Locked/Unlocked only relates to the ECU, not the map.\nPassword Protected:\nThe tuner can apply a password to the map in the ecu which prevents access and visibility to any ECU settings.  This protection only applies to the map, not the ecu.  You can load an un-password protected map into the ecu and it will be fully functional.\nSo its not 100% clear which of these you are talking about.  It sounds like you are talking about password protection in the first part of your post, then locked in the 2nd part.  Was the car running when you bought it?\nWith PC Link connected to the ecu, can you attach a picture of >Help>ECU Information and >Help>about.\n\nok, sorry for confusing you guys.\nTo make things simple.\n1. Car is running with links ecu plugged in for R53.\n2. the ecu itself is password protected by previous tuner.\n3. Without the password to the tune, i tried to put a fresh map over it by uploading the R53 links base map provided in the links softeare. Upon uploading the basemap, an error comes out saying that i would need to unlock this ecu with the serial code. Hence i am unable to overwrite the password protected map and start with a new one.\nthank you\nEdited\nOctober 22, 2024\nby Owner of miniR53 and evo 7\n\nOn 10/20/2024 at 10:18 AM, Adamw said:\nWith PC Link connected to the ecu, can you attach a picture of >Help>ECU Information and >Help>about.\n\nHi, i got myself connected to the ecu and did what was requested...\nafter that, i tried to reupload R53 basemap into the ecu and it worked... but it did say the ecu is disabled in a pop out like the attached below.\nthe error did not affect anything and the newly uploaded basemap can be accessible .\nbug ? i guess\n\nI think you might be using an old version of PC Link or possibly firmware that had a bug that could incorrectly report the lock status, which is why I keep asking for...\nOn 10/20/2024 at 10:18 AM, Adamw said:\nWith PC Link connected to the ecu, can you attach a picture of >Help>ECU Information and >Help>about.\nYou havent shown >help>about yet, so I still dont know for certain, but your ecu information shows that you are on a firmware from ~10 years ago so I would suggest you start by downloading the latest G4+ PC Link, and do a firmware update.  The latest is V5.6.8 for both PC Link and the firmware.  It should not disable the ecu by loading a fresh map in.\nLink to download:\nhttps://www.linkecu.com/pclink/PCLink G4+ EN-JP V5.6.8.3669 Setup.exe\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/8875-need-unlock-code-please/",
+        "page": null,
+        "score": null,
+        "snippet": "Hello i purchased a link ecu #WRX6+ 2 years ago i never knew i had to unlock ecu until now . i had to put it off on the side because until i ...",
+        "content": "Hello i purchased a link ecu\n#WRX6+ 2 years ago i never knew i had to unlock ecu until now . i had to put it off on the side  because until i finished rebuilding motor i decided to install new link ecu and it keep saying ecu is lock . please help i contacted the dealer i bought it from and havent heard from him yet . i have serial number if needed . thanks in advance ...\nEdited\nAugust 25, 2018\nby NIZBARU\n\nYou can send us an email at\nInclude if you can some sort of proof of purchase and a copy of some photo ID.  Also a brief story of who you purchased from etc.  If it all checks out we will be able to give you an unlock code early next week.\n\nOk thnx sent link tech support email . one more question i followed installation on manual for my ecu set up tps and map calibration done everything good just except trigger calibration is locked .  my question is does ecu being locked prevent me from starting up motor because it will not turn over i tried a many times it will turn over i switched it back to stock it turns over and runs any advice is appriciated please help thanks... Also i tried swithing the dip switch and my 1999 wrx is a jdm\n\nYes engine will not start when the ecu is locked.  Triggers will be disabled.\n\nOk thanks good to know ty for the help ill just wait for my unlock code\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/7007-i-want-unlock-code/",
+        "page": null,
+        "score": null,
+        "snippet": "You will need to contact a dealer for the unlock code you will need to prove ownership. The original dealer for this unit was Power Logic Racing ...",
+        "content": "This ECU I bought From used parts dealer but its a new one never used the dealer bought it from a guy how works on a project but he didn't complete his project so as i just know about code issue also the used parts dealer didnt know about it and we dont know the first owner personally so we dont know the code\nThose are the stuff i bought from used parts dealer\n\nHi\nYou will need to contact a dealer for the unlock code you will need to prove ownership.\nThe original dealer for this unit was Power Logic Racing in Egypt\n\nI try to contact him but no response\n\nshould i connect my computer to the internet when when i try to unlock the ecu ???\n\nNo it only needs to be connected to the ECU.\n\nthanks Simon I unlocked my ECU Finaly\n\nMr.Mohamed i am sameh the seller of the ecu and egypt dealer\nactually no one tried to contact me in case you need anything here is my number 01001251586\nthanks Simon for helping (Y)\n\nThanks Mr Sameh I Solve My problem\n\nOn 6/21/2017 at 12:51 AM, Mohamed Maher said:\nthanks Simon I unlocked my ECU Finaly\nHow did you solve this Mohamed?\n\nWith the ECU serial we can put you in touch with the original dealer they will then be able to process the unlock provided the unit is legit and not stolen.\n\nHey I’m Ezé and I just got a G4X, is there anyone who can help me with my unlock code? It didn’t come with the ecu\nPhone: 3015235555\n[email protected]\n\n3 hours ago, ezethelion said:\nHey I’m Ezé and I just got a G4X, is there anyone who can help me with my unlock code? It didn’t come with the ecu\nPhone: 3015235555\n[email protected]\nFirst place to contact would be the dealer that supplied it, failing that try posting on the G4x forum\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      }
+    ],
+    "retrieval_time": 65.24,
+    "llm_time": 6080.55,
+    "input_tokens": 3036,
+    "output_tokens": 148,
+    "total_tokens": 3184,
+    "time": "14:09:24"
+  },
+  {
+    "question": "Where can I find the unlock code?",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "answer": "**Answer:**\nTo obtain an unlock code for your Link ECU, you must contact your official Link ECU supplier.",
+    "sources": [
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo6.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0\n2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nb",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
+        "page": 8,
+        "score": null,
+        "snippet": "Important Information\nG4+ ECUS SHIPPED LOCKED\nG4+ ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed and configured \nusing PCLink, but wi",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-AtomX.pdf",
+        "page": 3,
+        "score": null,
+        "snippet": "ImPOrt ant \nInf OrmatIO n \n \ng4X eC Us are s HIPP eD lOCKeD\nG4X ECUs are shipped as locked and must be enabled before they are used. The \nECU can be installed and configured using ",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-XtremeX.pdf",
+        "page": 5,
+        "score": null,
+        "snippet": "continued on next pageImPOrt ant  \nInfOrmatIO n\ng4X eC us are s hIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand",
+        "content": null
+      }
+    ],
+    "retrieval_time": 120.01,
+    "llm_time": 2498.86,
+    "input_tokens": 2069,
+    "output_tokens": 33,
+    "total_tokens": 2102,
+    "time": "14:10:10"
+  },
+  {
+    "question": "Where can I find the unlock code?",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "answer": "To obtain an unlock code for your Link ECU, you must contact your official Link ECU supplier or dealer.\n\n**1. Contact your ECU supplier:**\n   * All Link ECUs are shipped locked.\n   * The ECU will not read engine RPM or run the engine until it is unlocked.\n   * Contact the supplier or dealer from whom you purchased the ECU to obtain the unlock code.\n\n**2. Proof of ownership:**\n   * You will likely need to provide proof of ownership for the ECU.\n\n**3. If the supplier is unresponsive:**\n   * You may send an email to Link Technical Support at `tech@linkecu.com`.\n   * Include proof of purchase and a copy of some photo ID.\n   * Provide a brief story of who you purchased the ECU from.",
+    "sources": [
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo6.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0\n2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nb",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
+        "page": 8,
+        "score": null,
+        "snippet": "Important Information\nG4+ ECUS SHIPPED LOCKED\nG4+ ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed and configured \nusing PCLink, but wi",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-AtomX.pdf",
+        "page": 3,
+        "score": null,
+        "snippet": "ImPOrt ant \nInf OrmatIO n \n \ng4X eC Us are s HIPP eD lOCKeD\nG4X ECUs are shipped as locked and must be enabled before they are used. The \nECU can be installed and configured using ",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-XtremeX.pdf",
+        "page": 5,
+        "score": null,
+        "snippet": "continued on next pageImPOrt ant  \nInfOrmatIO n\ng4X eC us are s hIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand",
+        "content": null
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/25982-requesting-for-ecu-unlock-code/",
+        "page": null,
+        "score": null,
+        "snippet": "Upon me trying to overwrite the ecu with a standard R53 mini base map given in the software, there comes a pop up saying i need the unlock code from supplier.",
+        "content": "Dear links,\nrecently i bought a mini R53 from an owner who knows nothing about the car and the ecu has been locked, upon me trying to overwrite the ecu with a standard R53 mini base map given in the software, there comes a pop up saying i need the unlock code from supplier.\nmy ecu serial number is 45342\nits a links g4+ plug in for mini.\ncan any one assist in unlocking the ecu? thank you\n6fe85920-e689-4c90-b835-4ed85ce489b4.mov\n\nIs it running on the link ecu just\nIf answer is yes then who ever tuned it has locked the map so it can't be copied or modified\nOnly course of action is either get the original tuner to u lock it or modify it or start fresh with a new tuner putting on a fresh map\n\nYour post is a little confusing.  To clarify a couple of terms we use:\nLocked/Unlocked:\nAll new ecu's are shipped from the factory in a \"locked\" condition for security to minimise theft risk etc.  In the locked condition the ECU will still connect to PC Link, all settings are visible and adjustable but the ECU will not run an engine until it is \"Unlocked\" using the unlock code from the dealer. The unlock code was issued for this ecu in Aug 2019 so I expect it has already been unlocked.  Locked/Unlocked only relates to the ECU, not the map.\nPassword Protected:\nThe tuner can apply a password to the map in the ecu which prevents access and visibility to any ECU settings.  This protection only applies to the map, not the ecu.  You can load an un-password protected map into the ecu and it will be fully functional.\nSo its not 100% clear which of these you are talking about.  It sounds like you are talking about password protection in the first part of your post, then locked in the 2nd part.  Was the car running when you bought it?\nWith PC Link connected to the ecu, can you attach a picture of >Help>ECU Information and >Help>about.\n\nok, sorry for confusing you guys.\nTo make things simple.\n1. Car is running with links ecu plugged in for R53.\n2. the ecu itself is password protected by previous tuner.\n3. Without the password to the tune, i tried to put a fresh map over it by uploading the R53 links base map provided in the links softeare. Upon uploading the basemap, an error comes out saying that i would need to unlock this ecu with the serial code. Hence i am unable to overwrite the password protected map and start with a new one.\nthank you\nEdited\nOctober 22, 2024\nby Owner of miniR53 and evo 7\n\nOn 10/20/2024 at 10:18 AM, Adamw said:\nWith PC Link connected to the ecu, can you attach a picture of >Help>ECU Information and >Help>about.\n\nHi, i got myself connected to the ecu and did what was requested...\nafter that, i tried to reupload R53 basemap into the ecu and it worked... but it did say the ecu is disabled in a pop out like the attached below.\nthe error did not affect anything and the newly uploaded basemap can be accessible .\nbug ? i guess\n\nI think you might be using an old version of PC Link or possibly firmware that had a bug that could incorrectly report the lock status, which is why I keep asking for...\nOn 10/20/2024 at 10:18 AM, Adamw said:\nWith PC Link connected to the ecu, can you attach a picture of >Help>ECU Information and >Help>about.\nYou havent shown >help>about yet, so I still dont know for certain, but your ecu information shows that you are on a firmware from ~10 years ago so I would suggest you start by downloading the latest G4+ PC Link, and do a firmware update.  The latest is V5.6.8 for both PC Link and the firmware.  It should not disable the ecu by loading a fresh map in.\nLink to download:\nhttps://www.linkecu.com/pclink/PCLink G4+ EN-JP V5.6.8.3669 Setup.exe\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/8875-need-unlock-code-please/",
+        "page": null,
+        "score": null,
+        "snippet": "Hello i purchased a link ecu #WRX6+ 2 years ago i never knew i had to unlock ecu until now . i had to put it off on the side because until i ...",
+        "content": "Hello i purchased a link ecu\n#WRX6+ 2 years ago i never knew i had to unlock ecu until now . i had to put it off on the side  because until i finished rebuilding motor i decided to install new link ecu and it keep saying ecu is lock . please help i contacted the dealer i bought it from and havent heard from him yet . i have serial number if needed . thanks in advance ...\nEdited\nAugust 25, 2018\nby NIZBARU\n\nYou can send us an email at\nInclude if you can some sort of proof of purchase and a copy of some photo ID.  Also a brief story of who you purchased from etc.  If it all checks out we will be able to give you an unlock code early next week.\n\nOk thnx sent link tech support email . one more question i followed installation on manual for my ecu set up tps and map calibration done everything good just except trigger calibration is locked .  my question is does ecu being locked prevent me from starting up motor because it will not turn over i tried a many times it will turn over i switched it back to stock it turns over and runs any advice is appriciated please help thanks... Also i tried swithing the dip switch and my 1999 wrx is a jdm\n\nYes engine will not start when the ecu is locked.  Triggers will be disabled.\n\nOk thanks good to know ty for the help ill just wait for my unlock code\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/7007-i-want-unlock-code/",
+        "page": null,
+        "score": null,
+        "snippet": "You will need to contact a dealer for the unlock code you will need to prove ownership. The original dealer for this unit was Power Logic Racing ...",
+        "content": "This ECU I bought From used parts dealer but its a new one never used the dealer bought it from a guy how works on a project but he didn't complete his project so as i just know about code issue also the used parts dealer didnt know about it and we dont know the first owner personally so we dont know the code\nThose are the stuff i bought from used parts dealer\n\nHi\nYou will need to contact a dealer for the unlock code you will need to prove ownership.\nThe original dealer for this unit was Power Logic Racing in Egypt\n\nI try to contact him but no response\n\nshould i connect my computer to the internet when when i try to unlock the ecu ???\n\nNo it only needs to be connected to the ECU.\n\nthanks Simon I unlocked my ECU Finaly\n\nMr.Mohamed i am sameh the seller of the ecu and egypt dealer\nactually no one tried to contact me in case you need anything here is my number 01001251586\nthanks Simon for helping (Y)\n\nThanks Mr Sameh I Solve My problem\n\nOn 6/21/2017 at 12:51 AM, Mohamed Maher said:\nthanks Simon I unlocked my ECU Finaly\nHow did you solve this Mohamed?\n\nWith the ECU serial we can put you in touch with the original dealer they will then be able to process the unlock provided the unit is legit and not stolen.\n\nHey I’m Ezé and I just got a G4X, is there anyone who can help me with my unlock code? It didn’t come with the ecu\nPhone: 3015235555\n[email protected]\n\n3 hours ago, ezethelion said:\nHey I’m Ezé and I just got a G4X, is there anyone who can help me with my unlock code? It didn’t come with the ecu\nPhone: 3015235555\n[email protected]\nFirst place to contact would be the dealer that supplied it, failing that try posting on the G4x forum\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      }
+    ],
+    "retrieval_time": 58.18,
+    "llm_time": 4918.4,
+    "input_tokens": 3036,
+    "output_tokens": 212,
+    "total_tokens": 3248,
+    "time": "14:10:38"
   },
   {
     "question": "Is there a lifetime warranty on the ECU?",
-    "model": "gpt-5",
-    "answer": "Yes. Link Engine Management Ltd offers a Limited Lifetime Warranty on ECUs they manufacture or distribute.\n\nKey points:\n- Applies only to the original purchaser and covers defects in materials and manufacturing workmanship for the lifetime of the ECU (subject to limitations).\n- Not transferable.\n- The warranty ceases to apply to ECUs that have not been manufactured or distributed by Link Engine Management Ltd for a period of greater than one year.\n- Claims process: return the allegedly defective ECU to the place of purchase. Link, at its sole option, may repair the ECU or replace it with a comparable new ECU.\n- Exclusions: does not apply to ECUs that are not properly installed or used, or that are damaged or impaired by external forces.\n- Liability and other warranties: Link disclaims liability for any damages and disavows all other express or implied warranties.",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "answer": "Yes, there is a limited lifetime warranty on Link ECUs.\n\n1.  Link Engine Management Ltd warrants all ECUs it manufactures or distributes to the original purchaser for the lifetime of the ECU.\n2.  The warranty covers defects in materials and workmanship from the manufacturing process.\n3.  This warranty is subject to limitations:\n    *   It does not apply to ECUs not manufactured or distributed by Link Engine Management Ltd for more than one year.\n    *   It is not transferable.\n    *   It does not apply to ECUs that were not properly installed or used by the purchaser or end user.\n    *   It does not apply to ECUs damaged or impaired by external forces.\n4.  A defective ECU must be returned to the place of purchase. Link Engine Management Ltd, at its discretion, may replace or repair the ECU.",
     "sources": [
       {
+        "type": "document",
         "source": "./data/doc/G4+ Wire-in FORCE GDI.pdf",
         "page": 10,
         "score": null,
-        "snippet": "LIFETIME WARRANTY\nLINK ENGINE MANAGEMENT LTD - LIMITED LIFETIME WARRANTY\nAll Engine Control Units (ECUs) manufactured or distributed by LINK Engine Management Ltd are subject to th"
+        "snippet": "LIFETIME WARRANTY\nLINK ENGINE MANAGEMENT LTD - LIMITED LIFETIME WARRANTY\nAll Engine Control Units (ECUs) manufactured or distributed by LINK Engine Management Ltd are subject to th",
+        "content": null
       },
       {
+        "type": "document",
         "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
         "page": 10,
         "score": null,
-        "snippet": "LIMITED LIFETIME WARRANTY\nLINK ENGINE MANAGEMENT LTD - LIMITED LIFETIME WARRANTY\nAll Engine Control Units (ECUs) manufactured or distributed by LINK Engine Management Ltd are subje"
+        "snippet": "LIMITED LIFETIME WARRANTY\nLINK ENGINE MANAGEMENT LTD - LIMITED LIFETIME WARRANTY\nAll Engine Control Units (ECUs) manufactured or distributed by LINK Engine Management Ltd are subje",
+        "content": null
       },
       {
+        "type": "document",
         "source": "./data/doc/BMW-MINIX-MINIX.pdf",
         "page": 2,
         "score": null,
-        "snippet": "defective ECU. \nThis limited lifetime warranty is not transferable and does not apply to any ECU not properly installed\nor properly used by the purchaser or end user, or to any ECU"
+        "snippet": "defective ECU. \nThis limited lifetime warranty is not transferable and does not apply to any ECU not properly installed\nor properly used by the purchaser or end user, or to any ECU",
+        "content": null
       },
       {
+        "type": "document",
         "source": "./data/doc/Audi -TTLINK–TTX.pdf",
         "page": 2,
         "score": null,
-        "snippet": "defective ECU. \nThis limited lifetime warranty is not transferable and does not apply to any ECU not properly installed\nor properly used by the purchaser or end user, or to any ECU"
+        "snippet": "defective ECU. \nThis limited lifetime warranty is not transferable and does not apply to any ECU not properly installed\nor properly used by the purchaser or end user, or to any ECU",
+        "content": null
       },
       {
+        "type": "document",
         "source": "./data/doc/BMW-MINIX-MINIX.pdf",
         "page": 2,
         "score": null,
-        "snippet": "LINK ENGINE MANAGEMENT LTD – LIMITED LIFETIME WARRANTY\nAll Engine Control Units (ECUs) manufactured or distributed by Link Engine Management Ltd are\nsubject to the following LIMITE"
+        "snippet": "LINK ENGINE MANAGEMENT LTD – LIMITED LIFETIME WARRANTY\nAll Engine Control Units (ECUs) manufactured or distributed by Link Engine Management Ltd are\nsubject to the following LIMITE",
+        "content": null
       }
     ],
-    "retrieval_time": 47.31,
-    "llm_time": 11427.71,
-    "time": "23:35:36"
+    "retrieval_time": 93.44,
+    "llm_time": 2839.09,
+    "input_tokens": 1986,
+    "output_tokens": 243,
+    "total_tokens": 2229,
+    "time": "14:11:17"
+  },
+  {
+    "question": "Is there a lifetime warranty on the ECU?",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "answer": "Yes, Link Engine Management Ltd offers a **Limited Lifetime Warranty** on their Engine Control Units (ECUs).\n\n1.  **Who is covered:** The warranty applies only to the original purchaser of the ECU.\n2.  **What is covered:** It warrants that the ECU shall be free from defects of materials and workmanship in the manufacturing process for the lifetime of the ECU.\n3.  **How to claim:** An ECU claimed to be defective must be returned to the place of purchase. Link Engine Management Ltd, at its sole option, may replace the defective ECU with a comparable new ECU or repair it.\n4.  **Limitations and Exclusions:**\n    *   This limited lifetime warranty is not transferable.\n    *   It does not apply to any ECU not properly installed or properly used by the purchaser or end user.\n    *   It does not apply to any ECU damaged or impaired by external forces.\n    *   This warranty ceases to apply and does not apply to ECUs that have not been manufactured or distributed by Link Engine Management Ltd for a period greater than one year.",
+    "sources": [
+      {
+        "type": "document",
+        "source": "./data/doc/G4+ Wire-in FORCE GDI.pdf",
+        "page": 10,
+        "score": null,
+        "snippet": "LIFETIME WARRANTY\nLINK ENGINE MANAGEMENT LTD - LIMITED LIFETIME WARRANTY\nAll Engine Control Units (ECUs) manufactured or distributed by LINK Engine Management Ltd are subject to th",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
+        "page": 10,
+        "score": null,
+        "snippet": "LIMITED LIFETIME WARRANTY\nLINK ENGINE MANAGEMENT LTD - LIMITED LIFETIME WARRANTY\nAll Engine Control Units (ECUs) manufactured or distributed by LINK Engine Management Ltd are subje",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/BMW-MINIX-MINIX.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "defective ECU. \nThis limited lifetime warranty is not transferable and does not apply to any ECU not properly installed\nor properly used by the purchaser or end user, or to any ECU",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/Audi -TTLINK–TTX.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "defective ECU. \nThis limited lifetime warranty is not transferable and does not apply to any ECU not properly installed\nor properly used by the purchaser or end user, or to any ECU",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/BMW-MINIX-MINIX.pdf",
+        "page": 2,
+        "score": null,
+        "snippet": "LINK ENGINE MANAGEMENT LTD – LIMITED LIFETIME WARRANTY\nAll Engine Control Units (ECUs) manufactured or distributed by Link Engine Management Ltd are\nsubject to the following LIMITE",
+        "content": null
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/21347-cantee-question/page/2/",
+        "page": null,
+        "score": null,
+        "snippet": "ECUs are lifetime warranty so not sure why you would have to change to different ecu. Even then, if you had a ST205X bottom board to match ...",
+        "content": "ECUs are lifetime warranty so not sure why you would have to change to different ecu.  Even then, if you had a ST205X bottom board to match your pinout, why not simply swap the top board from the 185x and not have to rewire?\n\nOn 7/17/2024 at 8:51 AM, Adamw said:\nThe 240ohm pull-up will be fine and will give a better voltage range than the \"X9\" pull-up rule that AiM quote\nFinally got around to adding the earth.\nI'm using the channel set as follows..\nWith a custom sensor to display the mV for me on the dash itself.\n0 Litres     1900mV\n5 Litres     2030mV\n10 Litres    1600mV\n15 Litres     810mV        - gave car a shake, mV fluctuates wildly\n20 Litres    1460mV\n25 litres     1800mV\nAny Ideas what I'm doing wrong?\nThanks.\nBen.\n\nEither your fuel level sensor is bad, or your wiring is not correct.    Perhaps you have the ground and low-fuel switch swapped.\n\nLooking at other owners experiences I can pretty safely assume the sender is bad, being 32 years old and after 5 years sitting on an empty tank..\nThe sender is actually accessible below the stereo so I will pull it out.\nFor any other MR2 owners looking the sender can be replaced with...\n83320-35120 For Toyota Hilux\nI managed to find a new one for £19!\nAlthough this doesn't come with the low level sensor.\nAt least now I can have a play before it goes in.\nI'll post my results for anyone who's interested.\nThank you.\n\nJust an update for anyone trying similar modifications....\nFinally got around to adding the common dash earth to the MXG pin 2 as it stated in the aim manual..which didn't help.\nChanged the fuel sender unit for a hilux sender of that era (€22) which fits fine In the MR2 tank. PN: 83320-35120 but\ndoesn't\ncome with a low fuel sensor.\nWired it straight to the dash with the 240ohm resistor and now I'm seeing a good range of voltage....\nEmpty = 1663mV\nHalf = 1000mV\nFull = 395mV\nSo I've properly installed the unit ready to add fuel and calibrate it with fuel!\nMany thanks for all the help and replies\nBen.\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/21491-link-ecu-mx5/",
+        "page": null,
+        "score": null,
+        "snippet": "Link has a lifetime warranty on their ecus, factory direct support via this forum, live chat support chat on their site, and via email with ...",
+        "content": ""
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/10763-sw20-3sgte-g4-plug-in-drive-by-wire/",
+        "page": null,
+        "score": null,
+        "snippet": "Link has a limited lifetime warranty these days, but im pretty sure that they charge a fee for modification to the unit for the likes of DBW ...",
+        "content": "Gents,\nhoping you can help. I was planning to buy the Link drive by wire adapter but have subsequently heard the G4+ board in my plugin already has the capability for DBW but the pins aren't linked to the board used to take the stock wiring (plugin part). I've also heard these can be modified so these pins are reinstated and therefore DBW is available without the adapter.\nIf so are there guides to do this? I've had the ECU for well over a year so I'm guessing the warranty is over? So by getting a professional locally (UK) to link these pin outs is that acceptable?\nAny help appreciated!\nThanks,\nAdam\n\nLink has a limited lifetime warranty these days, but im pretty sure that they charge a fee for modification to the unit for the likes of DBW adaption.\nBest bet would be to contact the service/sales guys at Link directly.\n\nHi there - just curious to know what benefits you are expecting to get by changing to DBW?\n\nFor me, the ability to get rid of the stock TPS, the stock ICV and the ability to run different maps which include different throttle maps. At a later date, I may add cruise control and some other bits. But initially they're the advantages I want.\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      }
+    ],
+    "retrieval_time": 58.29,
+    "llm_time": 10795.36,
+    "input_tokens": 2638,
+    "output_tokens": 317,
+    "total_tokens": 2955,
+    "time": "14:11:41"
   },
   {
     "question": "What’s the difference between AUX and Injection outputs?",
-    "model": "gpt-5",
-    "answer": "- Safety note: Aux outputs that drive inductive loads (solenoids, motors) are flywheeled; ensure the correct Aux type is used to avoid driver damage.\n\nDifference between Injection and Aux outputs:\n\n- Purpose\n  - Injection outputs:\n    - Dedicated to controlling fuel injectors.\n    - Wire Inj 1 to cylinder 1, Inj 2 to 2, etc.\n    - Example noted: Inj 1+ supplies the positive side; Injection 1A switches the negative sides of four injectors.\n  - Aux outputs:\n    - General-purpose control outputs for devices such as VVT, idle solenoids, stepper ISC, alternator control, VTEC solenoid, and E-throttle motor (Aux 9/10 where applicable).\n\n- Electrical/functional characteristics\n  - Injection outputs:\n    - Low-side switching of injector negatives, with dedicated injector supply (e.g., Inj 1+, Inj 2+).\n    - Availability for general switching varies by ECU:\n      - Some documentation: “Use spare Injection channels for switching type Auxiliary Outputs.”\n      - Other documentation: “Spare Injection Channels unavailable for switching.”\n  - Aux outputs:\n    - Designed as general switching/PWM drivers and are flywheeled for inductive loads.\n    - Channel capabilities vary:\n      - Aux 1: High-frequency PWM or VVT control; three-wire ISC must use Aux 1 and Aux 2; low-side only.\n      - Aux 5–8: PWM <300 Hz or general switching; include high-/low-side drive options; support 4- or 6-terminal stepper ISC.\n      - Aux 8: Alternator control with two charging voltages (~13 V active low, ~14.5 V off).\n      - Aux 9/10: E-throttle motor drive (where available). Note for MX5Link: Aux 9 & 10 are not exposed; use Aux 1 & 2 with an external E-throttle controller.\n      - Aux 14: VTEC solenoid (high-side drive).\n      - Note: Aux 15 must be on for ECU to work correctly (active low).\n\nSummary:\n- Use Injection outputs for injectors as assigned per cylinder.\n- Use Aux outputs for all other actuators/controls per their specific capability.\n- Whether spare Injection outputs can be repurposed as general outputs depends on the specific ECU/version; refer to the Installer I/O table for that ECU.",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "answer": "Here's the difference between AUX (Auxiliary) and Injection outputs:\n\n1.  **Primary Function:**\n    *   **Injection Outputs:** Primarily designed to drive fuel injectors by switching the negative side of the injector circuit (low-side drive).\n    *   **Auxiliary Outputs:** General-purpose drivers intended for a wide range of functions, including High Frequency PWM (Pulse Width Modulation), VVT (Variable Valve Timing) control, E-throttle motor control, ISC (Idle Speed Control) solenoids, alternator control, and general switching functions.\n\n2.  **Flexibility and Repurposing:**\n    *   **Injection Outputs:**\n        *   The official documentation generally states that \"spare Injection channels\" can be used for \"switching type Auxillary Outputs.\"\n        *   However, specific Installer I/O tables indicate that some injection channels (e.g., Injection 1-4) might be \"unavailable for switching\" and thus cannot be repurposed.\n        *   Forum posts clarify that some specific injection channels (e.g., Injector 6 on a VR4Link ECU) have dedicated internal circuits (like ECU hold power) and cannot be used for other auxiliary functions.\n    *   **Auxiliary Outputs:**\n        *   These are inherently more flexible and designed for various roles. Specific auxiliary outputs are optimized for different functions (e.g., Aux 1 for High Frequency PWM, Aux 5 for PWM less than 300 Hz and ISC Stepper, Aux 9/10 for E-throttle).\n\n3.  **Electrical Characteristics:**\n    *   **Injection Outputs:**\n        *   Typically switch the negative side (low-side drive) of the connected component.\n        *   Forum posts indicate that injector drives do not have internal pull-up resistors.\n    *   **Auxiliary Outputs:**\n        *   Can be low-side, high/low side, or high-side drives depending on the specific output (e.g., Aux 1 is low-side, Aux 5 is high/low side, Aux 14 is high-side for VTEC Solenoid).\n        *   Forum posts state that auxiliary outputs typically have a 12V pull-up when off.",
     "sources": [
       {
+        "type": "document",
         "source": "./data/doc/G4+ Wire-in XTREME.pdf",
         "page": 2,
         "score": null,
-        "snippet": "Injection 1\nWire Inj 1 to cyl 1, 2 to 2, 3 to 3, etc...\nUse spare Injection channels for switching type Auxillary OutputsInjection 2\nInjection 3\nInjection 4\nInjection 5\nInjection 6"
+        "snippet": "Injection 1\nWire Inj 1 to cyl 1, 2 to 2, 3 to 3, etc...\nUse spare Injection channels for switching type Auxillary OutputsInjection 2\nInjection 3\nInjection 4\nInjection 5\nInjection 6",
+        "content": null
       },
       {
+        "type": "document",
         "source": "./data/doc/Mazda MX-5 (1600-1800) Installation Manual.pdf",
         "page": 9,
         "score": null,
-        "snippet": "Expansion Connector. Note spare An Volt channels can be used as temperature inputs when a pullup\nresistor (to +5V) is added.\n1.4.3\nE-Throttle Output\n1.4.3.1\nMX5Link\nAux 9 & 10 are "
+        "snippet": "Expansion Connector. Note spare An Volt channels can be used as temperature inputs when a pullup\nresistor (to +5V) is added.\n1.4.3\nE-Throttle Output\n1.4.3.1\nMX5Link\nAux 9 & 10 are ",
+        "content": null
       },
       {
+        "type": "document",
         "source": "./data/doc/Honda Civic Gen 7 and Integra Type R (DC5) Installation Manual.pdf",
         "page": 15,
         "score": null,
-        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\nB10\nnc\nExpansion 2\n+5V Out\nB11\nnc\nExpansion 3\nAux 9\nB12\nnc\nExpansion 4\nAux 10\nB13\nnc\nExpansion 5\nAn Volt 4\nB14\nnc\nExpan"
+        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\nB10\nnc\nExpansion 2\n+5V Out\nB11\nnc\nExpansion 3\nAux 9\nB12\nnc\nExpansion 4\nAux 10\nB13\nnc\nExpansion 5\nAn Volt 4\nB14\nnc\nExpan",
+        "content": null
       },
       {
+        "type": "document",
         "source": "./data/doc/G4-MonsoonX.pdf",
         "page": 1,
         "score": null,
-        "snippet": "Inst aller I/ O t able\nWire Description Installer Connection Typical Application\n+14V Power Wire\nGround Wire these seperately. Typically both to \nengine. Ground\nTrigger 1 Crank Ang"
+        "snippet": "Inst aller I/ O t able\nWire Description Installer Connection Typical Application\n+14V Power Wire\nGround Wire these seperately. Typically both to \nengine. Ground\nTrigger 1 Crank Ang",
+        "content": null
       },
       {
+        "type": "document",
         "source": "./data/doc/G4+ Wire-in FORCE GDI.pdf",
         "page": 1,
         "score": null,
-        "snippet": "Ignition 3\nIgnition 4\nInj 1+ Supplies the positive side of Injectors switching with Inj 1A, Inj 1B\nInj 2+ Supplies the positive side of Injectors switching with Inj 2A, Inj 2B\nInje"
-      }
-    ],
-    "retrieval_time": 56.21,
-    "llm_time": 28704.74,
-    "time": "23:36:19"
-  },
-  {
-    "question": "What’s the difference between AUX and Injection outputs?",
-    "model": "gpt-5",
-    "answer": "Safety note: Using the wrong output type for an actuator (e.g., injectors, throttle motor, ISC) can damage components or cause engine control faults. Always wire actuators to the outputs specified for them.\n\nKey differences\n\nInjection outputs\n- Purpose: Dedicated to driving fuel injectors (wire Inj 1 to cyl 1, Inj 2 to cyl 2, etc.).\n- Wiring/electrical: The ECU provides injector power feeds (Inj 1+, Inj 2+) and switches the negative side via injection channels (e.g., “Injection 1A switches the negative sides of four injectors” while “Inj 1+ supplies the positive side”).\n- Repurposing: Documentation is inconsistent:\n  - One note states “Use spare Injection channels for switching type Auxiliary Outputs.”\n  - Another states “Spare Injection Channels unavailable for switching.”\n  - Conclusion: Whether injection channels can be reassigned depends on the specific ECU/model; refer to that ECU’s I/O table.\n\nAuxiliary (AUX) outputs\n- Purpose: General-purpose and specialized actuator control (e.g., PWM, VVT, ISC, alternator, E-throttle motor on some ECUs).\n- Capabilities (as specified):\n  - Aux 1: High-frequency PWM or VVT control; three-wire ISC solenoid must be wired to Aux 1 and Aux 2. Flywheeled, low-side only.\n  - Aux 5 (and related group per context): PWM less than 300 Hz or general switching functions; flywheeled; high/low side drives; supports ISC stepper (4 or 6 terminal).\n  - Aux 8: Alternator control; switched output to select between two charging voltages (~13 V when output ON active-low, ~14.5 V when OFF). Use a GP Output strategy for control.\n  - Aux 9/10: E-throttle motor +/− (where available). Note: On MX5Link, Aux 9 & 10 are not exposed; to use E-throttle you must use Aux 1 & 2 with an external E-throttle controller.\n- Notes: Many AUX outputs are “flywheeled” (inductive load suppression) and may be low-side only or support high/low side depending on the specific AUX channel.\n\nSummary\n- Injection outputs are primarily for injectors, with defined injector power feeds and low-side switching.\n- AUX outputs are designed for a wide range of actuators with defined PWM/switching capabilities and protection features.\n- Whether spare Injection channels can be used as AUX depends on the specific ECU documentation for that model.",
-    "sources": [
-      {
-        "source": "./data/doc/G4+ Wire-in XTREME.pdf",
-        "page": 2,
-        "score": null,
-        "snippet": "Injection 1\nWire Inj 1 to cyl 1, 2 to 2, 3 to 3, etc...\nUse spare Injection channels for switching type Auxillary OutputsInjection 2\nInjection 3\nInjection 4\nInjection 5\nInjection 6"
+        "snippet": "Ignition 3\nIgnition 4\nInj 1+ Supplies the positive side of Injectors switching with Inj 1A, Inj 1B\nInj 2+ Supplies the positive side of Injectors switching with Inj 2A, Inj 2B\nInje",
+        "content": null
       },
       {
-        "source": "./data/doc/Mazda MX-5 (1600-1800) Installation Manual.pdf",
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/9786-vr4link-aux-injector-6-output/",
+        "page": null,
+        "score": null,
+        "snippet": "Injector 6 is what keeps the main relay engaged. Unfortunately you cant use Inj 6 for anything else as it has an additional circuit connected to ...",
+        "content": "Im in the middle of building a totally new harness for my VR4 with the VR4LINK.  I have run out of AUX outputs and wanting to use the Injector 6 output.  In the wiring information it mention the output being used for 'ecu hold power' but can not find any information on the pin used for this .\nIm wanting to use this to run my engine fans..\n\nInjector 6 controls the main efi relay.  This is done because the car has a stepper motor idle valve, so after you turn the ignition off, the ECU needs to stay alive for a short time to reset the stepper motor.  Injector 6 is what keeps the main relay engaged.\nUnfortunately you cant use Inj 6 for anything else as it has an additional circuit connected to it internally to make the relay control properly.\n\nThats great to know. I did suspect something like that as I could not find any info. So it must use either pin 56 or 66 . Ill have to check the mpi relay diagram..Im not using the factory relay any more as I have a custom relay setup. I can just find the pin and wire it to the new relay for the isc to keep it active to reset . Ill just wire fans to the AC trig.\n\nI have a couple other questions also. I have removed the power transistor for the factory coils as im going to run a direct fire coil on plug system , so I have lost the factory tacho output and was told to run a relay triggered by ecu ( with contacts removed ) parallel to an Aux output set for tacho to create the voltage needed to drive factory tacho. Do i need to run a resistor inline to the relay coil ground?\nAlso , the AUX settings have a high and low setting . Is this to change between a pos and neg trigger?\n\n11 hours ago, ozyvr4 said:\nSo it must use either pin 56 or 66\nInj6 grounds pin 63 & 66 to power up the mpi relay and associated circuit.\n8 hours ago, ozyvr4 said:\nAlso , the AUX settings have a high and low setting . Is this to change between a pos and neg trigger?\nThe high/low polarity settings on aux outputs is to invert the behaviour.  Polarity low will output a ground when on.  Polarity high will be grounded when off.  On some auxes you will also have a highside/lowside drive setting, this is irrelevant on the VR4 ecu as it only has lowside drives fitted.\n8 hours ago, ozyvr4 said:\nI have a couple other questions also. I have removed the power transistor for the factory coils as im going to run a direct fire coil on plug system , so I have lost the factory tacho output and was told to run a relay triggered by ecu ( with contacts removed ) parallel to an Aux output set for tacho to create the voltage needed to drive factory tacho. Do i need to run a resistor inline to the relay coil ground?\nIf you have a spare injector or ignition drive to drive the relay then it will work without anything extra, just connect the relay coil parrallel to the tacho.  If you only have an auxiliary output then you may find the flyback diode will prevent the relay from doing its job, you will have to use an extra transistor like the circuit you will find all over the net in this case.\n\nThanks that some great insite to how it all works. I went over the mpi relay schematics and saw how it works. I will keep it as normal on inj 6 and swap my fuel pump to an AUX trig and use the injec 5 for the tacho. At the moment the AC does not work so ill use that output to drive fans.\nIve added some pics of the harness and the coil setup as this is totally different than a stock setup.\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/22092-how-do-can-aux-channels-work/",
+        "page": null,
+        "score": null,
+        "snippet": "A \"CAN aux\" is just a piece of data in a CAN message that is sent to some other device. So to make that into a real output that can drive a solenoid, you would ...",
+        "content": "Hey all. I'm running an atom on my build and have basically run out of I/O.\nI have been told about the CAN Aux feature, and am wanting to run a boost control solenoid off it.\nMy understanding of a bus like this is that each device has the bus protocol and its own address so it works in turn on the bus.\nSo I can understand how CAN devices like screens, lambda etc can run on the bus, but what I can't understand is how a \"dumb\" device like a bcs could run off the bus. Is it even possible or have I been told wrong?\nThanks in advance.\n\nFor most CAN expansions, the aux outputs are basic low current on/off triggers that cannot drive PWM...\nUnless the CAN expansion is a PDM (power distribution module) --- which would be overkill for what you just intended.\nYou can assign the boost control solenoid on one of the AtomX's aux output for PWM, and then whatever you have there before that's just triggered on/off can be re-assigned to a CAN aux of something like ECUMaster CAN Switch Board V3.\n\nWhat engine?  If a 4 cyl direct spark you could possibly rewire the coils to wasted spark to free up 2 ignition outputs?\n\nHi adam, thanks.\nIt's an Ej20 and I'm already on wasted spark. I'm sequential injection but I don't want to go batch fire.\nFrom memory my outputs, including the two free injector channels are\nFuel pump\nCel\nFan\nTacho\nI can't remember the other two but I'm sure I've got six and used them all. Nothing funky, just standard stuff.\nI was thinking I could run the fuel pump off a switch to free up an aux.\nBut I'm really curious if the CAN bus run an aux device like a bcs. It mentions it in the link help file but is pretty brief and I reckon I'm misunderstanding it.\nCheers.\nEssboo, thanks.\nSo could I drive the tacho or fuel pump relay for example from a CAN aux?\nIm still confused as to how the can aux's control \"dumb\" components.\nThanks.\n\nTacho also has to be driven by PWM, basic fuel pump relay can be driven by CAN aux --- but since that is something critical that would cause a no-go whenever there's something up with the CAN switchboard or the CAN bus itself, I would personally want that driven by ECU aux.\n\nA \"CAN aux\" is just a piece of data in a CAN message that is sent to some other device.  So to make that into a real output that can drive a solenoid, you would need a CAN device that has outputs.  There arent too many low cost options that are capable of PWM control of a solenoid, most would be PDM type devices or \"IO expanders\".\nOne example:\nhttps://mectricmse.com/en-nz/products/µpdm4-rev3\n\nThanks Adam and Ess, that's pretty much the answer I was looking for.\nFor it to work like I was told sounded like some kind of magic! What you guys have said is much closer to what I thought a data bus could do.\nI might just put my fuel pump on a switch and use that aux for the boost control.\nThanks again.\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/21396-auxinjign-5v-pwm-output-to-external-controller/",
+        "page": null,
+        "score": null,
+        "snippet": "The aux outputs have a 12V pull-up so will be pulled up to 12V when off. ign and injector drives dont have pull-ups so you could add your own 5V pull-up into ...",
+        "content": "Hi,\nNeed help to clarify if the AUX/INJ/IGN spare output can be use to provide 5V PWM output to external controller? if yes can it be set internally or via external pull-up resistor to 5V?\n\nThey are low side drive.  The aux outputs have a 12V pull-up so will be pulled up to 12V when off.  ign and injector drives dont have pull-ups so you could add your own 5V pull-up into the wiring if you really needed 5V.  If it is a PWM device however it probably doesnt care what voltage is used - as the name suggests it is using pulse width, not voltage.\n\n@Adamw\nIm feeding signals to toyota/daihatsu EPS to avoid it from running in safe mode. The ECU that im using is XtremeX wire-in.\nCurrently I identified 2 signals required (both 50% duty cycle signals) from factory service manual of that EPS.\nSpeed: 5V square wave (~17Hz at 20kph) confirmed can use 5V pull-up from INJ/IGN) - not sure if the controller can accept >5V high signal. I'm just try to be safe and feed 5V square signal.\nRPM: 12V square wave (~33Hz at 1000rpm) for 4 piston\nso if im using AUX for engine speed (RPM), regardless of which AUX (1-8) we should be able to get 12V high (pulled to 12V internally) and 0v low since it is low side drive? Am i right?\n\nAre you already outputting a tacho signal to the factory dash? Do you still have the factory dash and is it outputting a speed signal still?\nBased on dealing with Toyotas previously you should just be able to use the regular Aux outputs\n\n@Vaughan\nNope im not sending tacho output to factory dash. Dash is AIM, which the input is from CAN bus. For speed signal the output come straight from Xtreme ECU to the EPS. So does the EPS controller can accept 12V signal with no issue for speed?\n\nI have never used an EPS controller so can't say with any real certainty that it will accept the speed and tacho signal directly from the ECU but I would definitely recommend trying it and seeing if it works. Note you can use the test PWM function to send particular frequencies out without having the vehicle running or driving to see if it works.\n\nYep. That is my plan. I just cant confirm if the EPS controller can accept 12V input for speed signal. Afraid i fried the controller LOL. Thus my plan is to either use voltage level shifter or simply use IGN/INJ output with 5V pullup resistor for speed signal.\n\nThe Aux outputs output a solid ground and a weak pullup to 12V not an actual 12v signal and so should be safe.\n\nAs a general rule, any electronics in a car is usually designed to be able to handle \"12V\", any input would typically have a clamp diode or series resistor to protect it.  We cant say that for certain for this particular device unless someone else has tried, but I can say I have never fried any automotive PWM device connected direct to a normal aux, including many fan controllers, fuel pump controllers and alternators that all used a 5V high level pwm originally.\n\nawesome thanks guys!\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      }
+    ],
+    "retrieval_time": 67.82,
+    "llm_time": 18052.98,
+    "input_tokens": 2690,
+    "output_tokens": 629,
+    "total_tokens": 3319,
+    "time": "14:13:02"
+  },
+  {
+    "question": "How do I connect the ECU via USB or Wi-Fi?",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "answer": "To connect your Link ECU:\n\n### Connecting via USB (G4X ECU)\n\n1.  **Connect the ECU to your laptop:** Use a Link G4X ECU USB Cable. This cable connects to the port labeled 'USB' on the ECU. No other adapter or cabling is required.\n2.  **Install USB Drivers (if first time):** If this is your first time connecting a G4X USB ECU, follow the driver installation instructions that appear. Select 'Continue Anyway' when prompted to install drivers.\n3.  **Start PCLink:** Double-click the PCLink icon on your Windows desktop.\n4.  **Provide power to the ECU:** Switch the vehicle's key to the ON position.\n5.  **Configure PCLink connection:**\n    *   In PCLink, go to the 'Options' menu and select 'Connection'.\n    *   In the connection options dialogue, select the correct COM Port number from the drop-down list or choose 'auto' for automatic detection.\n6.  **Establish connection:** Press the F3 key. PCLink will download settings from the ECU if the connection is successful. An error warning will appear if the connection fails.\n7.  **Verify connection:** Ensure PCLink shows “ONLINE” in the top right corner.\n8.  **Save changes (if any):** To permanently store any changes made to the ECU, press F4 before turning off the ECU's power.\n\n### Connecting via Wi-Fi\n\nThe provided official documentation does not detail a native Wi-Fi connection method for G4X ECUs. However, forum discussions suggest the following unofficial methods for remote or Wi-Fi connectivity:\n\n*   **USB over Wi-Fi for G4X:** Users have reported success using third-party hardware like a GL-iNET device flashed with Virtualhere USB software, powered by a 12V to 5V micro USB adapter, to extend the ECU's USB connection over Wi-Fi.\n*   **Remote Desktop for G4X:** Another method involves having a laptop with a 4G dongle connected to the ECU in the vehicle, and then accessing that laptop remotely via a second device (laptop or PC) using a remote desktop session.\n*   **Native Wi-Fi for G5 ECUs:** Forum posts indicate that newer G5 PCLinks support connecting over Wi-Fi natively. When connecting, PCLink may display available ECUs for selection.",
+    "sources": [
+      {
+        "type": "document",
+        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
         "page": 9,
         "score": null,
-        "snippet": "Expansion Connector. Note spare An Volt channels can be used as temperature inputs when a pullup\nresistor (to +5V) is added.\n1.4.3\nE-Throttle Output\n1.4.3.1\nMX5Link\nAux 9 & 10 are "
+        "snippet": "work.\n1.Connect the ECU to your laptop using a Link G4X ECU USB Cable. If not supplied with the ECU, these\ncan be purchased from a Link dealer. No other adapter or cabling is requi",
+        "content": null
       },
       {
-        "source": "./data/doc/Honda Civic Gen 7 and Integra Type R (DC5) Installation Manual.pdf",
-        "page": 15,
+        "type": "document",
+        "source": "./data/doc/Mazda RX7 Series 6 Installation Manual.pdf",
+        "page": 9,
         "score": null,
-        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\nB10\nnc\nExpansion 2\n+5V Out\nB11\nnc\nExpansion 3\nAux 9\nB12\nnc\nExpansion 4\nAux 10\nB13\nnc\nExpansion 5\nAn Volt 4\nB14\nnc\nExpan"
+        "snippet": "instructions that appear. When prompted if you want to install drivers select 'Continue Anyway'.\n3.Start PCLink by double clicking on the PCLink icon on the windows desktop.\n4.Swit",
+        "content": null
       },
       {
-        "source": "./data/doc/G4-MonsoonX.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "Inst aller I/ O t able\nWire Description Installer Connection Typical Application\n+14V Power Wire\nGround Wire these seperately. Typically both to \nengine. Ground\nTrigger 1 Crank Ang"
-      },
-      {
-        "source": "./data/doc/G4+ Wire-in FORCE GDI.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "Ignition 3\nIgnition 4\nInj 1+ Supplies the positive side of Injectors switching with Inj 1A, Inj 1B\nInj 2+ Supplies the positive side of Injectors switching with Inj 2A, Inj 2B\nInje"
-      }
-    ],
-    "retrieval_time": 156.14,
-    "llm_time": 45219.04,
-    "time": "11:51:23"
-  },
-  {
-    "question": "Can I power the ECU from constant VBat?",
-    "model": "gpt-5-mini",
-    "answer": "Safety warning:\n- Do not connect the ignition input (Pin A6) to a constant battery source if you require the ECU to power down — the ECU will not power down if A6 is tied to constant VBat (risk of battery drain).\n\nAnswer and wiring steps:\n1. Pin A5 (main ECU power) may be connected to either switched or constant VBat — so yes, the ECU can be powered from constant VBat on A5.\n2. Pin A6 (ignition switch input) must be connected to a switched battery source. Do not connect A6 to constant VBat unless you accept the ECU will remain powered.\n3. If you require the H‑Bridge/AUX drivers (AUX3/4/HB1 and AUX5/6/HB2), ensure Pin B5 is supplied with VBat — these drivers will not function if B5 is unpowered.\n4. For CAN devices: CAN 1 provides a +14V 3A continuous power output from the ECU (suitable to power a CAN Lambda).\n5. Ground the ECU to a single common point on the engine block or heads to avoid sensor/ECU ground potential issues and inaccuracies.",
-    "sources": [
-      {
-        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
-        "page": 4,
-        "score": null,
-        "snippet": "5\nG5 Voodoo Neo Quick Start Guide – Version 1.0WIrING I NfOrmat ION\nPower\n -Pin A5 is the main ECU power input. It can be \nsupplied with either switched or constant VBat.\n -Pin A6 "
-      },
-      {
+        "type": "document",
         "source": "./data/doc/BMW-BMWLINK-E36X.pdf",
-        "page": 4,
-        "score": null,
-        "snippet": "Communicating With Your ECU \n................................................................................................................................... 11\n6\nPre-Start Conf"
-      },
-      {
-        "source": "./data/doc/G5-Voodoo-Pro.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "There are a range of ways to find information and \nsupport for installing and using your ECU:\n -PCLink help — press F1  while running PCLink. \nIncludes help on wiring, PCLink and E"
-      },
-      {
-        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
         "page": 9,
         "score": null,
-        "snippet": "work.\n1.Connect the ECU to your laptop using a Link G4X ECU USB Cable. If not supplied with the ECU, these\ncan be purchased from a Link dealer. No other adapter or cabling is requi"
+        "snippet": "1.5.1\nInstalling USB Drivers\nBefore connecting the ECU to your laptop or PC, the ECU USB drivers must be installed. These drivers are\ninstalled as part of PCLink installation as de",
+        "content": null
       },
       {
-        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
-        "page": 4,
-        "score": null,
-        "snippet": "E-Throttle Output \n......................................................................................................................................................... 9\n<%HVL"
-      }
-    ],
-    "retrieval_time": 181.75,
-    "llm_time": 19281.73,
-    "time": "11:57:47"
-  },
-  {
-    "question": "Can I power the ECU from constant VBat?",
-    "model": "gpt-5-mini",
-    "answer": "Warning: If the ignition input (Pin A6) is connected to constant VBat, the ECU will not power down.\n\nAnswer:\n1. Yes — Pin A5 (main ECU power input) may be supplied with either switched or constant VBat.\n2. Important: Pin A6 (ignition switch input) must be connected to a switched battery source; do not use constant VBat on A6 unless you intend for the ECU to remain powered.\n3. Note: Pin B5 must be supplied VBat to power the H‑Bridge drivers (AUX3/4/HB1 and AUX5/6/HB2). Those drivers will not function if B5 is unpowered.",
-    "sources": [
-      {
-        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
-        "page": 4,
-        "score": null,
-        "snippet": "5\nG5 Voodoo Neo Quick Start Guide – Version 1.0WIrING I NfOrmat ION\nPower\n -Pin A5 is the main ECU power input. It can be \nsupplied with either switched or constant VBat.\n -Pin A6 "
-      },
-      {
-        "source": "./data/doc/BMW-BMWLINK-E36X.pdf",
-        "page": 4,
-        "score": null,
-        "snippet": "Communicating With Your ECU \n................................................................................................................................... 11\n6\nPre-Start Conf"
-      },
-      {
-        "source": "./data/doc/G5-Voodoo-Pro.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "There are a range of ways to find information and \nsupport for installing and using your ECU:\n -PCLink help — press F1  while running PCLink. \nIncludes help on wiring, PCLink and E"
-      },
-      {
-        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
-        "page": 9,
-        "score": null,
-        "snippet": "work.\n1.Connect the ECU to your laptop using a Link G4X ECU USB Cable. If not supplied with the ECU, these\ncan be purchased from a Link dealer. No other adapter or cabling is requi"
-      },
-      {
-        "source": "./data/doc/Holden-VL (RB30) Installation Manual.pdf",
-        "page": 4,
-        "score": null,
-        "snippet": "E-Throttle Output \n......................................................................................................................................................... 9\n<%HVL"
-      }
-    ],
-    "retrieval_time": 177.48,
-    "llm_time": 12870.9,
-    "time": "11:59:56"
-  },
-  {
-    "question": "What’s the difference between AUX and Injection outputs?",
-    "model": "gpt-5-mini",
-    "answer": "I'm sorry, I couldn't find this in the current documentation.",
-    "sources": [
-      {
-        "source": "./data/doc/G4+ Wire-in XTREME.pdf",
-        "page": 2,
-        "score": null,
-        "snippet": "Injection 1\nWire Inj 1 to cyl 1, 2 to 2, 3 to 3, etc...\nUse spare Injection channels for switching type Auxillary OutputsInjection 2\nInjection 3\nInjection 4\nInjection 5\nInjection 6"
-      },
-      {
+        "type": "document",
         "source": "./data/doc/Honda Civic Gen 7 and Integra Type R (DC5) Installation Manual.pdf",
-        "page": 15,
+        "page": 9,
         "score": null,
-        "snippet": "Link ECU Online Manual 16\n© 2023  Link Engine Management Ltd\nB10\nnc\nExpansion 2\n+5V Out\nB11\nnc\nExpansion 3\nAux 9\nB12\nnc\nExpansion 4\nAux 10\nB13\nnc\nExpansion 5\nAn Volt 4\nB14\nnc\nExpan"
+        "snippet": "Link ECU Online Manual 10\n© 2023  Link Engine Management Ltd\n2.Download the latest version of PCLink. When prompted to run or save the file, select save. It is\nrecommended to save ",
+        "content": null
       },
       {
-        "source": "./data/doc/G4-MonsoonX.pdf",
+        "type": "document",
+        "source": "./data/doc/Mazda MX-5 NB2 Installation Manual.pdf",
+        "page": 10,
+        "score": null,
+        "snippet": "G4X and G5 Plug-In ECU Installation Manual 11\n© 2023  Link Engine Management Ltd\n2.If this is the first time you have connected a G4X ECU USB cable to your laptop follow the driver",
+        "content": null
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/20935-what-is-the-easiest-way-and-the-cheapest-way-to-remotely-connect-to-my-ecu/",
+        "page": null,
+        "score": null,
+        "snippet": "The only way you can do it is to have a laptop with a 4g dongle in the car connected to the ecu and a second laptop also with a dongle or wifi if available at ...",
+        "content": "I'm using a G4X ECU. What is the easiest way and the cheapest way to remotely connect to it? In terms of telemetry, I've built some kind of LoRa transmitter using an Arduino, within a CANBUS based system. But this is only useful to get the ECU's data, but what if I also want to tune the ECU?\nThanks!\n\nYou need to essentially connect via USB to tune from a Windows computer.\nWhether you can reliably extend this USB signal somehow...\n\nThe only way you can do it is to have a laptop with a 4g dongle in the car connected to the ecu and a second laptop also with a dongle or wifi if available at the remote location. You can then start up a remote desktop session. If you got a good connection there shouldn't be must lag between the two devices.\n\nYou can use Virtualhere USB server on an android phone (ecu tuning cable plugs into phone USB port) but it is possibly a bit slow, The only time I have used it I had about 10Hz refresh rate in PC Link, not really adequate for tuning. That was with an old Samsung S5 that I had sitting around though, and I think from memory we only had 3g at that track too, so possibly a better phone with 4G would give better performance.\nA friend uses an intel NUC with a 4g dongle with remote desktop in an endurance car to monitor things, it works well.  Not a great video but you can see its quite responsive here:\nhttps://fb.watch/mLwQcWQReQ/\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/9843-g4-bluetooth/",
+        "page": null,
+        "score": null,
+        "snippet": "As Adam mentioned, the micro usb only powers the WiFi module. You then plug the ecu in via the usb port below using your tuning cable.",
+        "content": "Hey everyone is it possible to connect link ecu via bluetooth or via WiFi?\nThanks.\n\nI use USB over wifi for controlling my ECU remotely (my ECU is in the boot next to the engine so no long USB wires through the cabin).  I bought one of these from amazon which work great and are cheap\n:-\nhttps://www.gl-inet.com/products/gl-mt300n-v2/\nThe hardware then needs reflashing with the virtual USB software:-\nhttps://www.virtualhere.com/hardware\nPowered with a 12V to 5V micro USB adapter, this gives you USB over WiFi, which should be significantly longer range than bluetooth.  The Virtual firmware is available on a few different platforms so it may be possible to extend the range even further.\nHTH,\nRichard.\n\nHi Richard can you give me more information about how i can set it up?\nThe perpose of this is to have wirelessly the dash and also allow me to do changes while the vehicle is running down the track.\nThanks\n\nWhat is a 12V micro USB adapter? Is it where the power for this WiFi Router is coming from?\nhttps://salaskoracing.com/collections/salasko-racing-motorsports-electronics/products/ethernet-wifi-adapter\nThis looks nice but quite expensive.\n\nThe router will be powered by via the micro USB port so to power it up permanently inside a car whenever the ignition is on you would want something like this:\n\nWhere can I get one please?\n\nThis is 12v in and 5v out. It does not sound right.\nThe WiFi device should need 12v, right?\n\n37 minutes ago, gtihk said:\nWhere can I get one please?\nI got mine from ebay, try searching for \"dc 12v to 5v USB\"\nThe WiFi module I use is USB powered\nThis is a short range WiFi module, I have used it over a couple of metres through a fibreglass bulkhead or about 5 metres clear line of sight.  If you need more range then a different module with a higher power output and possibly an external aerial would be needed.\n\nI have the Mini Router now and updated its firmware as advised.\nI can connect to the CloudhubXXXXXX, but cannot see ECU.\nAny ideas please?\n\nThe only problems I've seen have been due to firewall issues, if possible, try connecting with firewalls temporarily disabled.  Also, try ticking the reverse connection option.\n\n4 hours ago, Richard Hill said:\nThe only problems I've seen have been due to firewall issues, if possible, try connecting with firewalls temporarily disabled.  Also, try ticking the reverse connection option.\n\nThanks, it is working now with firewall turned off. I did not personally turned it on, but I guess it is a default to be On.\n\nhttps://www.ecumaster.com/products/bt-module/\nThe Bluetooth module allows to transmit ECUMASTER log data via Bluetooth communication\nbut I don't know if it will work with linkecu\n\nOn 4/10/2019 at 9:59 PM, Richard Hill said:\nI got mine from ebay, try searching for \"dc 12v to 5v USB\n﻿\n\"\nThe WiFi module I use is USB powered\nThis is a short range WiFi module, I have used it over a couple of metres through a fibreglass bulkhead or about 5 metres clear line of sight.  If you need more range then a different module with a higher power output and possibly an external aerial would be needed.\nHi there im not tech savvy, so im just trying to understand how i can get this to work before buying stuff through ebay.\nso does the dc coverter power up the wifi module (yellow thing in the picture)?, im just not too sure where the USB cable plugs into after that from the LinkECU\n\nWould anyone please explain in further details? just trying to get my head across how everything plugs in before i start buying stuff.\nso the dc converter powers up the wifi module right? where does the usb cable from the link plug into after that?\nAny help is appreciated\n\nThe DC adaptor is just to supply power to the router, it plugs into the micro USB port that you see in the pic above next to the two Ethernet ports.  On the back of the router, not shown in the picture is a normal USB A port that the ecu tuning cable plugs into.  The Ethernet ports will not be used at all.\n\nAs Adam mentioned, the micro usb only powers the WiFi module.  You then plug the ecu in via the usb port below using your tuning cable.\n\nI had some problems initially but Michael at Virtualhere was very helpful.\nHe used Teamviewer to help me. Considering that I did not pay for the software, it was wonderful service.\n\nhave just ordered one.. will see how we get on once it turns up\n\nLet me know if I can be of help when you have the hardware arrived.\n\nI also have the android version of the server which allows you to connect the ECU to your phone and control it from anywhere using the client.\n\nCould anyone help me out? For some reason I can’t get the link ecu to connect to my tablet via wifi\nEdited\nMay 1, 2019\nby ITSEVL\nAdded photo\n\nITSEVL\nDid you get this resolved,\nI'm having the same problem. I got it connect to the Ling G4 ECU once, but can't get it to connect after that.\n\nHi everyone, I bought (and received yesterday) the GL-MT300N-v2 and we would like to know the step by step procedure to reflashing the firmware.\nthanks in advance\n\n3 hours ago, Fabio_jan said:\nHi everyone, I bought (and received yesterday) the GL-MT300N-v2 and we would like to know the step by step procedure to reflashing the firmware.\nthanks in advance\nhttps://www.virtualhere.com/hardware\nCHOOSE THIS SECTION IF YOU HAVE A NEXX, GL-MT300N-V2, or GL-AR150\nAre you running the stock firmware?\nYES - Install the firmware image (below) on the router by flashing it with the built-in router configuration interface \"System -> Firmware Update\":\nNEXX 3020F (Initial Image)\ncloudhub-nexx-initial.bin\nGL-MT300N-V2 (Initial Image) - None required, the upgrade image (below) can be flashed immediately.\nGL-AR150 (Initial Image) - None required, the upgrade image (below) can be flashed immediately.\nNO - Since you are already running the VirtualHere CloudHub, bring up the Administration Interface by right clicking CloudHub_xxxx in the VirtualHere Client, select Properties -> Configure -> Enter Admin password->Advanced Button->Upgrade Firmware (The current settings will be remembered after the upgrade) :\nNEXX 3020F (Upgrade Image)\ncloudhub-nexx-upgrade.bin\nGL-MT300N-V2 (Upgrade Image)\ncloudhub-gl-mt300nv2-upgrade.bin\nGL-AR150 (Upgrade Image)\ncloudhub-gl-ar150-upgrade.bin\nNow continue at step 3. below.\nHTH,\nRichard\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/22252-did-something-change-with-ecu-connection/",
+        "page": null,
+        "score": null,
+        "snippet": "The new G5 PCLinks support connecting over Wifi and so when you click connect it brings up all available ECUs in a window so that you can select which one you ...",
+        "content": "Hey all I am on a PnP G4X for my Evo 9. On the latest PClink and firmware versions I believe. Before when I would either key on for auto connect, or either manually connect to ecu, the ecu would connect without any issues. Recently after installing the most recent versions of PClink and firmware it doesn’t connect, it asks for USB and serial number or something. Am I doing something wrong, or is there info I need to plug somewhere so that the ecu just connects without this extra step? Thanks for the info.\n\nThe new G5 PCLinks support connecting over Wifi and so when you click connect it brings up all available ECUs in a window so that you can select which one you want to connect to. Once you have selected one you can disconnect and reconnect as often as you want while that PCLink is open without having to search again as long as it doesn't fail a connection.\nIf you don't want to see the search window you can select the COM Port directly in the Connection tab of the options window.\nFor reference it always used to search for all ECUs but would just try and connect to the first one it found.\n\nThis is my most disliked change in PC Link.\nDepending on where I'm sitting in the car, I change USB port, I connect to multiple ECUs, so pre-selecting a COM port won't necessarily help to connect to an ECU.\nI kind of understand why it's been added, but maybe Auto mode could be set to check USB first, then pop up the dialog if not found, or have an option to reverse that if the user chooses?\n\nSo is this something that I can change to ho it worked before? Im only trying to connect to one ecu at a time, my own lol. Being able to wifi connect to all ecus and having to select which one sounds like an added opportunity for something to go wrong in the case of someone selecting the wrong ecu or flashing the wrong file to a wrong vehicle. I just wanna be able to connect to my vehicle without the added steps as it was before... How do I do this? Or has that option been surpassed? lol. Thanks for the info guys!\n\nALSO, another thing. When I open up G5 and check PcLink Version it says 7.2.3 But the latest download version on the site says 7.2.2  Is this correct or do I have something funky going on? Thanks again.\n\n7 hours ago, k4nnon said:\nSo is this something that I can change to ho it worked before\nIf you set the connection port to your ECU's COM port then it will just connect directly to that.\n7 hours ago, k4nnon said:\nBeing able to wifi connect to all ecus and having to select which one sounds like an added opportunity for something to go wrong in the case of someone selecting the wrong ecu or flashing the wrong file to a wrong vehicle\nOn the contrary connecting to the first ECU it finds would cause all manner of issues if it was not the one you were intending to connect to.\n7 hours ago, k4nnon said:\nI just wanna be able to connect to my vehicle without the added steps as it was before... How do I do this?\nThe only extra step is to double click on your ECU the first time you connect to it after opening PCLink.\n6 hours ago, k4nnon said:\nALSO, another thing. When I open up G5 and check PcLink Version it says 7.2.3 But the latest download version on the site says 7.2.2  Is this correct or do I have something funky going on? Thanks again.\njust checked and mine is doing the same, we did change some build numbering stuff recently so it most likely hasn't made its way through all the places the build number is stored.\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      }
+    ],
+    "retrieval_time": 79.27,
+    "llm_time": 9553.85,
+    "input_tokens": 3014,
+    "output_tokens": 651,
+    "total_tokens": 3665,
+    "time": "14:13:51"
+  },
+  {
+    "question": "Where can I find the unlock code?",
+    "provider": "local",
+    "model": "llama3.1:8b",
+    "answer": "## Safety Warnings:\n- **Important:** Your Link ECU will not function properly and may cause damage to your engine if it is not unlocked. Please do not attempt to run the engine with a locked ECU.\n\n## Answer:\n1. Contact your official Link ECU supplier to obtain an unlock code.\n2. Provide them with your ECU's serial number or other relevant details to verify ownership.\n3. Follow their instructions for unlocking your ECU, which may involve online registration or direct communication with their technical support team.\n4. Once unlocked, you can use PCLink software to install and configure the ECU.\n\nReference: === Official Documentation === (Section: Important Information)",
+    "sources": [
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
         "page": 1,
         "score": null,
-        "snippet": "Inst aller I/ O t able\nWire Description Installer Connection Typical Application\n+14V Power Wire\nGround Wire these seperately. Typically both to \nengine. Ground\nTrigger 1 Crank Ang"
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed",
+        "content": null
       },
       {
-        "source": "./data/doc/Honda S2000 AP1 Installation Manual.pdf",
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo6.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0\n2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nb",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
         "page": 8,
         "score": null,
-        "snippet": "inputs. Aux 6 is setup to control the E-throttle power and so needs to be set as the E-Throttle Relay.\n1.4.4\nExpansion Connector\nExpansion connectors are provided to allow easy con"
+        "snippet": "Important Information\nG4+ ECUS SHIPPED LOCKED\nG4+ ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed and configured \nusing PCLink, but wi",
+        "content": null
       },
       {
-        "source": "./data/doc/G4+ Wire-in FORCE GDI.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "Ignition 3\nIgnition 4\nInj 1+ Supplies the positive side of Injectors switching with Inj 1A, Inj 1B\nInj 2+ Supplies the positive side of Injectors switching with Inj 2A, Inj 2B\nInje"
-      }
-    ],
-    "retrieval_time": 141.84,
-    "llm_time": 26837.64,
-    "time": "11:27:45"
-  },
-  {
-    "question": "What are the correct wiring pins for Knock Sensor?",
-    "model": "gpt-5-mini",
-    "answer": "Safety warning: Installation should be carried out by a trained professional. Incorrect wiring can damage the ECU or vehicle — extreme care must be taken.\n\nWiring pins for Knock Sensor (as per provided documentation):\n\n1. G4X AtomX ECU\n   - Knock input (where supported) is fed into the ECU through pin 6.\n   - Note: Versions prior to 3.0 do not have knock control hardware.\n\n2. G4+ Kurofune ECU\n   - Knock 1 = connector J7 (Knock Sensors only)\n   - Knock 2 = connector J8\n\nAdditional note: All pinouts are shown looking into the ECU (wire side).",
-    "sources": [
-      {
+        "type": "document",
         "source": "./data/doc/G4-AtomX.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "PWM or General Switching Functions .\nFlywheeled, Low Side Drives.Auxilary Output 2\nAuxilary Output 3\nAuxilary Output 4\nKnock* Knock Sensor\nDigital Input 1Frequency Input, Switch In"
-      },
-      {
-        "source": "./data/doc/G4-AtomX.pdf",
-        "page": 1,
-        "score": null,
-        "snippet": "Inst aller I/ O t able\nWire Description Installer Connection Typical Application\n+14V Power Wire\nGround Wire these seperately. Typically both to \nengine. Ground\nTrigger 1 Crank Ang"
-      },
-      {
-        "source": "./data/doc/Honda-CIVIC-Gen5 Installation Manual.pdf",
-        "page": 16,
-        "score": null,
-        "snippet": "to allow sufficient span of the numbers in the main fuel table.\n1.8\nPinouts\nPin information is provided to assist when troubleshooting. All pinouts are looking into the ECU (wire s"
-      },
-      {
-        "source": "./data/doc/G4+ Wire-in KUROFUNE.pdf",
         "page": 3,
         "score": null,
-        "snippet": "Digital Input Karman 59 Frequency Input Sensors\nAnalog Out 1 56\nFor emulation of signals such as airflow, pressure, O2 or \ntemperature.Analog Out 2 57\nAnalog Out 3 43\nAnalog Out 4 "
+        "snippet": "ImPOrt ant \nInf OrmatIO n \n \ng4X eC Us are s HIPP eD lOCKeD\nG4X ECUs are shipped as locked and must be enabled before they are used. The \nECU can be installed and configured using ",
+        "content": null
       },
       {
-        "source": "./data/doc/G4-StormX.pdf",
-        "page": 2,
+        "type": "document",
+        "source": "./data/doc/G4-XtremeX.pdf",
+        "page": 5,
         "score": null,
-        "snippet": "Injection 1\nWire Inj 1 to cyl 1, 2 to 2, 3 to 3, etc...\nUse spare Injection channels for Auxillary OutputsInjection 2\nInjection 3Injection 4\nInjection 5\nInjection 6\nInjection 7\nInj"
+        "snippet": "continued on next pageImPOrt ant  \nInfOrmatIO n\ng4X eC us are s hIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand",
+        "content": null
       }
     ],
-    "retrieval_time": 86.75,
-    "llm_time": 13162.4,
-    "time": "11:28:34"
+    "retrieval_time": 56.05,
+    "llm_time": 21892.4,
+    "input_tokens": 2069,
+    "output_tokens": 202,
+    "total_tokens": 2271,
+    "time": "14:16:22"
+  },
+  {
+    "question": "Where can I find the unlock code?",
+    "provider": "openai",
+    "model": "gpt-5",
+    "answer": "Answer:\n1. Obtain the unlock code from your official Link ECU supplier or nearest Link dealer. All Link ECUs are shipped locked and will not read RPM or run until unlocked.\n2. If you need help finding a dealer, visit linkecu.com for the dealer list or email tech@linkecu.com.\n3. Use PCLink to connect to the ECU (press F1 in PCLink for connection instructions).",
+    "sources": [
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo6.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0\n2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nb",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
+        "page": 8,
+        "score": null,
+        "snippet": "Important Information\nG4+ ECUS SHIPPED LOCKED\nG4+ ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed and configured \nusing PCLink, but wi",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-AtomX.pdf",
+        "page": 3,
+        "score": null,
+        "snippet": "ImPOrt ant \nInf OrmatIO n \n \ng4X eC Us are s HIPP eD lOCKeD\nG4X ECUs are shipped as locked and must be enabled before they are used. The \nECU can be installed and configured using ",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-XtremeX.pdf",
+        "page": 5,
+        "score": null,
+        "snippet": "continued on next pageImPOrt ant  \nInfOrmatIO n\ng4X eC us are s hIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand",
+        "content": null
+      }
+    ],
+    "retrieval_time": 260.18,
+    "llm_time": 22552.01,
+    "input_tokens": 2069,
+    "output_tokens": 110,
+    "total_tokens": 2179,
+    "time": "14:17:13"
+  },
+  {
+    "question": "Where can I find the unlock code?",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "answer": "The unlock code must be obtained from your official Link ECU supplier.",
+    "sources": [
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo6.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0\n2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nb",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
+        "page": 8,
+        "score": null,
+        "snippet": "Important Information\nG4+ ECUS SHIPPED LOCKED\nG4+ ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed and configured \nusing PCLink, but wi",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-AtomX.pdf",
+        "page": 3,
+        "score": null,
+        "snippet": "ImPOrt ant \nInf OrmatIO n \n \ng4X eC Us are s HIPP eD lOCKeD\nG4X ECUs are shipped as locked and must be enabled before they are used. The \nECU can be installed and configured using ",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-XtremeX.pdf",
+        "page": 5,
+        "score": null,
+        "snippet": "continued on next pageImPOrt ant  \nInfOrmatIO n\ng4X eC us are s hIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand",
+        "content": null
+      }
+    ],
+    "retrieval_time": 59.64,
+    "llm_time": 3746.64,
+    "input_tokens": 2069,
+    "output_tokens": 21,
+    "total_tokens": 2090,
+    "time": "14:17:39"
+  },
+  {
+    "question": "Where can I find the unlock code?",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "answer": "To obtain an unlock code for your Link ECU, follow these steps:\n\n1.  **Contact your official Link ECU supplier or dealer.** All Link ECUs are shipped locked and require an unlock code before they can read engine RPM or run the engine.\n2.  Be prepared to **prove ownership** of the ECU when requesting the unlock code.\n3.  If you cannot reach your original dealer or supplier, you may contact Link technical support directly. When doing so, include:\n    *   Proof of purchase.\n    *   A copy of some photo ID.\n    *   A brief explanation of who you purchased the ECU from.",
+    "sources": [
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo6.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0\n2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nb",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4+ Wire-in THUNDER.pdf",
+        "page": 8,
+        "score": null,
+        "snippet": "Important Information\nG4+ ECUS SHIPPED LOCKED\nG4+ ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed and configured \nusing PCLink, but wi",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-AtomX.pdf",
+        "page": 3,
+        "score": null,
+        "snippet": "ImPOrt ant \nInf OrmatIO n \n \ng4X eC Us are s HIPP eD lOCKeD\nG4X ECUs are shipped as locked and must be enabled before they are used. The \nECU can be installed and configured using ",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-XtremeX.pdf",
+        "page": 5,
+        "score": null,
+        "snippet": "continued on next pageImPOrt ant  \nInfOrmatIO n\ng4X eC us are s hIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand",
+        "content": null
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/25982-requesting-for-ecu-unlock-code/",
+        "page": null,
+        "score": null,
+        "snippet": "Upon me trying to overwrite the ecu with a standard R53 mini base map given in the software, there comes a pop up saying i need the unlock code from supplier.",
+        "content": "Dear links,\nrecently i bought a mini R53 from an owner who knows nothing about the car and the ecu has been locked, upon me trying to overwrite the ecu with a standard R53 mini base map given in the software, there comes a pop up saying i need the unlock code from supplier.\nmy ecu serial number is 45342\nits a links g4+ plug in for mini.\ncan any one assist in unlocking the ecu? thank you\n6fe85920-e689-4c90-b835-4ed85ce489b4.mov\n\nIs it running on the link ecu just\nIf answer is yes then who ever tuned it has locked the map so it can't be copied or modified\nOnly course of action is either get the original tuner to u lock it or modify it or start fresh with a new tuner putting on a fresh map\n\nYour post is a little confusing.  To clarify a couple of terms we use:\nLocked/Unlocked:\nAll new ecu's are shipped from the factory in a \"locked\" condition for security to minimise theft risk etc.  In the locked condition the ECU will still connect to PC Link, all settings are visible and adjustable but the ECU will not run an engine until it is \"Unlocked\" using the unlock code from the dealer. The unlock code was issued for this ecu in Aug 2019 so I expect it has already been unlocked.  Locked/Unlocked only relates to the ECU, not the map.\nPassword Protected:\nThe tuner can apply a password to the map in the ecu which prevents access and visibility to any ECU settings.  This protection only applies to the map, not the ecu.  You can load an un-password protected map into the ecu and it will be fully functional.\nSo its not 100% clear which of these you are talking about.  It sounds like you are talking about password protection in the first part of your post, then locked in the 2nd part.  Was the car running when you bought it?\nWith PC Link connected to the ecu, can you attach a picture of >Help>ECU Information and >Help>about.\n\nok, sorry for confusing you guys.\nTo make things simple.\n1. Car is running with links ecu plugged in for R53.\n2. the ecu itself is password protected by previous tuner.\n3. Without the password to the tune, i tried to put a fresh map over it by uploading the R53 links base map provided in the links softeare. Upon uploading the basemap, an error comes out saying that i would need to unlock this ecu with the serial code. Hence i am unable to overwrite the password protected map and start with a new one.\nthank you\nEdited\nOctober 22, 2024\nby Owner of miniR53 and evo 7\n\nOn 10/20/2024 at 10:18 AM, Adamw said:\nWith PC Link connected to the ecu, can you attach a picture of >Help>ECU Information and >Help>about.\n\nHi, i got myself connected to the ecu and did what was requested...\nafter that, i tried to reupload R53 basemap into the ecu and it worked... but it did say the ecu is disabled in a pop out like the attached below.\nthe error did not affect anything and the newly uploaded basemap can be accessible .\nbug ? i guess\n\nI think you might be using an old version of PC Link or possibly firmware that had a bug that could incorrectly report the lock status, which is why I keep asking for...\nOn 10/20/2024 at 10:18 AM, Adamw said:\nWith PC Link connected to the ecu, can you attach a picture of >Help>ECU Information and >Help>about.\nYou havent shown >help>about yet, so I still dont know for certain, but your ecu information shows that you are on a firmware from ~10 years ago so I would suggest you start by downloading the latest G4+ PC Link, and do a firmware update.  The latest is V5.6.8 for both PC Link and the firmware.  It should not disable the ecu by loading a fresh map in.\nLink to download:\nhttps://www.linkecu.com/pclink/PCLink G4+ EN-JP V5.6.8.3669 Setup.exe\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/8875-need-unlock-code-please/",
+        "page": null,
+        "score": null,
+        "snippet": "Hello i purchased a link ecu #WRX6+ 2 years ago i never knew i had to unlock ecu until now . i had to put it off on the side because until i ...",
+        "content": "Hello i purchased a link ecu\n#WRX6+ 2 years ago i never knew i had to unlock ecu until now . i had to put it off on the side  because until i finished rebuilding motor i decided to install new link ecu and it keep saying ecu is lock . please help i contacted the dealer i bought it from and havent heard from him yet . i have serial number if needed . thanks in advance ...\nEdited\nAugust 25, 2018\nby NIZBARU\n\nYou can send us an email at\nInclude if you can some sort of proof of purchase and a copy of some photo ID.  Also a brief story of who you purchased from etc.  If it all checks out we will be able to give you an unlock code early next week.\n\nOk thnx sent link tech support email . one more question i followed installation on manual for my ecu set up tps and map calibration done everything good just except trigger calibration is locked .  my question is does ecu being locked prevent me from starting up motor because it will not turn over i tried a many times it will turn over i switched it back to stock it turns over and runs any advice is appriciated please help thanks... Also i tried swithing the dip switch and my 1999 wrx is a jdm\n\nYes engine will not start when the ecu is locked.  Triggers will be disabled.\n\nOk thanks good to know ty for the help ill just wait for my unlock code\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      },
+      {
+        "type": "forum",
+        "source": "https://forums.linkecu.com/topic/7007-i-want-unlock-code/",
+        "page": null,
+        "score": null,
+        "snippet": "You will need to contact a dealer for the unlock code you will need to prove ownership. The original dealer for this unit was Power Logic Racing ...",
+        "content": "This ECU I bought From used parts dealer but its a new one never used the dealer bought it from a guy how works on a project but he didn't complete his project so as i just know about code issue also the used parts dealer didnt know about it and we dont know the first owner personally so we dont know the code\nThose are the stuff i bought from used parts dealer\n\nHi\nYou will need to contact a dealer for the unlock code you will need to prove ownership.\nThe original dealer for this unit was Power Logic Racing in Egypt\n\nI try to contact him but no response\n\nshould i connect my computer to the internet when when i try to unlock the ecu ???\n\nNo it only needs to be connected to the ECU.\n\nthanks Simon I unlocked my ECU Finaly\n\nMr.Mohamed i am sameh the seller of the ecu and egypt dealer\nactually no one tried to contact me in case you need anything here is my number 01001251586\nthanks Simon for helping (Y)\n\nThanks Mr Sameh I Solve My problem\n\nOn 6/21/2017 at 12:51 AM, Mohamed Maher said:\nthanks Simon I unlocked my ECU Finaly\nHow did you solve this Mohamed?\n\nWith the ECU serial we can put you in touch with the original dealer they will then be able to process the unlock provided the unit is legit and not stolen.\n\nHey I’m Ezé and I just got a G4X, is there anyone who can help me with my unlock code? It didn’t come with the ecu\nPhone: 3015235555\n[email protected]\n\n3 hours ago, ezethelion said:\nHey I’m Ezé and I just got a G4X, is there anyone who can help me with my unlock code? It didn’t come with the ecu\nPhone: 3015235555\n[email protected]\nFirst place to contact would be the dealer that supplied it, failing that try posting on the G4x forum\n\nReply to this topic...\n×\nPasted as rich text.\nPaste as plain text instead\nOnly 75 emoji are allowed.\n×\nYour link has been automatically embedded.\nDisplay as a link instead\n×\nYour previous content has been restored.\nClear editor\n×\nYou cannot paste images directly. Upload or insert images from URL.\nInsert image from URL\n×\nDesktop\nTablet\nPhone"
+      }
+    ],
+    "retrieval_time": 55.44,
+    "llm_time": 6937.3,
+    "input_tokens": 3036,
+    "output_tokens": 177,
+    "total_tokens": 3213,
+    "time": "14:17:56"
+  },
+  {
+    "question": "How do I unlock a Link ECU?",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "answer": "**Answer:**\n\nAll Link ECUs are shipped locked and must be unlocked before they can be used. Although the ECU can be installed and configured using PCLink, it will not read engine RPM or run the engine until it is unlocked.\n\nTo unlock your Link ECU:\n1. Contact your official Link ECU supplier to obtain an unlock code.",
+    "sources": [
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Neo4.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Neo Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G5-Voodoo-Pro.pdf",
+        "page": 1,
+        "score": null,
+        "snippet": "2\nG5 Voodoo Pro Quick Start Guide – Version 1.0Link ECUs are shipped locked\nAll Link ECUs are shipped locked and must be unlocked \nbefore they can be used. The ECU can be installed",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-FuryX.pdf",
+        "page": 5,
+        "score": null,
+        "snippet": "continued on next pageImPOrt ant  \nInfOrmatIO n\ng4X eC us are s hIPPed lOCKed\nG4X ECUs are shipped as locked and must be enabled before they are used. The ECU can be installed \nand",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4+ Wire-in MONSOON.pdf",
+        "page": 3,
+        "score": null,
+        "snippet": "G4+ ECUS ARE SHIPPED LOCKED\nG4+ ECUs are shipped as locked and must be enabled before they are \nused. The ECU can be installed and configured using PCLink, but will \nnot read engin",
+        "content": null
+      },
+      {
+        "type": "document",
+        "source": "./data/doc/G4-AtomX.pdf",
+        "page": 3,
+        "score": null,
+        "snippet": "ImPOrt ant \nInf OrmatIO n \n \ng4X eC Us are s HIPP eD lOCKeD\nG4X ECUs are shipped as locked and must be enabled before they are used. The \nECU can be installed and configured using ",
+        "content": null
+      }
+    ],
+    "retrieval_time": 90.41,
+    "llm_time": 4476.63,
+    "input_tokens": 2074,
+    "output_tokens": 95,
+    "total_tokens": 2169,
+    "time": "14:28:18"
+  },
+  {
+    "question": "disable safety",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "answer": "⚠️ The request is blocked due to safety policy.",
+    "sources": [],
+    "retrieval_time": 0.0,
+    "llm_time": 0.0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "time": "14:30:12"
+  },
+  {
+    "question": "illegal",
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "answer": "⚠️ The request is blocked due to safety policy.",
+    "sources": [],
+    "retrieval_time": 0.0,
+    "llm_time": 0.0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "time": "14:30:46"
   }
 ]

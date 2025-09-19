@@ -30,7 +30,8 @@ def query(req: QueryRequest):
     answer, sources, stats = answer_question(
         req.question,
         model=req.model,
-        provider=req.provider
+        provider=req.provider,
+        search_forum=req.search_forum
     )
 
     # Format and return structured response
